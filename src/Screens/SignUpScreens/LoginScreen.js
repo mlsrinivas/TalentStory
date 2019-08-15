@@ -52,19 +52,21 @@ export default class LoginScreen extends React.Component {
                 />
                 </View>
 
-                <View style={{ marginTop:15 }}>
-                <TouchableOpacity
-                style = {styles.buttonlogin}>
-                <Text style={styles.logintitle}>Login</Text>
-                </TouchableOpacity>
-                </View>
+                
                 <View style={{ flexDirection:'row',marginTop:15, justifyContent:'center' }}>
                 <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>Not Register?</Text>
                 <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Sign-Up</Text>
                 <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>or</Text>
                 <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Forgot Password</Text>
                 </View>
+
             </View>
+            <View style={{ marginTop:15 }}>
+                <TouchableOpacity
+                style = {styles.buttonlogin}>
+                <Text style={styles.logintitle}>REGISTER</Text>
+                </TouchableOpacity>
+                </View>
             </View>
         </ScrollView>
         </View>
