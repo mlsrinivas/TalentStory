@@ -13,7 +13,7 @@ import styles from '../../Styles/SignUpStyles/LoginStyle';
 import ResponsiveImage from 'react-native-responsive-image';
 
 
-export default class LoginScreen extends React.Component {
+export default class Login extends React.Component {
 
     constructor(props){
         super(props);
@@ -27,12 +27,12 @@ export default class LoginScreen extends React.Component {
         <View style={styles.container}>
         <ScrollView>
             <View style = {{flex:2, alignItems:'center', justifyContent:'space-between', flexDirection:'column'}}>
-            <View >
+            {/* <View >
                 <ResponsiveImage source={require('../../../assets/Login.jpeg')} 
                                  initWidth="412" initHeight="300"
                                  //style = {{borderBottomLeftRadius:200, borderBottomRightRadius:200}}
                                  />
-            </View>
+            </View> */}
             <View style={styles.login}>
                 <View >
                 <TextInput
@@ -55,7 +55,9 @@ export default class LoginScreen extends React.Component {
                 
                 <View style={{ flexDirection:'row',marginTop:15, justifyContent:'center' }}>
                 <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>Not Register?</Text>
-                <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Sign-Up</Text>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
+                  <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Sign-Up</Text>
+                </TouchableOpacity>
                 <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>or</Text>
                 <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Forgot Password</Text>
                 </View>

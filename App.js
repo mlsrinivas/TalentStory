@@ -1,21 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import LoginScreen from './src/Screens/SignUpScreens/LoginScreen';
-import SignUp from './src/Screens/SignUpScreens/SignUp';
+import AuthLoadingScreen from './src';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <SignUp/>
-    </View>
-  );
+export default class App extends React.Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+        <AuthLoadingScreen />
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     // flex:1,
     // alignItems:'flex-end',
     margin:5,
-    marginTop: 200,
+    marginTop: 100,
     //marginBottom:'10%'
     
 
