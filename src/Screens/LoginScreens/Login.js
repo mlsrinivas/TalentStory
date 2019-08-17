@@ -27,12 +27,12 @@ export default class Login extends React.Component {
         <View style={styles.container}>
         <ScrollView>
             <View style = {{flex:2, alignItems:'center', justifyContent:'space-between', flexDirection:'column'}}>
-            {/* <View >
+            <View >
                 <ResponsiveImage source={require('../../../assets/Login.jpeg')} 
                                  initWidth="412" initHeight="300"
                                  //style = {{borderBottomLeftRadius:200, borderBottomRightRadius:200}}
                                  />
-            </View> */}
+            </View>
             <View style={styles.login}>
                 <View >
                 <TextInput

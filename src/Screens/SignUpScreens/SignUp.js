@@ -29,10 +29,10 @@ export default class SignUp extends React.Component {
         <View style={styles.container}>
         <ScrollView>
             <View >
-            {/* <View >
+            <View >
                 <ResponsiveImage source={require('../../../assets/Login.jpeg')} 
                                  initWidth="412" initHeight="150"/>
-            </View> */}
+            </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
                 <View >
                 <Text>First Name</Text>
