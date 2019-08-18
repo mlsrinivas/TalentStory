@@ -19,7 +19,7 @@ const Header = props => (
       <View style={{  backgroundColor: 'transparent'}}>
         <Image
          // style={StyleSheet.absoluteFill}
-          source={require('../../../../assets/Login.jpeg')}
+          source={require('../../../../assets/icon.png')}
         />
         {/* <Header {...props} style={{ backgroundColor: 'transparent' }}/> */}
       </View>

@@ -9,12 +9,12 @@ const styles = StyleSheet.create({
     // flex:1,
     // alignItems:'flex-end',
     margin:5,
-    marginTop: 100,
+    //marginTop: 100,
     //marginBottom:'10%'
     
 
   },
-  firstNameText: {
+  firstNameText: { 
     width:330,
     height:40,
     backgroundColor: '#fff',
@@ -25,12 +25,14 @@ const styles = StyleSheet.create({
     elevation: 2,
     borderRadius:3,
     paddingHorizontal :10,
+    marginTop:15
   },
   buttonlogin:{
     width:330,
     height:40,
     backgroundColor: '#0073C0',
     borderRadius:5,
+    marginTop:15
 
   },
   logintitle:{

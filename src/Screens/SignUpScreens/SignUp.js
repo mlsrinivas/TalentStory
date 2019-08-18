@@ -8,10 +8,14 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
+  Dimensions,
+  ImageBackground,
 } from 'react-native';
 import styles from '../../Styles/SignUpStyles/SignUpStyles';
-import ResponsiveImage from 'react-native-responsive-image';
-import Icon from 'react-native-vector-icons/Foundation';
+//import ResponsiveImage from 'react-native-responsive-image';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+//import Icon from 'react-native-vector-icons/Foundation';
+
 
 
 
@@ -25,15 +29,19 @@ export default class SignUp extends React.Component {
       } 
 
     render() {
+        const dimensions = Dimensions.get('window');
+        //const imageHeight = Math.round(dimensions.width * 2 / 2);
+        const imageWidth = dimensions.width;
       return (
         <View style={styles.container}>
         <ScrollView>
             <View >
-            <View >
-                <ResponsiveImage source={require('../../../assets/Login.jpeg')} 
-                                 initWidth="412" initHeight="150"/>
+            <ImageBackground  source={require('../../../assets/login.png')} resizeMode = 'cover'
+                          style={{ height: 250, width: imageWidth }}/>
+            <View style = {{marginBottom:30}}>
+            <Icon size={24}  name="rhombus-outline" color = "black" style = {{alignSelf:'center'}} />
             </View>
-            <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
+            <View style = {{flexDirection:"row", justifyContent:'space-around', marginTop:'5%'}}>
                 <View >
                 <Text>First Name</Text>
                 <TextInput
@@ -119,14 +127,15 @@ export default class SignUp extends React.Component {
                     <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Terms</Text>
                 </View>
             </View>
-            <View style={{ marginTop:'10%', alignItems:'flex-end' }}>
+            </View>
+        </ScrollView>
+            <View >
                 <TouchableOpacity
                 style = {styles.loginButton}>
                 <Text style={styles.loginTitle}>REGISTER</Text>
                 </TouchableOpacity>
             </View>
-            </View>
-        </ScrollView>
+            
         </View>
 
     
