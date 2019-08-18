@@ -15,12 +15,16 @@ import ResponsiveImage from 'react-native-responsive-image';
 
 export default class Login extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state={
-          text : '',
-        }
-      } 
+  static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
+  
+  constructor(props){
+      super(props);
+      this.state={
+        text : '',
+      }
+    } 
 
     render() {
       return (
@@ -65,8 +69,8 @@ export default class Login extends React.Component {
             </View>
             <View style={{ marginTop:15 }}>
                 <TouchableOpacity
-                style = {styles.buttonlogin}>
-                <Text style={styles.logintitle}>REGISTER</Text>
+                style = {styles.buttonlogin} onPress={()=>{this.props.navigation.navigate('HomeScreenStack')}}>
+                <Text style={styles.logintitle}>Login</Text>
                 </TouchableOpacity>
                 </View>
             </View>

@@ -1,16 +1,22 @@
 import React from "react";
 import {
   View,
-  Image
+  Image,
+  ActivityIndicator,
+  StatusBar,
+  Dimensions
 } from "react-native";
 import {
   createStackNavigator,
   createAppContainer,
   createSwitchNavigator,
+  createDrawerNavigator
 } from "react-navigation";
 import Login from './Screens/LoginScreens/Login'
 import SignUp from './Screens/SignUpScreens/SignUp'
-import { NavigationOptions } from './Components/ReUsableComponents/Header/Header'
+//import { NavigationOptions } from './Components/ReUsableComponents/Header/Header'
+import SideMenu from './Components/SideMenu'
+import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -27,8 +33,10 @@ class AuthLoadingScreen extends React.Component {
   render() {
     return (
       <View>
-       
+        <ActivityIndicator />
+        <StatusBar barStyle="default" />
       </View>
+
     );
   }
 }
@@ -44,15 +52,30 @@ const AuthStack = createStackNavigator({
      },
 });
 
-
+const DrawerAuthStack = createDrawerNavigator(
+  {
+    AuthStack: {
+      screen: AuthStack
+    },
+    HomeScreenStack: { 
+      screen: HomeScreenBottomTabs
+    },
+  },
+  {
+    contentComponent: props => <SideMenu {...props} />,
+    drawerPosition: "left",
+    drawerWidth: Dimensions.get("window").width - 70
+  }
+)
 
 export default createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
-      Auth: {
-        screen: AuthStack,
-      }
+     Auth: DrawerAuthStack,
+      // Auth: {
+      //   screen: AuthStack,
+      // }
     },
     {
       initialRouteName: "AuthLoading"
