@@ -7,15 +7,21 @@ import {
   colors,
   StyleSheet,
   Image,
-  TouchableOpacity,
+  TouchableOpacity,  
+  ImageBackground,
+  Dimensions,
 } from 'react-native';
 import styles from '../../Styles/SignUpStyles/SignUpStyles';
-import ResponsiveImage from 'react-native-responsive-image';
-import Icon from 'react-native-vector-icons/Foundation';
+//import ResponsiveImage from 'react-native-responsive-image';
+import {Icon} from 'react-native-vector-icons/AntDesign';
 
 
 
 export default class SignUp extends React.Component {
+
+    static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
 
     constructor(props){
         super(props);
@@ -25,14 +31,19 @@ export default class SignUp extends React.Component {
       } 
 
     render() {
+        const dimensions = Dimensions.get('window');
+        //const imageHeight = Math.round(dimensions.width * 2 / 2);
+        const imageWidth = dimensions.width;
       return (
         <View style={styles.container}>
         <ScrollView>
             <View >
             <View >
-                <ResponsiveImage source={require('../../../assets/Login.jpeg')} 
-                                 initWidth="412" initHeight="150"/>
+            <ImageBackground  source={require('../../../assets/Splash.png')} resizeMode = 'cover'
+                          style={{ height: 250, width: imageWidth }}/>
             </View>
+                            {/* <Icon size={24} color="black" name="arrowleft" /> */}
+
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
                 <View >
                 <Text>First Name</Text>
