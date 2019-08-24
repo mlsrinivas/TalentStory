@@ -13,7 +13,7 @@ export default class ForgetPassword extends React.Component{
     render() {
         return(
             <View>
-            <Image style={styles.setimage} source= {require('../../assets/Login.jpeg')} />
+            <Image style={styles.setimage} source= {require('../../assets/login.png')} />
                 <View style={styles.container}>
                     <Text style={{ color:'#000000' }}>Reset Password?</Text>
                     <Text style={{ color:'#DADADA',marginTop:10 }}>Enter phone number below to recieve</Text>
