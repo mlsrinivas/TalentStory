@@ -37,7 +37,7 @@ class AuthLoadingScreen extends React.Component {
 const AuthStack = createStackNavigator({
     Login: { 
         screen: Login,
-        //navigationOptions: (options) => NavigationOptions(options, <Image src={require('../assets/Login.jpeg')}/>)
+        //navigationOptions: (options) => NavigationOptions(options, <Image src={require('../assets/abc..jpeg')}/>)
      },
     SignUp: { 
         screen: SignUp,

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   viewFname:{
     width:170,
     height:40,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff', 
     shadowColor: '#000000',
     shadowOffset:{ width:0, height:2 },
     shadowOpacity: 0.25,
