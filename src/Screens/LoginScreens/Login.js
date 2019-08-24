@@ -16,12 +16,16 @@ import styles from '../../Styles/SignUpStyles/LoginStyle';
  
 export default class Login extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state={
-          text : '',
-        } 
-      } 
+  static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
+  
+  constructor(props){
+      super(props);
+      this.state={
+        text : '',
+      }
+    } 
 
       
 
@@ -75,7 +79,12 @@ export default class Login extends React.Component {
                 </View>
 
             </View>
-            
+            <View style={{ marginTop:15 }}>
+                <TouchableOpacity
+                style = {styles.buttonlogin} onPress={()=>{this.props.navigation.navigate('HomeScreenStack')}}>
+                <Text style={styles.logintitle}>Login</Text>
+                </TouchableOpacity>
+                </View>
             </View>
         </ScrollView>
         </View>
