@@ -10,11 +10,12 @@ import {
 } from "react-navigation";
 import Login from './Screens/LoginScreens/Login'
 import SignUp from './Screens/SignUpScreens/SignUp'
+import ForgetPassword from './Screens/ForgetPassword'
 import { NavigationOptions } from './Components/ReUsableComponents/Header/Header'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
-    super(props);
+    super(props); 
     this._bootstrapAsync()
   }
 
@@ -42,6 +43,9 @@ const AuthStack = createStackNavigator({
         screen: SignUp,
         //navigationOptions: (options) => NavigationOptions(options,  <Image src={require('../assets/Login.jpeg')}/>)
      },
+     ForgetPassword: {
+       screen: ForgetPassword,
+     }
 });
 
 
@@ -56,6 +60,6 @@ export default createAppContainer(
     },
     {
       initialRouteName: "AuthLoading"
-    }
+    } 
   )
 )

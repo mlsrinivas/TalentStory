@@ -59,7 +59,9 @@ export default class Login extends React.Component {
                   <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Sign-Up</Text>
                 </TouchableOpacity>
                 <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>or</Text>
+                <TouchableOpacity onPress = {() => this.props.navigation.navigate('ForgetPassword')}>
                 <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Forgot Password</Text>
+                </TouchableOpacity>
                 </View>
 
             </View>
