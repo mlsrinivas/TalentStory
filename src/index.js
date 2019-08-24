@@ -15,7 +15,7 @@ import { NavigationOptions } from './Components/ReUsableComponents/Header/Header
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
-    super(props);
+    super(props); 
     this._bootstrapAsync()
   }
 
