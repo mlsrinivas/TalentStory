@@ -32,7 +32,7 @@ export default class Login extends React.Component {
     render() {
       const dimensions = Dimensions.get('window');
       //const imageHeight = Math.round(dimensions.width * 2 / 2);
-      const imageWidth = dimensions.width;
+      const imageWidth = dimensions.width; 
       
       return (
         <View style={styles.container}>
