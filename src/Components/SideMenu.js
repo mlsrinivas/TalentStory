@@ -41,7 +41,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
              
-             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Login')}}
+             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scholarship')}}
                                style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>

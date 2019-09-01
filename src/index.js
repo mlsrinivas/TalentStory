@@ -23,6 +23,7 @@ import Aboutus from './Screens/Aboutus'
 import SideMenu from './Components/SideMenu'
 import JoinedCommunity from './Screens/JoinedCommunity'
 import CreatedCommunity from './Screens/CreatedCommunity'
+import Scholarship from './Screens/Scholarship'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
 
 class AuthLoadingScreen extends React.Component {
@@ -63,9 +64,9 @@ const AuthStack = createStackNavigator({
     // FeedBackScreen: {
     //   screen: FeedBack
     // },
-    // ScholarshipScreen: {
-    //   screen: Scholarship
-    // },
+    Scholarship: {
+      screen: Scholarship
+    },
     // MyWalletScreen: {
     //   screen: MyWallet
     // },
