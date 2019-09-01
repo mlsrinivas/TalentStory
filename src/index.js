@@ -4,19 +4,25 @@ import {
   Image,
   ActivityIndicator,
   StatusBar,
-  Dimensions
+  Dimensions,
+  ScrollView,
+  SafeAreaView
 } from "react-native";
 import {
   createStackNavigator,
   createAppContainer,
   createSwitchNavigator,
-  createDrawerNavigator
+  createDrawerNavigator,
+  DrawerItems
 } from "react-navigation";
 import Login from './Screens/LoginScreens/Login'
 import SignUp from './Screens/SignUpScreens/SignUp'
 import ForgetPassword from './Screens/ForgetPassword'
+import Aboutus from './Screens/Aboutus'
 //import { NavigationOptions } from './Components/ReUsableComponents/Header/Header'
 import SideMenu from './Components/SideMenu'
+import JoinedCommunity from './Screens/JoinedCommunity'
+import CreatedCommunity from './Screens/CreatedCommunity'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
 
 class AuthLoadingScreen extends React.Component {
@@ -53,7 +59,34 @@ const AuthStack = createStackNavigator({
      },
      ForgetPassword: {
        screen: ForgetPassword,
-     }
+     },
+    // FeedBackScreen: {
+    //   screen: FeedBack
+    // },
+    // ScholarshipScreen: {
+    //   screen: Scholarship
+    // },
+    // MyWalletScreen: {
+    //   screen: MyWallet
+    // },
+    JoinedCommunity: {
+      screen: JoinedCommunity
+    },
+    CreatedCommunity: {
+      screen: CreatedCommunity
+    },
+    // RateTheAppScreen: {
+    //   screen: CreatedCommunity
+    // },
+    // ShareWithFriendsScreen: {
+    //   screen: ShareWithFriend
+    // },
+       Aboutus: {
+         screen: Aboutus
+       },
+    // LogOutScreen: {
+    //   screen: Logout
+    // },
 });
 
 const DrawerAuthStack = createDrawerNavigator(
@@ -86,3 +119,4 @@ export default createAppContainer(
     } 
   )
 )
+
