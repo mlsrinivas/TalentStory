@@ -25,14 +25,18 @@ const styles = StyleSheet.create({
     elevation: 2,
     borderRadius:3,
     paddingHorizontal :10,
-    marginTop:15
+    marginTop:15,
+    fontSize:15,
+
   },
   buttonlogin:{
     width:330,
     height:40,
     backgroundColor: '#0073C0',
     borderRadius:5,
-    marginTop:15
+    marginTop:15,
+    fontSize:15,
+
 
   },
   logintitle:{

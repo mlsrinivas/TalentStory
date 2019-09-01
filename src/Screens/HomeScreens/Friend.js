@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 
 export default class Friend extends React.Component {
   constructor() {
@@ -8,9 +8,10 @@ export default class Friend extends React.Component {
   render() {
     return (
         <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-          <Text>
-            Friends Screen
-          </Text>
+        <Image source = {require('../../../assets/noData.webp')} style = {{height:100, width:100}} />
+        <View style = {{marginTop:'10%', justifyContent:'center'}}>
+        <Text>No Friends</Text>
+        </View>
         </View>
     );
   }
