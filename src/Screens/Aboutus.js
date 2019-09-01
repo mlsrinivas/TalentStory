@@ -4,7 +4,7 @@ import styles from '../Styles/Aboutusstyles'
 
 export default class Aboutus extends React.Component {
 
-    render(){
+    render(){ 
         return(
             <View style={{ alignItems:'center', justifyContent:'center' }}>
                   <Image
