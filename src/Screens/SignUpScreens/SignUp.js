@@ -6,16 +6,17 @@ import {
   Text,
   colors,
   StyleSheet,
-  Image,
+  Image, 
   TouchableOpacity,  
   ImageBackground,
   Dimensions,
+  
 } from 'react-native';
 import styles from '../../Styles/SignUpStyles/SignUpStyles';
 //import ResponsiveImage from 'react-native-responsive-image';
-import {Icon} from 'react-native-vector-icons/AntDesign';
-
-
+import  Ionicons  from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class SignUp extends React.Component {
 
@@ -41,9 +42,14 @@ export default class SignUp extends React.Component {
             <View >
             <ImageBackground  source={require('../../../assets/Splash.png')} resizeMode = 'cover'
                           style={{ height: 250, width: imageWidth }}/>
+            <TouchableOpacity style = {{ position:'absolute', marginLeft:'5%', marginTop:'8%' }}
+                              onPress={()=>{this.props.navigation.navigate('Login')}}>
+              <AntDesign size={24} color="white" name="arrowleft" />
+            </TouchableOpacity>
+            <View style = {{ position:'absolute', alignSelf:'center', marginTop:'57%' }}>
+            <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' />
             </View>
-                            {/* <Icon size={24} color="black" name="arrowleft" /> */}
-
+            </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
                 <View >
                 <Text>First Name</Text>
@@ -79,7 +85,7 @@ export default class SignUp extends React.Component {
 
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>                
                 <View >
-                {/* <Icon size={24} color="black" name="male-symbol" /> */}
+                <Ionicons size={26} color="#c2c0c0" name="ios-male" style = {{ position:'absolute', margin:'10%' }}/>
                 <TextInput
                 style = {styles.viewMale}
                 placeholderTextColor = '#c2c0c0'
@@ -88,6 +94,7 @@ export default class SignUp extends React.Component {
                 />                
                 </View>
                 <View >
+                <Ionicons size={26} color="#c2c0c0" name="ios-female" style = {{ position:'absolute', margin:'10%' }}/>
                 <TextInput
                 style = {styles.viewFemale}
                 placeholderTextColor = '#c2c0c0'
