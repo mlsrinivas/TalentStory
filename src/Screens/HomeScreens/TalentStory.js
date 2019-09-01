@@ -37,7 +37,7 @@ export default class TalentStory extends React.Component {
                 </View>
                 <View style={styles.talentStoryDescriptionView}>
                   <Text style={styles.talentStoryDescription}> 
-                    B2B Udaan In Talks To Raise $500 Mn {'\n'}Funding Round: Report {'\n'}
+                    B2B Unicorn Udaan In Talks To Raise $500 Mn {'\n'}Funding Round: Report {'\n'}
                     B2B online marketplace Udaan is reportedly close to raise around $500 
                     Mn in a fresh funding round  led by Lightspeed Venture Partners and 
                     {/* DST Global.

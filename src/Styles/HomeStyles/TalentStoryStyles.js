@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.8,
         shadowRadius: 1,
         elevation: 1,
-        marginTop: '4%',
+        marginTop: '2%',
         marginBottom: '4%'
     },
     talenStoryCircle: {
