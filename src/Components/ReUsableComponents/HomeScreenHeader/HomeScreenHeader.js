@@ -1,11 +1,9 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Platform } from 'react-native'
+import { View, Text, TouchableOpacity, Platform, Image } from 'react-native'
 
-import 
-    Icon
-   from "react-native-vector-icons/MaterialCommunityIcons"
-
-
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import Ionicons from "react-native-vector-icons/Ionicons"
+   
 export const NavigationOptions = (options, screenName, category) => {
   const { navigation } = options
   return {
@@ -30,25 +28,28 @@ export const NavigationOptions = (options, screenName, category) => {
           navigation.openDrawer()
         }}
       >
-        <Icon name="menu" size={28} color={"grey"} />
+        <MaterialCommunityIcons name="menu" size={26} color={"grey"} />
       </TouchableOpacity>
     ),
-    // headerRight: (
-    //   <View
-    //     style={{
-    //       marginRight: 20,
-    //       flexDirection: "row",
-    //       alignItems: "center"
-    //     }}
-    //   >
-    //     <TouchableOpacity style={{ marginRight: 20 }}>
-    //       <EvilIcons name="search" size={28} color={"white"} />
-    //     </TouchableOpacity>
-    //     <TouchableOpacity onPress={() => navigation.navigate("WriteReview", { category: category })}>
-    //       <Ionicons name="ios-add" size={28} color={"white"} />
-    //     </TouchableOpacity>
-    //   </View>
-    // ),
+    headerRight: (
+      <View
+        style={{
+          marginRight: 18,
+          flexDirection: "row",
+          alignItems: "center"
+        }}
+      >
+        <TouchableOpacity style={{ marginRight: 25 }}>
+        <Ionicons name="ios-notifications" size={24} color={"grey"} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ marginRight: 25 }}>
+        <Ionicons name="md-search" size={20} color={"grey"} />
+        </TouchableOpacity>
+        <TouchableOpacity >
+        <Image style={{tintColor: 'grey', width: 30, height: 30}} source={require('../../../../assets/funding.png')} />
+        </TouchableOpacity>
+      </View>
+    ),
     // headerBackground: (
     //   <LinearGradient
     //     colors={["#001a33", "#004f99"]}
