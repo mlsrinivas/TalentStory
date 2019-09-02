@@ -25,6 +25,7 @@ import JoinedCommunity from './Screens/JoinedCommunity'
 import CreatedCommunity from './Screens/CreatedCommunity'
 import Scholarship from './Screens/Scholarship'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
+import Scanner from './Screens/Scanner'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -88,6 +89,9 @@ const AuthStack = createStackNavigator({
     // LogOutScreen: {
     //   screen: Logout
     // },
+       Scanner:{
+         screen: Scanner
+       }
 });
 
 const DrawerAuthStack = createDrawerNavigator(

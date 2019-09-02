@@ -165,7 +165,7 @@ export default class SideMenu extends React.Component {
                 <View style={{ height:90,backgroundColor:'#F5F5F5',alignItems:'center',justifyContent:'center',flexDirection:'column' }}>
                     <Text style={{ color:'#696969' }}>Version: 1.0.12</Text>
                     <Text style={{ color:'#808080' }}>Powered by: TalentStory</Text>
-                        <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Login')}}>
+                        <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scanner')}}>
                             <Image source={require('../../assets/qrcode.png')} 
                                     style={{height:50,width:20,marginTop:'1%'}}/>
                         </TouchableOpacity>
