@@ -19,7 +19,7 @@ import Login from './Screens/LoginScreens/Login'
 import SignUp from './Screens/SignUpScreens/SignUp'
 import ForgetPassword from './Screens/ForgetPassword'
 import Aboutus from './Screens/Aboutus'
-//import { NavigationOptions } from './Components/ReUsableComponents/Header/Header'
+import { NavigationOptions } from './Components/ReUsableComponents/HomeScreenHeader/HomeScreenHeader'
 import SideMenu from './Components/SideMenu'
 import JoinedCommunity from './Screens/JoinedCommunity'
 import CreatedCommunity from './Screens/CreatedCommunity'
@@ -28,6 +28,7 @@ import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNav
 import Apply from './Screens/ScholarshipScreens/Apply'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
+import Scanner from './Screens/Scanner'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -74,10 +75,12 @@ const AuthStack = createStackNavigator({
     //   screen: MyWallet
     // },
     JoinedCommunity: {
-      screen: JoinedCommunity
+      screen: JoinedCommunity,
+      navigationOptions: (options) => NavigationOptions(options, "Joined Communities", "sideMenu")
     },
     CreatedCommunity: {
-      screen: CreatedCommunity
+      screen: CreatedCommunity,
+      navigationOptions: (options) => NavigationOptions(options, "Created Communities", "sideMenu")
     },
     // RateTheAppScreen: {
     //   screen: CreatedCommunity
@@ -86,7 +89,8 @@ const AuthStack = createStackNavigator({
     //   screen: ShareWithFriend
     // },
        Aboutus: {
-         screen: Aboutus
+         screen: Aboutus,
+         navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
        },
        Apply: {
          screen: Apply
@@ -100,6 +104,9 @@ const AuthStack = createStackNavigator({
     // LogOutScreen: {
     //   screen: Logout
     // },
+       Scanner:{
+         screen: Scanner
+       }
 });
 
 const DrawerAuthStack = createDrawerNavigator(

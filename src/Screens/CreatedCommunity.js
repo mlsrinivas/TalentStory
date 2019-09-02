@@ -6,8 +6,8 @@ export default class CreatedCommunity extends React.Component{
     render(){
         return(
             <View>
-                <Text>vfkjbkjdb</Text>
-                </View>
+                
+            </View>
         );
     }
 }
