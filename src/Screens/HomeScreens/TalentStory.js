@@ -1,26 +1,27 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import styles from '../../Styles/HomeStyles/TalentStoryStyles'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons' 
+import Feather from 'react-native-vector-icons/Feather'
 
 export default class TalentStory extends React.Component {
   constructor() {
     super();
     this.state = {
-      talentStoriesList: [
-        {},
-        {}
-      ]
+      talentStoriesList: [ {},{},{},{},{} ]
     }
   }
   render() {
     return (
-        <View>
-          <ScrollView>
+        <View style={{flex:1}}>
+          
+     {/* <AntDesign name='like2' size={20} style={{position:'absolute',bottom:0}} /> */}
+            
+        <ScrollView>
             {this.state.talentStoriesList.map((talentStory, index) => (
               <View key={index} style={styles.talentStory}>
                 <View style={styles.talentStoryRow}>
@@ -32,7 +33,11 @@ export default class TalentStory extends React.Component {
                     <Text style={styles.storyTime}>27 days ago</Text>
                   </View>
                   <View style={styles.horizontalDots}>
+                  <TouchableOpacity>
+
                     <Entypo size={21} color='rgb(176, 171, 171)' name="dots-three-horizontal" />
+                    </TouchableOpacity>
+
                   </View>
                 </View>
                 <View style={styles.talentStoryDescriptionView}>
@@ -50,24 +55,41 @@ export default class TalentStory extends React.Component {
                     <Text style={styles.likeCountText}>
                       3 likes
                     </Text>
+                    <Text style={styles.shareCountText}>
+                      2 shares
+                    </Text>
                   </View>
                   <View style={styles.likeCommentShareView}>
+                  <TouchableOpacity>
                     <View style={styles.like}>
-                      <AntDesign style={{marginLeft: '4%'}} size={22} color='rgb(176, 171, 171)' name="like2" />
+                      <AntDesign style={{marginLeft: '12%'}} size={22} color='rgb(176, 171, 171)' name="like2" />
                       <Text style={[{marginTop: '1%'}, styles.likeCommentShareText]}>Like</Text>
                     </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
                     <View style={styles.comment}>
                       <EvilIcons size={22} color='rgb(176, 171, 171)' name="comment" />
                       <Text style={styles.likeCommentShareText}>Comment</Text>
                     </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
                     <View style={styles.share}>
                       <MaterialCommunityIcons size={22} color='rgb(176, 171, 171)' name="share" />
-                      <Text style={[{right: '4%'}, styles.likeCommentShareText]}>Share</Text>
+                      <Text style={[{marginRight: '4%'}, styles.likeCommentShareText]}>Share</Text>
                     </View>
+                  </TouchableOpacity>
                   </View>
             </View>
             ))}
-          </ScrollView>
+          </ScrollView>   
+     <View style={{position: 'absolute', bottom: 20, right:20}}>
+       <TouchableOpacity>
+          <View style={{backgroundColor:'#0073C0', width:50, height:50, borderRadius: 25, justifyContent: 'center', alignItems: 'center'}}>
+            <MaterialCommunityIcons name='square-edit-outline'size={30} color='#fff'/>
+          </View>
+        </TouchableOpacity>
+      </View>
+     
         </View>
     );
   }
