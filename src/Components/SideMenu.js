@@ -26,7 +26,7 @@ export default class SideMenu extends React.Component {
              </TouchableOpacity>
             <View style={{ borderBottomColor:'#f2f2f2',borderBottomWidth:1,marginTop:'4%' }} />
         
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('home')}}
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Feedback')}}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>
                     <View style={styles.circleBorder}/>
@@ -41,7 +41,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
              
-             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('home')}}
+             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scholarship')}}
                                style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
@@ -56,7 +56,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
             
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Login')}}
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Mywallet')}}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
