@@ -168,6 +168,7 @@ export default class SideMenu extends React.Component {
                         <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scanner')}}>
                             <Image source={require('../../assets/qrcode.png')} 
                                     style={{height:50,width:50,marginTop:'1%'}}/>
+                        </TouchableOpacity>
                 </View>
             </View>
         </View>
