@@ -22,33 +22,33 @@ export const NavigationOptions = (options, screenName, category) => {
       </View>
     ),
     headerLeft: (
-      <TouchableOpacity
+      ( category != "sideMenu" && <TouchableOpacity
         style={{ marginLeft: 15 }}
         onPress={() => {
           navigation.openDrawer()
         }}
       >
         <MaterialCommunityIcons name="menu" size={26} color={"grey"} />
-      </TouchableOpacity>
+      </TouchableOpacity>)
     ),
     headerRight: (
-      <View
+      ( category != "sideMenu" && <View
         style={{
           marginRight: 18,
           flexDirection: "row",
           alignItems: "center"
         }}
       >
-        <TouchableOpacity style={{ marginRight: 25 }}>
+        <TouchableOpacity style={{ marginRight: 28 }}>
         <Ionicons name="ios-notifications" size={24} color={"grey"} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ marginRight: 25 }}>
+        <TouchableOpacity style={{ marginRight: 28 }}>
         <Ionicons name="md-search" size={20} color={"grey"} />
         </TouchableOpacity>
         <TouchableOpacity >
         <Image style={{tintColor: 'grey', width: 30, height: 30}} source={require('../../../../assets/funding.png')} />
         </TouchableOpacity>
-      </View>
+      </View>)
     ),
     // headerBackground: (
     //   <LinearGradient
