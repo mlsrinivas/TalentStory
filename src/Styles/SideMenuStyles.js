@@ -10,13 +10,14 @@ const styles = StyleSheet.create({
     },
     profilenamesview:{
         flexDirection:'column',
-        marginLeft:'6%',
+        marginLeft:'6%', 
         marginTop:'10%'
     },
     iconarrowstyle:{
-        color:'black',
+        color:'gray',
         marginTop:'12%',
-        marginLeft:'12%'
+        marginLeft:'35%'
+        //justifyContent:'flex-end'
     },
     imageAndText:{
         flex:1,
