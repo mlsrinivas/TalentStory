@@ -17,6 +17,7 @@ import styles from '../../Styles/SignUpStyles/SignUpStyles';
 import  Ionicons  from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Icon } from 'native-base'
 
 export default class SignUp extends React.Component {
 
@@ -84,24 +85,13 @@ export default class SignUp extends React.Component {
             </View>
 
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>                
-                <View >
-                <Ionicons size={26} color="#c2c0c0" name="ios-male" style = {{ position:'absolute', margin:'10%' }}/>
-                <TextInput
-                style = {styles.viewMale}
-                placeholderTextColor = '#c2c0c0'
-                placeholder = 'Male'
-                onChangeText = { (text) => this.setState({text})}
-                />                
+                <View style={styles.gender}>
+                <Icon size={26} name="ios-male" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+                <Text style={{ color:'#DADADA',margin:'5%',position:'absolute',marginHorizontal:50 }}>Male</Text>
                 </View>
-                <View >
-                <Ionicons size={26} color="#c2c0c0" name="ios-female" style = {{ position:'absolute', margin:'10%' }}/>
-                <TextInput
-                style = {styles.viewFemale}
-                placeholderTextColor = '#c2c0c0'
-                placeholder = 'Female'
-
-                onChangeText = { (text) => this.setState({text})}
-                />
+                <View style={ styles.gender}>
+                <Icon size={26} name="ios-female" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+                <Text style={{ color:'#DADADA',margin:'5%',position:'absolute',marginHorizontal:50}}>Female</Text>
                 </View>                
             </View>
             </View>

@@ -13,6 +13,7 @@ import TalentStory from '../../Screens/HomeScreens/TalentStory'
 import Friend from '../../Screens/HomeScreens/Friend'
 import Chat from '../../Screens/HomeScreens/Chat'
 import AddCommunity from '../../Screens/HomeScreens/AddCommunity'
+import TalentStoryStar from '../../Components/TalentStoryStar'
 
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
@@ -28,6 +29,9 @@ const bottomTabIcon = (options, icon) => {
   }
   else if(icon=="message-processing"){
       icon = <MaterialCommunityIcons size={21} color={tintColor} name={icon} />
+  }
+  else if(icon=="star"){
+    return <TalentStoryStar />
   }
   //console.log("tintColor is",tintColor)
   return icon
@@ -75,6 +79,13 @@ export const HomeScreenBottomTabs = createBottomTabNavigator({
         tabBarIcon: (options) => bottomTabIcon(options, "user-friends")
       }
     },
+    StarButton: {
+      screen: () => null,
+      navigationOptions: {
+        tabBarIcon: (options) => bottomTabIcon(options, "star"),
+        tabBarOnPress: () => {}
+      }
+    },
     Chat: {
       screen: ChatStack,
       navigationOptions: {
@@ -90,7 +101,7 @@ export const HomeScreenBottomTabs = createBottomTabNavigator({
   }
   , {
     tabBarOptions: {
-      scrollEnabled: true,
+      scrollEnabled: false,
       activeTintColor: '#0073C0',
       inactiveTintColor: "grey",
       showLabel: false,
@@ -99,6 +110,10 @@ export const HomeScreenBottomTabs = createBottomTabNavigator({
     //   },
       style: {}
     },
+    // tabBarComponent: props => <TalentStoryStar {...props}/>,
+    // tabBarPosition: "bottom",
+    // animationEnabled: true,
+    // swipeEnabled: true,
     initialRouteName: "TalentStory",
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarOnPress: ({ navigation, defaultHandler }) => { defaultHandler() }

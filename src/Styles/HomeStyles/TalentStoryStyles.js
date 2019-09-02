@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
     },
     likeCountView: {
         // flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         marginLeft: '4%',
         marginRight: '4%',
         marginTop: '2%',
@@ -88,6 +88,14 @@ const styles = StyleSheet.create({
         marginTop: '2%',
         //marginBottom: '1%',
         fontSize:13,
+        //alignSelf: 'flex-start',
+        color: 'rgb(176, 171, 171)',
+    },
+    shareCountText: {
+        marginTop: '2%',
+        //marginBottom: '1%',
+        fontSize:13,
+        alignSelf: 'flex-end',
         color: 'rgb(176, 171, 171)',
     },
     likeCommentShareView: {

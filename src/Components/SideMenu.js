@@ -41,7 +41,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
              
-             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('home')}}
+             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scholarship')}}
                                style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
@@ -165,6 +165,7 @@ export default class SideMenu extends React.Component {
                 <View style={{ height:100,backgroundColor:'#F6F6F6',alignItems:'center',justifyContent:'center',flexDirection:'column' }}>
                     <Text style={{ color:'#696969' }}>Version: 1.0.12</Text>
                     <Text style={{ color:'#808080' }}>Powered by: TalentStory</Text>
+                        <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scanner')}}>
                             <Image source={require('../../assets/qrcode.png')} 
                                     style={{height:50,width:50,marginTop:'1%'}}/>
                 </View>
