@@ -7,7 +7,7 @@ export default class JoinedCommunity extends React.Component{
         return(
             <View>
 
-                </View>
+            </View>
         );
     }
 }
