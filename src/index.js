@@ -25,10 +25,12 @@ import JoinedCommunity from './Screens/JoinedCommunity'
 import CreatedCommunity from './Screens/CreatedCommunity'
 import Scholarship from './Screens/ScholarshipScreens/Scholarship'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
+import Profile from './Screens/Profile/Profile'
 import Apply from './Screens/ScholarshipScreens/Apply'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
+
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -97,6 +99,9 @@ const AuthStack = createStackNavigator({
        },
        Mywallet: {
          screen: Mywallet
+       },
+       Profile: {
+         screen: Profile
        },
        SendCoins: {
         screen: SendCoins
