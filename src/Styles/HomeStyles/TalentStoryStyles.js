@@ -9,17 +9,17 @@ const styles = StyleSheet.create({
         backgroundColor: "#F7F7F7"
     },
     talentStory: {
-        height: 500,
+        height: 520,
         //borderColor: '#ddd',
         borderBottomWidth: 0,
         borderTopWidth: 0,
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 0.8,
-        shadowRadius: 1,
+        //shadowRadius: 1,
         elevation: 1,
         marginTop: '2%',
-        marginBottom: '4%'
+        //marginBottom: '2%'
     },
     talenStoryCircle: {
         width: 42,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     },
     talentStoryDescription: {
         color: 'rgb(92, 84, 84)',
-        fontSize: 15,
+        fontSize: 14,
     },
     talentStoryText: {
         fontSize: 15,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginLeft: '4%',
         marginRight: '4%',
-        marginTop: '4%',
+        marginTop: '2%',
         borderWidth: 0.25,
         borderLeftWidth: 0,
         borderRightWidth: 0,

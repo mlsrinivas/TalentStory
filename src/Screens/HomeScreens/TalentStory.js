@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import styles from '../../Styles/HomeStyles/TalentStoryStyles'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
@@ -12,10 +12,7 @@ export default class TalentStory extends React.Component {
   constructor() {
     super();
     this.state = {
-      talentStoriesList: [
-        {},
-        {}
-      ]
+      talentStoriesList: [ {},{},{},{},{} ]
     }
   }
   render() {
@@ -36,7 +33,11 @@ export default class TalentStory extends React.Component {
                     <Text style={styles.storyTime}>27 days ago</Text>
                   </View>
                   <View style={styles.horizontalDots}>
+                  <TouchableOpacity>
+
                     <Entypo size={21} color='rgb(176, 171, 171)' name="dots-three-horizontal" />
+                    </TouchableOpacity>
+
                   </View>
                 </View>
                 <View style={styles.talentStoryDescriptionView}>
@@ -59,18 +60,24 @@ export default class TalentStory extends React.Component {
                     </Text>
                   </View>
                   <View style={styles.likeCommentShareView}>
+                  <TouchableOpacity>
                     <View style={styles.like}>
-                      <AntDesign style={{marginLeft: '4%'}} size={22} color='rgb(176, 171, 171)' name="like2" />
+                      <AntDesign style={{marginLeft: '12%'}} size={22} color='rgb(176, 171, 171)' name="like2" />
                       <Text style={[{marginTop: '1%'}, styles.likeCommentShareText]}>Like</Text>
                     </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
                     <View style={styles.comment}>
                       <EvilIcons size={22} color='rgb(176, 171, 171)' name="comment" />
                       <Text style={styles.likeCommentShareText}>Comment</Text>
                     </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
                     <View style={styles.share}>
                       <MaterialCommunityIcons size={22} color='rgb(176, 171, 171)' name="share" />
-                      <Text style={[{right: '4%'}, styles.likeCommentShareText]}>Share</Text>
+                      <Text style={[{marginRight: '4%'}, styles.likeCommentShareText]}>Share</Text>
                     </View>
+                  </TouchableOpacity>
                   </View>
             </View>
             ))}
