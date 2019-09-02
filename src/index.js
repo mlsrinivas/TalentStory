@@ -23,8 +23,11 @@ import { NavigationOptions } from './Components/ReUsableComponents/HomeScreenHea
 import SideMenu from './Components/SideMenu'
 import JoinedCommunity from './Screens/JoinedCommunity'
 import CreatedCommunity from './Screens/CreatedCommunity'
-import Scholarship from './Screens/Scholarship'
+import Scholarship from './Screens/ScholarshipScreens/Scholarship'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
+import Apply from './Screens/ScholarshipScreens/Apply'
+import Mywallet from './Screens/Mywallet'
+import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
 
 class AuthLoadingScreen extends React.Component {
@@ -89,6 +92,15 @@ const AuthStack = createStackNavigator({
          screen: Aboutus,
          navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
        },
+       Apply: {
+         screen: Apply
+       },
+       Mywallet: {
+         screen: Mywallet
+       },
+       SendCoins: {
+        screen: SendCoins
+      },
     // LogOutScreen: {
     //   screen: Logout
     // },
