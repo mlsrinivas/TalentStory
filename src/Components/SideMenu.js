@@ -13,7 +13,7 @@ export default class SideMenu extends React.Component {
       <ScrollView>
         <View style={{ flex:1,flexDirection: 'column'}}>
              <TouchableOpacity style={{ flex:1,flexDirection:'row' }}
-                               onPress={()=>{this.props.navigation.navigate('Login')}}>
+                               onPress={()=>{this.props.navigation.navigate('Profile')}}>
                 <Image source={require('../../assets/Splash.png')}
                        style={styles.profileimage}/>
                         <View style={styles.profilenamesview}>

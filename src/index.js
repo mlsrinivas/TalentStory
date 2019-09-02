@@ -24,6 +24,7 @@ import SideMenu from './Components/SideMenu'
 import JoinedCommunity from './Screens/JoinedCommunity'
 import CreatedCommunity from './Screens/CreatedCommunity'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
+import Profile from './Screens/Profile/Profile'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -83,6 +84,9 @@ const AuthStack = createStackNavigator({
     // },
        Aboutus: {
          screen: Aboutus
+       },
+       Profile: {
+         screen: Profile
        },
     // LogOutScreen: {
     //   screen: Logout
