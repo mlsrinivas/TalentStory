@@ -30,6 +30,9 @@ import Apply from './Screens/ScholarshipScreens/Apply'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
+import MyTimeline from './Screens/Profile/MyTimeline'
+import Language from './Screens/Profile/Language'
+import Topics from './Screens/Profile/Topics'
 
 
 class AuthLoadingScreen extends React.Component {
@@ -111,7 +114,16 @@ const AuthStack = createStackNavigator({
     // },
        Scanner:{
          screen: Scanner
-       }
+       },
+       Timeline:{
+         screen: MyTimeline
+       },
+       Language:{
+         screen: Language
+       },
+       Topics:{
+         screen: Topics
+       },
 });
 
 const DrawerAuthStack = createDrawerNavigator(
