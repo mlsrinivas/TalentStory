@@ -45,7 +45,7 @@ export const NavigationOptions = (options, screenName, category) => {
         <TouchableOpacity style={{ marginRight: 28 }}>
         <Ionicons name="md-search" size={20} color={"grey"} />
         </TouchableOpacity>
-        <TouchableOpacity >
+        <TouchableOpacity onPress={()=>navigation.navigate('Funding')}>
         <Image style={{tintColor: 'grey', width: 30, height: 30}} source={require('../../../../assets/funding.png')} />
         </TouchableOpacity>
       </View>)

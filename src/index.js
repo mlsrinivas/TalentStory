@@ -30,6 +30,7 @@ import Apply from './Screens/ScholarshipScreens/Apply'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
+import Funding from './Screens/FundingScreens/Funding'
 
 
 class AuthLoadingScreen extends React.Component {
@@ -111,6 +112,9 @@ const AuthStack = createStackNavigator({
     // },
        Scanner:{
          screen: Scanner
+       },
+       Funding: {
+        screen: Funding
        }
 });
 
