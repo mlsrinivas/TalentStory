@@ -39,7 +39,8 @@ export const NavigationOptions = (options, screenName, category) => {
           alignItems: "center"
         }}
       >
-        <TouchableOpacity style={{ marginRight: 28 }}>
+        <TouchableOpacity style={{ marginRight: 28 }}
+                          onPress={()=>navigation.navigate('Notifications')}>
         <Ionicons name="ios-notifications" size={24} color={"grey"} />
         </TouchableOpacity>
         <TouchableOpacity style={{ marginRight: 28 }}>
