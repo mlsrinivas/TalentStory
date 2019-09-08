@@ -80,7 +80,7 @@ export default class Login extends React.Component {
                 <TextInput
                 style = {styles.firstNameText}
                 placeholder = 'Mobile Number'
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                
@@ -88,16 +88,16 @@ export default class Login extends React.Component {
                 style = {styles.firstNameText}
                 secureTextEntry = {true}
                 placeholder = 'Enter Password'
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                 
                 <View style={{ flexDirection:'row',marginTop:15, justifyContent:'center' }}>
-                <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>Not Register?</Text>
+                <Text style={{ color:'#B5B5B5',margin:5,fontSize: 12 }}>Not Register?</Text>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
                   <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Sign-Up</Text>
                 </TouchableOpacity>
-                <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>or</Text>
+                <Text style={{ color:'#B5B5B5',margin:5,fontSize: 12 }}>or</Text>
                 <TouchableOpacity onPress = {() => this.props.navigation.navigate('ForgetPassword')}>
                 <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Forgot Password</Text>
                 </TouchableOpacity>
