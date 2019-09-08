@@ -6,6 +6,9 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 //import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 //import RadioButton from 'react-native-radio-button' 
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
+import { Dropdown } from 'react-native-material-dropdown';
+import ModalDropdown from 'react-native-modal-dropdown';
+
 
 
 export default class AddCommunity extends React.Component {
@@ -19,6 +22,28 @@ export default class AddCommunity extends React.Component {
   render() {
     const name = this.state;
     const radio_props = [{label: 'Public', value: 0 }, {label: 'Private', value: 0 }];
+
+    let data = [{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              }, 
+            ];
+
     return (
         <View style={{ flex: 1 }}>
         <ScrollView>
@@ -58,8 +83,29 @@ export default class AddCommunity extends React.Component {
         </View>
         </TouchableOpacity>
         </View>
-        
+
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+        <Dropdown
+        label='Select City'
+        data={data}
+        itemCount = '10'
+        />
+        </View>
+
+        <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+        <Dropdown
+        label='Select State'
+        data={data}
+        itemCount = '10'
+        />
+        </View>
+
+        {/* <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+        <ModalDropdown options={['option 1', 'option 2']}/>
+        </View> */}
+
+        
+        {/* <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Select City'
         tintColor = '#c2c0c0'
@@ -74,7 +120,8 @@ export default class AddCommunity extends React.Component {
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
-        </View>
+        </View> */}
+
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Area'
