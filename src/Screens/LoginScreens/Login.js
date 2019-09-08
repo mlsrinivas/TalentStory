@@ -23,42 +23,42 @@ export default class Login extends React.Component {
   
   constructor(props){
       super(props);
-      this.state={
-        text : '',
-        keyboardOffset: 0,
-      }
-      this._keyboardDidShow = this._keyboardDidShow.bind(this);
-      this._keyboardDidHide = this._keyboardDidHide.bind(this);
+      // this.state={
+      //   text : '',
+      //   keyboardOffset: 0,
+      // }
+      // this._keyboardDidShow = this._keyboardDidShow.bind(this);
+      // this._keyboardDidHide = this._keyboardDidHide.bind(this);
 
     } 
 
-      componentDidMount() {
-          this.keyboardDidShowListener = Keyboard.addListener(
-              'keyboardDidShow',
-              this._keyboardDidShow,
-          );
-          this.keyboardDidHideListener = Keyboard.addListener(
-              'keyboardDidHide',
-              this._keyboardDidHide,
-          );
-      }
+      // componentDidMount() {
+      //     this.keyboardDidShowListener = Keyboard.addListener(
+      //         'keyboardDidShow',
+      //         this._keyboardDidShow,
+      //     );
+      //     this.keyboardDidHideListener = Keyboard.addListener(
+      //         'keyboardDidHide',
+      //         this._keyboardDidHide,
+      //     );
+      // }
 
-      componentWillUnmount() {
-          this.keyboardDidShowListener.remove();
-          this.keyboardDidHideListener.remove();
-      }
+      // componentWillUnmount() {
+      //     this.keyboardDidShowListener.remove();
+      //     this.keyboardDidHideListener.remove();
+      // }
 
-      _keyboardDidShow(event) {
-          this.setState({
-              keyboardOffset: event.endCoordinates.height,
-          })
-      }
+      // _keyboardDidShow(event) {
+      //     this.setState({
+      //         keyboardOffset: event.endCoordinates.height,
+      //     })
+      // }
 
-      _keyboardDidHide() {
-          this.setState({
-              keyboardOffset: 0,
-          })
-      }
+      // _keyboardDidHide() {
+      //     this.setState({
+      //         keyboardOffset: 0,
+      //     })
+      // }
 
     render() {
       const dimensions = Dimensions.get('window');
@@ -68,7 +68,7 @@ export default class Login extends React.Component {
       return (
         <View style={styles.container}>
         <ScrollView>
-            <View style = {{flex:1, flexDirection:'column', bottom:this.state.keyboardOffset, alignItems:'center', justifyContent:'space-between'}}>
+            <View style = {{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'space-between'}}>
                 {/* <ResponsiveImage source={require('../../../assets/login.png')} 
                                 style = {{justifyContent:'flex-start'}}
                                  initWidth="300" initHeight="300"

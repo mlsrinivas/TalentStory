@@ -114,8 +114,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
             
-            <TouchableOpacity onPress={()=>onFeedBackModal}
-                              style={{flexDirection:'row'}}>
+            <TouchableOpacity style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
                     <Image source={require('../../assets/rating.png')}
@@ -129,8 +128,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
             
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Login')}}
-                              style={{flexDirection:'row'}}>
+            <TouchableOpacity style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
                     <Image source={require('../../assets/rating.png')}
@@ -160,7 +158,7 @@ export default class SideMenu extends React.Component {
             <View style={styles.linestyle} />
             
             <TouchableOpacity onPress={() => Alert.alert('Logout', 'Do you want to logout from app?', 
-                                    [{text: 'No'}, {text: 'Yes'}])} style={{flexDirection:'row'}}>
+                                    [{text: 'No'}, {text: 'Yes', onPress: () => this.props.navigation.navigate('Login')}])} style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
                     <Image source={require('../../assets/logout.png')}

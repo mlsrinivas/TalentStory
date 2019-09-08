@@ -59,6 +59,71 @@ class AuthLoadingScreen extends React.Component {
   }
 }
 
+const AppStack = createStackNavigator({
+  HomeScreenStack: { 
+    screen: HomeScreenBottomTabs,
+    navigationOptions: (options) => NavigationOptions(options, "", "homeScreen")
+  },
+  Scholarship: {
+    screen: Scholarship,
+    navigationOptions: (options) => NavigationOptions(options, "Scholarship", "sideMenu")
+  },
+  // MyWalletScreen: {
+  //   screen: MyWallet
+  // },
+  JoinedCommunity: {
+    screen: JoinedCommunity,
+    navigationOptions: (options) => NavigationOptions(options, "Joined Communities", "sideMenu")
+  },
+  CreatedCommunity: {
+    screen: CreatedCommunity,
+    navigationOptions: (options) => NavigationOptions(options, "Created Communities", "sideMenu")
+  },
+  Aboutus: {
+       screen: Aboutus,
+       navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
+  },
+  Apply: {
+       screen: Apply
+     },
+     Mywallet: {
+       screen: Mywallet,
+       navigationOptions: (options) => NavigationOptions(options, "My Wallet", "sideMenu")
+     },
+     Profile: {
+       screen: Profile,
+       //navigationOptions: (options) => NavigationOptions(options, "My Wallet", "sideMenu")
+     },
+     SendCoins: {
+      screen: SendCoins
+    },
+  // LogOutScreen: {
+  //   screen: Logout
+  // },
+     Scanner:{
+       screen: Scanner,
+       navigationOptions: (options) => NavigationOptions(options, "QR Scan", "sideMenu")
+     },
+     Funding: {
+      screen: Funding
+     },
+     Timeline:{
+       screen: MyTimeline,
+       navigationOptions: (options) => NavigationOptions(options, "My Timeline", "sideMenu")
+     },
+     Language:{
+       screen: Language,
+       navigationOptions: (options) => NavigationOptions(options, "Languages Known", "sideMenu")
+     },
+     Topics:{
+       screen: Topics,
+       navigationOptions: (options) => NavigationOptions(options, "Interested Topics", "sideMenu")
+     },
+    Notifications:{
+      screen: Notifications,
+      navigationOptions: (options) => NavigationOptions(options, "Notifications", "sideMenu")
+    }    
+})
 const AuthStack = createStackNavigator({
     Login: { 
         screen: Login,
@@ -74,66 +139,15 @@ const AuthStack = createStackNavigator({
     // FeedBackScreen: {
     //   screen: FeedBack
     // },
-    Scholarship: {
-      screen: Scholarship
-    },
-    // MyWalletScreen: {
-    //   screen: MyWallet
-    // },
-    JoinedCommunity: {
-      screen: JoinedCommunity,
-      navigationOptions: (options) => NavigationOptions(options, "Joined Communities", "sideMenu")
-    },
-    CreatedCommunity: {
-      screen: CreatedCommunity,
-      navigationOptions: (options) => NavigationOptions(options, "Created Communities", "sideMenu")
-    },
-    Aboutus: {
-         screen: Aboutus,
-         navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
-    },
-    Apply: {
-         screen: Apply
-       },
-       Mywallet: {
-         screen: Mywallet
-       },
-       Profile: {
-         screen: Profile
-       },
-       SendCoins: {
-        screen: SendCoins
-      },
-    // LogOutScreen: {
-    //   screen: Logout
-    // },
-       Scanner:{
-         screen: Scanner
-       },
-       Funding: {
-        screen: Funding
-       },
-       Timeline:{
-         screen: MyTimeline
-       },
-       Language:{
-         screen: Language
-       },
-       Topics:{
-         screen: Topics
-       },
-   Notifications:{
-     screen: Notifications
-   }    
+    
 });
 
 const DrawerAuthStack = createDrawerNavigator(
   {
-    AuthStack: {
-      screen: AuthStack
-    },
-    HomeScreenStack: { 
-      screen: HomeScreenBottomTabs
+    
+    
+    App: {
+      screen: AppStack
     },
   },
   {
@@ -147,10 +161,8 @@ export default createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
-     Auth: DrawerAuthStack,
-      // Auth: {
-      //   screen: AuthStack,
-      // }
+     Auth: AuthStack,
+      App: DrawerAuthStack
     },
     {
       initialRouteName: "AuthLoading"

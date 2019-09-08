@@ -14,7 +14,7 @@ const TalentStoryStar = props => {
             <Image source={require('../../assets/tstar.webp')} tintColor style={styles.buttonIcon}/>
           </TouchableOpacity>
       </View>
-   
+    
   );
 };
 

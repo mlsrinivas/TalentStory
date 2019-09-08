@@ -7,6 +7,7 @@ import Ionicons from "react-native-vector-icons/Ionicons"
 export const NavigationOptions = (options, screenName, category) => {
   const { navigation } = options
   return {
+    header: (category == "homeScreen" && null),
     headerTitle: (
       <View style={{ marginBottom: Platform === "ios" ? 30 : 25, marginLeft:5 }}>
         <Text
