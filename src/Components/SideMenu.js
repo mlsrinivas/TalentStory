@@ -1,13 +1,26 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, ScrollView, Alert} from 'react-native'
+import { View, Text, TouchableOpacity, Image, ScrollView, Alert, Dimensions, StyleSheet,TextInput } from 'react-native'
 import { Icon } from 'native-base';
 import styles from '../Styles/SideMenuStyles';
-
+import Modal from 'react-native-modal'
 
 export default class SideMenu extends React.Component {
   constructor() {
     super();
+    this.state={
+        isModalVisible:false,
+        text:'',
+    }
   }
+
+  onModalState = () => {
+      this.setState({ isModalVisible: true })
+  }
+
+  closeModal = () => {
+      this.setState({ isModalVisible: false })
+  }
+
   render() {
     return (
       <ScrollView>
@@ -26,7 +39,7 @@ export default class SideMenu extends React.Component {
              </TouchableOpacity>
             <View style={{ borderBottomColor:'#f2f2f2',borderBottomWidth:1,marginTop:'4%' }} />
         
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Feedback')}}
+            <TouchableOpacity onPress={this.onModalState}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>
                     <View style={styles.circleBorder}/>
@@ -101,7 +114,7 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
             
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Login')}}
+            <TouchableOpacity onPress={()=>onFeedBackModal}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
@@ -172,7 +185,63 @@ export default class SideMenu extends React.Component {
                 </View>
             </View>
         </View>
+        <Modal isVisible={this.state.isModalVisible}>
+                <View style={modalstyles.content}>
+                   {/* <View style={{ flexDirection:'row',margin:'5%'}}> */}
+                   <View style={{ margin:'5%'}}>
+                    <Text style={{ color:'#000000',fontSize:20,fontWeight:'bold' }}>Feedback</Text> 
+                    <Text style={{ color:'gray',fontSize:10 }}>Reinforce positive and negative behaviours</Text>
+                    {/* </View> */}
+                    </View> 
+                    <View style={{ borderBottomColor:'#DADADA',borderBottomWidth:1,marginTop:'5%' }} />
+                    
+                    <TextInput  placeholder='Message'
+                                style={modalstyles.inputtext}
+                                editable={true}
+                                multiline={true}
+                                placeholderTextColor = '#c2c0c0'
+                                onChangeText = { (text) => this.setState({text})}/>
+                            
+                    
+                    <View style={{ flexDirection:'row',margin:'3%',justifyContent:'space-around',marginTop:'8%'}}>
+                        <TouchableOpacity style={modalstyles.button}
+                                          onPress={this.closeModal}>
+                        <Text style={{ marginTop:'4%',fontWeight:'bold',fontSize:15 }}>cancel</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={modalstyles.button}
+                                          onPress={this.closeModal}>
+                        <Text style={{ marginTop:'4%',fontWeight:'bold',fontSize:15 }}>submit</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
       </ScrollView>
     );
   }
 }
+
+const modalstyles= StyleSheet.create({
+    content:{
+        backgroundColor: 'white',
+        borderRadius: 4,
+        justifyContent:'space-between'
+    },
+    inputtext:{
+        borderRadius:4,
+        borderColor:'#000000',
+        borderWidth:1,
+        paddingHorizontal:10,
+        margin:'3%',
+        height:60,
+        justifyContent:'space-around'
+    },
+    button:{
+        borderRadius:4,
+        borderColor:'#000000',
+        borderWidth:1,
+        alignItems:'center',
+        height:35,
+        width:100,
+    }
+
+})
