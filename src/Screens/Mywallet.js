@@ -20,33 +20,33 @@ export default class Mywallet extends React.Component{
     render(){
         return(
             <View style = {{flex:1, height:'100%', width:'100%'}}>
-                <View style = {{height:'39%', width:'94%', backgroundColor: '#0073C0', margin:'3%', borderRadius:5}}>
-                    <Text style = {{textAlign:'center', fontSize:15, color:'white', marginTop:'5%'}}>Srinivas ML</Text>
-                    <View style = {{height:70, width:70,borderRadius:40, backgroundColor:'white', marginLeft:'40%', marginTop:'5%'}}>
+                <View style = {{height:'41%', width:'94%', backgroundColor: '#0073C0', margin:'3%', borderRadius:5}}>
+                    <Text style = {{textAlign:'center', fontSize:15, color:'white', marginTop:'5%', fontWeight:'bold'}}>Srinivas ML</Text>
+                    <View style = {{height:100, width:100,borderRadius:50, backgroundColor:'white', alignSelf:'center', marginTop:'5%'}}>
 
                     </View>
-                    <View style = {{justifyContent:'space-between', flexDirection:'row', marginTop:'12%', margin:'7%'}}>
-                        <Text style = {{fontSize:15, color:'white'}}>Available balance</Text>
+                    <View style = {{justifyContent:'space-between', flexDirection:'row',  margin:'7%'}}>
+                        <Text style = {{fontSize:15, color:'white', fontWeight:'bold'}}>Available balance</Text>
                         <View style = {{height:35, width:125, backgroundColor:'white', borderRadius:30, borderWidth:1, borderColor:'#F7A502', alignContent:'center'}}>
                             <TouchableOpacity style = {{justifyContent:'center', marginTop:'5%', flexDirection:'row'}}>
                             <AntDesign size={15} color='#7CD41C' name='caretdown' />
-                            <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>TCS 1000</Text>
+                            <Text style = {{fontSize:15, color:'black', marginLeft:'3%', fontWeight:'bold'}}>TCS 10000</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
                     <View style = {{alignItems:'center'}}>
                     <TouchableOpacity style = {{height:23, width:125, backgroundColor:'#00897D', borderRadius:30, borderWidth:2, borderColor:'white', alignItems:'center'}}>
-                    <Text style = {{fontSize:12, color:'white',alignItems:'center' }}>Terms and Conditions</Text>
+                    <Text style = {{fontSize:12, color:'white',alignItems:'center', fontWeight:'bold' }}>Terms and Conditions</Text>
                     </TouchableOpacity>
                     </View>
                     </View>
                     <View style = {{height:50, width:'100%', backgroundColor:'#0073C0'}}>
                         <View style = {{ justifyContent:'space-around', flexDirection:'row', alignContent:'center', marginTop:'4%'}}>
                         <TouchableOpacity>
-                        <Text style = {{fontSize:15, color:'white'}}>RECEIVED</Text>
+                        <Text style = {{fontSize:15, color:'white', fontWeight:'bold'}}>RECEIVED</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                        <Text style = {{fontSize:15, color:'white'}}>SENT</Text>
+                        <TouchableOpacity> 
+                        <Text style = {{fontSize:15, color:'white', fontWeight:'bold'}}>SENT</Text>
                         </TouchableOpacity>
                         </View>
                     </View> 

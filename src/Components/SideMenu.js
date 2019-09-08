@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image, ScrollView, Alert, Dimensions, Sty
 import { Icon } from 'native-base';
 import styles from '../Styles/SideMenuStyles';
 import Modal from 'react-native-modal'
+import { Dropdown } from 'react-native-material-dropdown';
 
 export default class SideMenu extends React.Component {
   constructor() {
@@ -22,6 +23,16 @@ export default class SideMenu extends React.Component {
   }
 
   render() {
+        let data = [{
+                    value: 'General',
+                },{
+                    value: 'Performance',
+                },{
+                    value: 'Something Not Working',
+                },{
+                    value: 'Abusive Content',
+                }];
+
     return (
       <ScrollView>
         <View style={{ flex:1,flexDirection: 'column'}}>
@@ -183,15 +194,25 @@ export default class SideMenu extends React.Component {
                 </View>
             </View>
         </View>
-        <Modal isVisible={this.state.isModalVisible}>
+        <Modal isVisible={this.state.isModalVisible}> 
                 <View style={modalstyles.content}>
                    {/* <View style={{ flexDirection:'row',margin:'5%'}}> */}
                    <View style={{ margin:'5%'}}>
-                    <Text style={{ color:'#000000',fontSize:20,fontWeight:'bold' }}>Feedback</Text> 
-                    <Text style={{ color:'gray',fontSize:10 }}>Reinforce positive and negative behaviours</Text>
+                    <Text style={{ color:'#515151',fontSize:25,fontWeight:'bold' }}>Feedback</Text> 
+                    <Text style={{ color:'#515151',fontSize:12 }}>Reinforce positive and negative behaviours</Text>
                     {/* </View> */}
                     </View> 
-                    <View style={{ borderBottomColor:'#DADADA',borderBottomWidth:1,marginTop:'5%' }} />
+                    <View style={{ borderBottomColor:'#DADADA',borderBottomWidth:1,marginTop:'1%' }} />
+
+                    <View style = {{marginLeft:'5%', marginRight:'5%', marginTop:'5%'}}>
+                        <Dropdown
+                        label='Select Category'
+                        data={data}
+                        itemCount = '5'
+                        textColor = '#515151'
+                        itemColor = '#515151'
+                        />
+                    </View>
                     
                     <TextInput  placeholder='Message'
                                 style={modalstyles.inputtext}
@@ -199,16 +220,16 @@ export default class SideMenu extends React.Component {
                                 multiline={true}
                                 placeholderTextColor = '#B5B5B5'
                                 onChangeText = { (text) => this.setState({text})}/>
-                            
+                          
                     
-                    <View style={{ flexDirection:'row',margin:'3%',justifyContent:'space-around',marginTop:'8%'}}>
+                    <View style={{ flexDirection:'row',margin:'3%',justifyContent:'space-around',marginTop:'8%', marginBottom:'8%'}}>
                         <TouchableOpacity style={modalstyles.button}
                                           onPress={this.closeModal}>
-                        <Text style={{ marginTop:'4%',fontWeight:'bold',fontSize:15 }}>cancel</Text>
+                        <Text style={{ fontWeight:'bold',fontSize:17, color:'#515151' }}>Cancel</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={modalstyles.button}
                                           onPress={this.closeModal}>
-                        <Text style={{ marginTop:'4%',fontWeight:'bold',fontSize:15 }}>submit</Text>
+                        <Text style={{ fontWeight:'bold',fontSize:17, color:'#515151' }}>Submit</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -221,25 +242,26 @@ export default class SideMenu extends React.Component {
 const modalstyles= StyleSheet.create({
     content:{
         backgroundColor: 'white',
-        borderRadius: 4,
+        borderRadius: 5,
         justifyContent:'space-between'
     },
     inputtext:{
-        borderRadius:4,
-        borderColor:'#000000',
+        borderRadius:5,
+        borderColor:'#B5B5B5',
         borderWidth:1,
         paddingHorizontal:10,
         margin:'3%',
         height:60,
-        justifyContent:'space-around'
+        justifyContent:'space-around',
+        fontSize:15
     },
     button:{
-        borderRadius:4,
-        borderColor:'#000000',
+        borderRadius:5,
+        borderColor:'#B5B5B5',
         borderWidth:1,
         alignItems:'center',
-        height:35,
-        width:100,
+        height:32,
+        width:150,
     }
 
 })
