@@ -31,7 +31,10 @@ import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
 import Funding from './Screens/FundingScreens/Funding'
-
+import MyTimeline from './Screens/Profile/MyTimeline'
+import Language from './Screens/Profile/Language'
+import Topics from './Screens/Profile/Topics'
+import Notifications from './Screens/Notifications'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -85,17 +88,11 @@ const AuthStack = createStackNavigator({
       screen: CreatedCommunity,
       navigationOptions: (options) => NavigationOptions(options, "Created Communities", "sideMenu")
     },
-    // RateTheAppScreen: {
-    //   screen: CreatedCommunity
-    // },
-    // ShareWithFriendsScreen: {
-    //   screen: ShareWithFriend
-    // },
-       Aboutus: {
+    Aboutus: {
          screen: Aboutus,
          navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
-       },
-       Apply: {
+    },
+    Apply: {
          screen: Apply
        },
        Mywallet: {
@@ -115,7 +112,19 @@ const AuthStack = createStackNavigator({
        },
        Funding: {
         screen: Funding
-       }
+       },
+       Timeline:{
+         screen: MyTimeline
+       },
+       Language:{
+         screen: Language
+       },
+       Topics:{
+         screen: Topics
+       },
+   Notifications:{
+     screen: Notifications
+   }    
 });
 
 const DrawerAuthStack = createDrawerNavigator(
