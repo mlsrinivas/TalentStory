@@ -30,7 +30,7 @@ export default class SideMenu extends React.Component {
                 <Image source={require('../../assets/Splash.png')}
                        style={styles.profileimage}/>
                         <View style={styles.profilenamesview}>
-                            <Text style={{ fontSize:18,color:'#808080',fontWeight:'bold'}}>User Name</Text>
+                            <Text style={{ fontSize:18,color:'#515151',fontWeight:'bold'}}>User Name</Text>
                             <Text style={{ fontSize:12,color:'#BeBeBe', marginTop:'4%' }}>View Your Profile</Text>
                         </View>
                 <Icon name='ios-arrow-forward' 
@@ -46,7 +46,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/feedback.png')}
                            style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10}}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10}}>
                                 Feedback
                                 </Text>
                         </View>
@@ -61,7 +61,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/scholarship.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     Scholarship
                                 </Text>
                         </View>
@@ -76,7 +76,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/scholarship.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     My Wallet
                                 </Text>
                         </View>
@@ -91,7 +91,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/jionedcommunity.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     Joined Communities
                                 </Text>
                         </View>
@@ -106,7 +106,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/createdcommunity.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     Created Communities
                                 </Text>
                         </View>
@@ -114,14 +114,13 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
             
-            <TouchableOpacity onPress={()=>onFeedBackModal}
-                              style={{flexDirection:'row'}}>
+            <TouchableOpacity style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
                     <Image source={require('../../assets/rating.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     Rate the App
                                 </Text>
                         </View>
@@ -129,14 +128,13 @@ export default class SideMenu extends React.Component {
             </TouchableOpacity>
             <View style={styles.linestyle} />
             
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Login')}}
-                              style={{flexDirection:'row'}}>
+            <TouchableOpacity style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
                     <Image source={require('../../assets/rating.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     Share with Friends
                                 </Text>
                         </View>
@@ -151,7 +149,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/aboutus.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                     About Us
                                 </Text>
                         </View>
@@ -160,13 +158,13 @@ export default class SideMenu extends React.Component {
             <View style={styles.linestyle} />
             
             <TouchableOpacity onPress={() => Alert.alert('Logout', 'Do you want to logout from app?', 
-                                    [{text: 'No'}, {text: 'Yes'}])} style={{flexDirection:'row'}}>
+                                    [{text: 'No'}, {text: 'Yes', onPress: () => this.props.navigation.navigate('Login')}])} style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
                     <Image source={require('../../assets/logout.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                            <Text style={{ color:'black', paddingHorizontal:10 }}>
+                            <Text style={{ color:'#515151', paddingHorizontal:10 }}>
                                 Logout
                             </Text>
                      </View>
@@ -199,7 +197,7 @@ export default class SideMenu extends React.Component {
                                 style={modalstyles.inputtext}
                                 editable={true}
                                 multiline={true}
-                                placeholderTextColor = '#c2c0c0'
+                                placeholderTextColor = '#B5B5B5'
                                 onChangeText = { (text) => this.setState({text})}/>
                             
                     

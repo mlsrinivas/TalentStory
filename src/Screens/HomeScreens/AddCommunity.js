@@ -51,7 +51,7 @@ export default class AddCommunity extends React.Component {
         <TextField
         label='Community Name'
         //baseColor = 'red'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
@@ -59,7 +59,7 @@ export default class AddCommunity extends React.Component {
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Tell about your community'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         numberOfLines={10}
         multiline={true}
@@ -108,7 +108,7 @@ export default class AddCommunity extends React.Component {
         {/* <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Select City'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
@@ -116,7 +116,7 @@ export default class AddCommunity extends React.Component {
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Select State'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
@@ -125,7 +125,7 @@ export default class AddCommunity extends React.Component {
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Area'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />

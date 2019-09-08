@@ -37,14 +37,14 @@ export default class ForgetPassword extends React.Component{
             <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' />
             </View>
                 <View style={styles.container}>
-                    <Text style={{ color:'#000000', fontSize:25}}>Reset Password?</Text>
-                    <Text style={{ color:'#c2c0c0',marginTop:10 }}>Enter phone number below to recieve</Text>
-                    <Text style={{ color:'#c2c0c0',marginLeft:17 }}>otp to reset your password</Text>
+                    <Text style={{ color:'#515151', fontSize:25}}>Reset Password?</Text>
+                    <Text style={{ color:'#B5B5B5',marginTop:10 }}>Enter phone number below to recieve</Text>
+                    <Text style={{ color:'#B5B5B5',marginLeft:17 }}>otp to reset your password</Text>
 
                     <TextInput
                     style= {styles.txtinput}
                     placeholder= 'Phone number'
-                    placeholderTextColor = '#c2c0c0'
+                    placeholderTextColor = '#B5B5B5'
                     onChangeText = {(text) => this.setState({text})}/>
 
                     <TouchableOpacity style= {styles.buton}>

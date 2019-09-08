@@ -60,11 +60,12 @@ const styles = StyleSheet.create({
         marginRight: '4%'
     },
     talentStoryDescription: {
-        color: 'rgb(92, 84, 84)',
+        color:'#5E5E5E',
         fontSize: 14,
     },
     talentStoryText: {
         fontSize: 15,
+        color:'#515151'
     },
     storyImage: {
         marginTop: '2%',

@@ -25,7 +25,7 @@ export default class Apply extends React.Component{
                 <TextField
                     label='Community Name'
                     //baseColor = 'red'
-                    tintColor = '#c2c0c0'
+                    tintColor = '#B5B5B5'
                     style  = {{activeLineWidth : 1, lineWidth : 0.7, }}
                     
                     //onChangeText={ (name) => this.setState({ name }) }

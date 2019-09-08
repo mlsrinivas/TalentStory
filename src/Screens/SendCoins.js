@@ -48,17 +48,17 @@ export default class Apply extends React.Component{
                         <TextInput
                             style= {styles.txtinput}
                             placeholder= 'To'
-                            placeholderTextColor = '#c2c0c0'
+                            placeholderTextColor = '#B5B5B5'
                             onChangeText = {(text) => this.setState({text})}/>
                         <TextInput
                             style= {styles.txtinput}
                             placeholder= 'Amount(in TCS)'
-                            placeholderTextColor = '#c2c0c0'
+                            placeholderTextColor = '#B5B5B5'
                             onChangeText = {(text) => this.setState({text})}/>
                         <TextInput
                             style= {styles.txtinput}
                             placeholder= 'Message(Optional)'
-                            placeholderTextColor = '#c2c0c0'
+                            placeholderTextColor = '#B5B5B5'
                             onChangeText = {(text) => this.setState({text})}/>
                         
                         <LinearGradient colors={['#4dd2ff', '#4dffdb']} start={{x: 0, y: 0}} end={{x: 1, y: 0}} style = {{height:45, width:'65%',  marginTop:'20%', borderRadius:30}}>

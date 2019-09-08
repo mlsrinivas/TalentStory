@@ -23,42 +23,42 @@ export default class Login extends React.Component {
   
   constructor(props){
       super(props);
-      this.state={
-        text : '',
-        keyboardOffset: 0,
-      }
-      this._keyboardDidShow = this._keyboardDidShow.bind(this);
-      this._keyboardDidHide = this._keyboardDidHide.bind(this);
+      // this.state={
+      //   text : '',
+      //   keyboardOffset: 0,
+      // }
+      // this._keyboardDidShow = this._keyboardDidShow.bind(this);
+      // this._keyboardDidHide = this._keyboardDidHide.bind(this);
 
     } 
 
-      componentDidMount() {
-          this.keyboardDidShowListener = Keyboard.addListener(
-              'keyboardDidShow',
-              this._keyboardDidShow,
-          );
-          this.keyboardDidHideListener = Keyboard.addListener(
-              'keyboardDidHide',
-              this._keyboardDidHide,
-          );
-      }
+      // componentDidMount() {
+      //     this.keyboardDidShowListener = Keyboard.addListener(
+      //         'keyboardDidShow',
+      //         this._keyboardDidShow,
+      //     );
+      //     this.keyboardDidHideListener = Keyboard.addListener(
+      //         'keyboardDidHide',
+      //         this._keyboardDidHide,
+      //     );
+      // }
 
-      componentWillUnmount() {
-          this.keyboardDidShowListener.remove();
-          this.keyboardDidHideListener.remove();
-      }
+      // componentWillUnmount() {
+      //     this.keyboardDidShowListener.remove();
+      //     this.keyboardDidHideListener.remove();
+      // }
 
-      _keyboardDidShow(event) {
-          this.setState({
-              keyboardOffset: event.endCoordinates.height,
-          })
-      }
+      // _keyboardDidShow(event) {
+      //     this.setState({
+      //         keyboardOffset: event.endCoordinates.height,
+      //     })
+      // }
 
-      _keyboardDidHide() {
-          this.setState({
-              keyboardOffset: 0,
-          })
-      }
+      // _keyboardDidHide() {
+      //     this.setState({
+      //         keyboardOffset: 0,
+      //     })
+      // }
 
     render() {
       const dimensions = Dimensions.get('window');
@@ -68,7 +68,7 @@ export default class Login extends React.Component {
       return (
         <View style={styles.container}>
         <ScrollView>
-            <View style = {{flex:1, flexDirection:'column', bottom:this.state.keyboardOffset, alignItems:'center', justifyContent:'space-between'}}>
+            <View style = {{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'space-between'}}>
                 {/* <ResponsiveImage source={require('../../../assets/login.png')} 
                                 style = {{justifyContent:'flex-start'}}
                                  initWidth="300" initHeight="300"
@@ -80,7 +80,7 @@ export default class Login extends React.Component {
                 <TextInput
                 style = {styles.firstNameText}
                 placeholder = 'Mobile Number'
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                
@@ -88,16 +88,16 @@ export default class Login extends React.Component {
                 style = {styles.firstNameText}
                 secureTextEntry = {true}
                 placeholder = 'Enter Password'
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                 
                 <View style={{ flexDirection:'row',marginTop:15, justifyContent:'center' }}>
-                <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>Not Register?</Text>
+                <Text style={{ color:'#B5B5B5',margin:5,fontSize: 12 }}>Not Register?</Text>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
                   <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Sign-Up</Text>
                 </TouchableOpacity>
-                <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>or</Text>
+                <Text style={{ color:'#B5B5B5',margin:5,fontSize: 12 }}>or</Text>
                 <TouchableOpacity onPress = {() => this.props.navigation.navigate('ForgetPassword')}>
                 <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Forgot Password</Text>
                 </TouchableOpacity>

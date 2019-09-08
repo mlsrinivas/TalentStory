@@ -9,6 +9,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Feather from 'react-native-vector-icons/Feather'
 
 export default class Funding extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
   constructor() {
     super();
     this.state = {
