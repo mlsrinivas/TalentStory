@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   Dimensions,
   Keyboard
-} from 'react-native';
+} from 'react-native'; 
 import styles from '../../Styles/SignUpStyles/LoginStyle';
 //import ResponsiveImage from 'react-native-responsive-image';
 

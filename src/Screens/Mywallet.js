@@ -27,15 +27,15 @@ export default class Mywallet extends React.Component{
                     </View>
                     <View style = {{justifyContent:'space-between', flexDirection:'row', marginTop:'12%', margin:'7%'}}>
                         <Text style = {{fontSize:15, color:'white'}}>Available balance</Text>
-                        <View style = {{height:35, width:125, backgroundColor:'white', borderRadius:30, borderWidth:1, borderColor:'orange', alignContent:'center'}}>
+                        <View style = {{height:35, width:125, backgroundColor:'white', borderRadius:30, borderWidth:1, borderColor:'#F7A502', alignContent:'center'}}>
                             <TouchableOpacity style = {{justifyContent:'center', marginTop:'5%', flexDirection:'row'}}>
-                            <AntDesign size={15} color='green' name='caretdown' />
+                            <AntDesign size={15} color='#7CD41C' name='caretdown' />
                             <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>TCS 1000</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
                     <View style = {{alignItems:'center'}}>
-                    <TouchableOpacity style = {{height:23, width:125, backgroundColor:'green', borderRadius:30, borderWidth:2, borderColor:'white', alignItems:'center'}}>
+                    <TouchableOpacity style = {{height:23, width:125, backgroundColor:'#00897D', borderRadius:30, borderWidth:2, borderColor:'white', alignItems:'center'}}>
                     <Text style = {{fontSize:12, color:'white',alignItems:'center' }}>Terms and Conditions</Text>
                     </TouchableOpacity>
                     </View>

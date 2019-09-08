@@ -38,13 +38,13 @@ export default class Apply extends React.Component{
             </TouchableOpacity>
             <View>
                 <View style = {{flexDirection:'column', alignItems:'center', marginTop:'30%'}}>
-                        <View style = {{height:35, width:125, backgroundColor:'white', borderRadius:30, borderWidth:1, borderColor:'orange', alignContent:'center'}}>
+                        <View style = {{height:35, width:125, backgroundColor:'white', borderRadius:30, borderWidth:1, borderColor:'#F7A502', alignContent:'center'}}>
                             <TouchableOpacity style = {{justifyContent:'center', marginTop:'5%', flexDirection:'row'}}>
-                            <AntDesign size={15} color='green' name='caretdown' />
-                            <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>TCS 1000</Text>
+                            <AntDesign size={15} color='#7CD41C' name='caretdown' />
+                            <Text style = {{fontSize:15, color:'#1D2662', marginLeft:'3%'}}>TCS 1000</Text>
                             </TouchableOpacity>
                         </View>
-                        <Text style = {{fontSize:15, color:'black'}}>Available balance</Text>
+                        <Text style = {{fontSize:15, color:'#1D2662'}}>Available balance</Text>
                         <TextInput
                             style= {styles.txtinput}
                             placeholder= 'To'

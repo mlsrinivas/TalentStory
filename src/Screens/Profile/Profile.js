@@ -28,43 +28,43 @@ export default class Profile extends React.Component{
                     </TouchableOpacity>
                 </View>
                 <View style = {{height:35, width:'100%', backgroundColor:'white' }}>
-                    <Text style = {{fontSize:20, color:'#5900b3', textAlign:'center', alignContent:'center'}}>User Name</Text>
+                    <Text style = {{fontSize:20, color:'#38006B', textAlign:'center', alignContent:'center'}}>User Name</Text>
                 </View>
 
                 <View style = {{height:250, width:'96%', borderRadius:5, backgroundColor:'white', margin:'2%'}}>
                     <View style = {{flexDirection:'row', justifyContent:'space-between', margin:'5%'}}>
                         <Text style = {{fontSize:17, color:'black', textAlign:'center', alignContent:'center'}}>Personal Details</Text>
                         <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Timeline')}}
-                                        style = {{height:30, width:'25%', borderRadius:20, backgroundColor:'green', justifyContent:'center'}}>
+                                        style = {{height:30, width:'25%', borderRadius:20, backgroundColor:'#00897D', justifyContent:'center'}}>
                             <Text style = {{fontSize:12, color:'white', textAlign:'center'}}>My Timeline</Text>
                         </TouchableOpacity>                        
                     </View>
                     <View style = {{borderWidth:0.7, width:'100%', borderColor:'#BeBeBe'}}>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
-                        <Entypo size={20} color='#5900b3' name='mail' />
+                        <Entypo size={20} color='#38006B' name='mail' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Email ID</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>user@gmailcom</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>user@gmailcom</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                         <MaterialCommunityIcons size={20} color='green' name='contacts' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Gender</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>Male</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>Male</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                     <MaterialCommunityIcons size={20} color='#ff33ff' name='calendar-check-outline' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Born</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>15-07-2020</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>15-07-2020</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                     <MaterialCommunityIcons size={20} color='red' name='phone' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Phone Number</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>9876543214(UserName)</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>9876543214(UserName)</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                     <MaterialCommunityIcons size={20} color='green' name='phone' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Other Number</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>9876543212</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>9876543212</Text>
                     </View>
                 </View>
 
@@ -75,36 +75,36 @@ export default class Profile extends React.Component{
                     <View style = {{borderWidth:0.7, width:'100%', borderColor:'#BeBeBe'}}>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
-                        <MaterialIcons size={20} color='#5900b3' name='my-location' />
+                        <MaterialIcons size={20} color='#38006B' name='my-location' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>From</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>Paris</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>Paris</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                         <Ionicons size={20} color='blue' name='md-briefcase' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Profession</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>Employee</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>Employee</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                     <FontAwesome size={20} color='#ff33ff' name='university' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Studied at</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>So College</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>So College</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                     <FontAwesome5 size={20} color='orange' name='book-open' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Went to</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>So School</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>So School</Text>
                     </View>
                     <View style = {{flexDirection:'row', margin:'2%'}}>
                     <FontAwesome size={20} color='green' name='briefcase' />
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>Skills</Text>
-                        <Text style = {{fontSize:15, color:'#5900b3', marginLeft:'3%'}}>etc..</Text>
+                        <Text style = {{fontSize:15, color:'#38006B', marginLeft:'3%'}}>etc..</Text>
                     </View>
                 </View>
 
                 <View style = {{height:120, width:'96%', borderRadius:5, backgroundColor:'white', margin:'2%'}}>
                     <View style = {{flexDirection:'row', justifyContent:'space-between', margin:'5%'}}>
                         <Text style = {{fontSize:17, color:'black', textAlign:'center', alignContent:'center'}}>Interested Topics</Text>
-                        <TouchableOpacity style = {{height:30, width:'25%', borderRadius:20, backgroundColor:'green', justifyContent:'center'}}
+                        <TouchableOpacity style = {{height:30, width:'25%', borderRadius:20, backgroundColor:'#00897D', justifyContent:'center'}}
                                         onPress = {() => {this.props.navigation.navigate('Topics')}}>
                             <Text style = {{fontSize:12, color:'white', textAlign:'center'}}>Edit</Text>
                         </TouchableOpacity>                         
@@ -119,7 +119,7 @@ export default class Profile extends React.Component{
                 <View style = {{height:120, width:'96%', borderRadius:5, backgroundColor:'white', margin:'2%', marginBottom:'5%'}}>
                     <View style = {{flexDirection:'row', justifyContent:'space-between', margin:'5%'}}>
                         <Text style = {{fontSize:17, color:'black', textAlign:'center', alignContent:'center'}}>Languages Known</Text>
-                        <TouchableOpacity style = {{height:30, width:'25%', borderRadius:20, backgroundColor:'green', justifyContent:'center'}}
+                        <TouchableOpacity style = {{height:30, width:'25%', borderRadius:20, backgroundColor:'#00897D', justifyContent:'center'}}
                                           onPress = {() => {this.props.navigation.navigate('Language')}}>
                             <Text style = {{fontSize:12, color:'white', textAlign:'center'}}>Edit</Text>
                         </TouchableOpacity>                       

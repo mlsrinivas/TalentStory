@@ -7,7 +7,7 @@ import { View,
     StyleSheet,
     Image, 
     TouchableOpacity,  
-    ImageBackground,
+    ImageBackground, 
     } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from '../../Styles/Profile/Topics'
@@ -20,60 +20,60 @@ export default class Language extends React.Component{
         <View>
 
             <View style = {styles.buttonView}>
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'blue'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#0073C0'}]}>
                         <Text style={styles.buttonText}>English</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Bengali</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Gujarati</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Hindi</Text>
                     </TouchableOpacity>
             </View>
 
             <View style = {styles.buttonView}>
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Kannada</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Malayalam</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Marathi</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Punjabi</Text>
                     </TouchableOpacity>
             </View>
 
             <View style = {styles.buttonView}>
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Sanskrit</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Tamil</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Telugu</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.button, {backgroundColor:'#BeBeBe'}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor:'#B5B5B5'}]}>
                         <Text style={styles.buttonText}>Urdu</Text>
                     </TouchableOpacity>
             </View>
 
-            <View style = {{borderWidth:0.5, width:'100%', borderColor:'#BeBeBe', marginTop:'5%'}}>
+            <View style = {{borderWidth:0.5, width:'100%', borderColor:'#B5B5B5', marginTop:'5%'}}>
             </View>
 
             <LinearGradient colors={['#4dd2ff', '#4dffdb']} start={{x: 0, y: 0}} end={{x: 1, y: 0}} 
