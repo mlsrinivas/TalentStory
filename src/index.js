@@ -30,6 +30,7 @@ import Apply from './Screens/ScholarshipScreens/Apply'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
+import Funding from './Screens/FundingScreens/Funding'
 import MyTimeline from './Screens/Profile/MyTimeline'
 import Language from './Screens/Profile/Language'
 import Topics from './Screens/Profile/Topics'
@@ -108,6 +109,9 @@ const AuthStack = createStackNavigator({
     // },
        Scanner:{
          screen: Scanner
+       },
+       Funding: {
+        screen: Funding
        },
        Timeline:{
          screen: MyTimeline
