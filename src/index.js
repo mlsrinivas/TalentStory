@@ -6,7 +6,9 @@ import {
   StatusBar,
   Dimensions,
   ScrollView,
-  SafeAreaView
+  SafeAreaView,
+  Platform,
+  StyleSheet
 } from "react-native";
 import {
   createStackNavigator,
@@ -50,14 +52,17 @@ class AuthLoadingScreen extends React.Component {
   // Render any loading content that you like here
   render() {
     return (
-      <View>
-        <ActivityIndicator />
-        <StatusBar barStyle="light-content" hidden={false} translucent={true} backgroundColor='#0073C0'/>
+      <View style={{flex:1}}>
+          {/*<MyStatusBar backgroundColor="#5E8D48" barStyle="light-content" />*/}
+{/*        <ActivityIndicator />*/}
+        {/*<StatusBar barStyle="light-content" hidden={false} translucent={true} backgroundColor='#0073C0'/>*/}
       </View>
 
     );
   }
 }
+
+
 
 const AppStack = createStackNavigator({
   HomeScreenStack: { 
@@ -161,7 +166,7 @@ export default createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
-     Auth: AuthStack,
+      Auth: AuthStack,
       App: DrawerAuthStack
     },
     {

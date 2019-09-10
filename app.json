@@ -5,6 +5,11 @@
       "barStyle": "light-content",
       "backgroundColor": "#0073C0"
     },
+    "iosStatusBarColor": "#0073C0",
+    "iosStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#0073C0"
+    },
     "name": "TalentStory",
     "slug": "TalentStory",
     "privacy": "public",
