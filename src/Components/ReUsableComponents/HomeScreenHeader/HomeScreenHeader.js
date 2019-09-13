@@ -9,12 +9,12 @@ export const NavigationOptions = (options, screenName, category) => {
   return {
     header: (category == "homeScreen" && null),
     headerTitle: (
-      <View style={{ marginBottom: Platform === "ios" ? 30 : 25, marginLeft:5 }}>
+      <View style={{ marginBottom: Platform.OS === "ios" ? 30 : 25, marginLeft:5 }}>
         <Text
           style={{
             color: "gray",
             position: "absolute",
-            right: Platform.OS === "ios" ? 20 : null,
+            right: Platform.OS === "ios" ? '20%' : null,
             //fontWeight: "bold",
             fontSize: 17
           }}>

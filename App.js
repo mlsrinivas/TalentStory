@@ -12,6 +12,9 @@ import {
   StyleSheet
 } from "react-native";
 
+const ReactNavigation = require('react-navigation');
+ReactNavigation.SafeAreaView.setStatusBarHeight(0);
+
 export default class App extends React.Component {
   constructor() {
     super();
@@ -19,7 +22,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-    	<View style={{flex:1}}>
+    	<View style={styles.container}>
           <MyStatusBar backgroundColor="#0073C0" barStyle="light-content" />
           <AuthLoadingScreen />
       	</View>
