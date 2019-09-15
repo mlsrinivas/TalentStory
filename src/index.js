@@ -37,6 +37,7 @@ import MyTimeline from './Screens/Profile/MyTimeline'
 import Language from './Screens/Profile/Language'
 import Topics from './Screens/Profile/Topics'
 import Notifications from './Screens/Notifications'
+import EnterPreneurForm from './Screens/FundingScreens/EnterpreneurForm'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -127,6 +128,10 @@ const AppStack = createStackNavigator({
     Notifications:{
       screen: Notifications,
       navigationOptions: (options) => NavigationOptions(options, "Notifications", "sideMenu")
+    },
+    EnterPreneurForm: {
+      screen: EnterPreneurForm,
+      navigationOptions: (options) => NavigationOptions(options, "EnterPreneurForm", "sideMenu")
     }    
 })
 const AuthStack = createStackNavigator({
