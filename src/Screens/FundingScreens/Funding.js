@@ -20,7 +20,7 @@ export default class Funding extends React.Component {
             <TouchableOpacity style={[{marginBottom: '4%'}, styles.fundingButton]} onPress={()=>this.props.navigation.navigate('EnterPreneurForm')}>
               <Text style={styles.fundingText}>Startup</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.fundingButton}>
+            <TouchableOpacity style={styles.fundingButton} onPress={()=>this.props.navigation.navigate('InvestorForm')}>
               <Text style={styles.fundingText}>Investor</Text>
             </TouchableOpacity>
           </View>
