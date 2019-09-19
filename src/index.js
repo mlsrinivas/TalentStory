@@ -91,7 +91,8 @@ const AppStack = createStackNavigator({
        navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
   },
   Apply: {
-       screen: Apply
+       screen: Apply,
+       navigationOptions: (options) => NavigationOptions(options, "Apply ScholarShip", "sideMenu")
      },
      Mywallet: {
        screen: Mywallet,

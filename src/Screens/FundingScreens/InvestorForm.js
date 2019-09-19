@@ -43,15 +43,17 @@ export default class InvestorForm extends React.Component {
                 tintColor = 'rgb(10,111,179)'
                 characterRestriction = {50}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'7%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'7%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (startup) => this.setState({ startup }) }
                 animationDuration = {0}
+                autoFocus={true}
               />
               <Dropdown
                 dropdownOffset={{top:5}}
-                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft:20, marginRight:20, width:screenWidth-40, marginTop: 1}}
+                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft: '6%', marginRight: '6%', marginTop: 1}}
                 rippleCentered={true}
                 inputContainerStyle={{ borderBottomColor: 'transparent' }}
                 data={data}
@@ -65,9 +67,10 @@ export default class InvestorForm extends React.Component {
                 tintColor = 'rgb(10,111,179)'
                 characterRestriction = {50}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (dealMaker) => this.setState({ dealMaker }) }
               />
               <View style={{flexDirection:'column', alignItems: 'center', marginTop: '3%'}}>
@@ -82,9 +85,10 @@ export default class InvestorForm extends React.Component {
                 tintColor = 'rgb(10,111,179)'
                 characterRestriction = {100}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (linkedIn) => this.setState({ linkedIn }) }
                 
               />
@@ -92,9 +96,10 @@ export default class InvestorForm extends React.Component {
                 label='No of Investments(till date)'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60, backgroundColor:'rgb(240,240,240)', marginTop:'1%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'1%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (date) => this.setState({ date }) }
                 
               />
@@ -102,9 +107,10 @@ export default class InvestorForm extends React.Component {
                 label='Amount Invested(In USD)'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (hqLocation) => this.setState({ hqLocation }) }
                 
               />
@@ -112,9 +118,10 @@ export default class InvestorForm extends React.Component {
                 label='No of Exists Made'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (website) => this.setState({ website }) }
                 
               />
@@ -122,14 +129,15 @@ export default class InvestorForm extends React.Component {
                 label='Startups Funded'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                                  
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 keyboardType='numeric'
                 onChangeText={ (noOfCustomers) => this.setState({ noOfCustomers }) }
                 
               />
-              <View style={{marginLeft:20, marginRight:20, width:screenWidth-40, height: 60, marginTop: '3%'}}>
+              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: '3%'}}>
                 <TextInput 
                   placeholder = 'Choose Sector'
                   style = {{fontSize: 17, color: 'rgb(111,111,111)'}}
@@ -140,7 +148,7 @@ export default class InvestorForm extends React.Component {
               </View>
               <Dropdown
                 dropdownOffset={{top:5}}
-                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft:20, marginRight:20, width:screenWidth-40, marginTop: 1}}
+                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft: '6%', marginRight: '6%', marginTop: 1}}
                 rippleCentered={true}
                 inputContainerStyle={{ borderBottomColor: 'transparent' }}
                 data={data}

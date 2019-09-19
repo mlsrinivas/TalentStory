@@ -49,9 +49,10 @@ export default class EnterPreneurForm extends React.Component {
                 tintColor = 'rgb(10,111,179)'
                 characterRestriction = {50}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'7%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'7%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (startup) => this.setState({ startup }) }
                 animationDuration = {0}
               />
@@ -60,9 +61,10 @@ export default class EnterPreneurForm extends React.Component {
                 tintColor = 'rgb(10,111,179)'
                 characterRestriction = {50}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (dealMaker) => this.setState({ dealMaker }) }
               />
               <View style={{flexDirection:'column', alignItems: 'center', marginTop: '3%'}}>
@@ -77,13 +79,14 @@ export default class EnterPreneurForm extends React.Component {
                 tintColor = 'rgb(10,111,179)'
                 characterRestriction = {100}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (linkedIn) => this.setState({ linkedIn }) }
                 
               />
-              <View style={{marginLeft:20, marginRight:20, width:screenWidth-40, height: 60, marginTop: '3%'}}>
+              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: '3%'}}>
                 <TextInput 
                   placeholder = 'Choose Sector'
                   style = {{fontSize: 17, color: 'rgb(111,111,111)'}}
@@ -96,11 +99,12 @@ export default class EnterPreneurForm extends React.Component {
                 label='Date of Funding'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60, backgroundColor:'rgb(240,240,240)', marginTop:'1%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'1%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (date) => this.setState({ date }) }
-                
+                autoFocus={true}
               />
               <TextField
                 label='About Idea(Elevator pitch)'
@@ -109,13 +113,14 @@ export default class EnterPreneurForm extends React.Component {
                 multiline={true}
                 numberOfLines={10}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height: 120, backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%', paddingBottom: '28%' }}
+                inputContainerStyle={{backgroundColor:'rgb(240,240,240)', marginTop:'3%', paddingBottom: '28%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (aboutIdea) => this.setState({ aboutIdea }) }
                 
               />
-              <View style={{marginLeft:20, marginRight:20, width:screenWidth-40, height: 60, marginTop: '3%'}}>
+              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: '3%'}}>
                 <TextInput 
                   placeholder = 'Technologies used(IT Operations,SaaS)'
                   style = {{fontSize: 17, color: 'rgb(111,111,111)'}}
@@ -126,7 +131,7 @@ export default class EnterPreneurForm extends React.Component {
               </View>
               <Dropdown
                 dropdownOffset={{top:5}}
-                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft:20, marginRight:20, width:screenWidth-40, marginTop: 1}}
+                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft: '6%', marginRight: '6%', marginTop: 1}}
                 rippleCentered={true}
                 inputContainerStyle={{ borderBottomColor: 'transparent' }}
                 data={data}
@@ -137,7 +142,7 @@ export default class EnterPreneurForm extends React.Component {
               />
               <Dropdown
                 dropdownOffset={{top:5}}
-                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft:20, marginRight:20, width:screenWidth-40, marginTop: 20}}
+                containerStyle={{borderWidth:1, borderColor:'rgb(82,82,82)', marginLeft: '6%', marginRight: '6%', marginTop: 20}}
                 rippleCentered={true}
                 inputContainerStyle={{ borderBottomColor: 'transparent' }}
                 data={data}
@@ -150,9 +155,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='HQ Location'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (hqLocation) => this.setState({ hqLocation }) }
                 
               />
@@ -160,9 +166,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='Website'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (website) => this.setState({ website }) }
                 
               />
@@ -170,9 +177,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='No of Current Customers'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 keyboardType='numeric'
                 onChangeText={ (noOfCustomers) => this.setState({ noOfCustomers }) }
                 
@@ -181,9 +189,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='No of Employees'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (noOfEmployees) => this.setState({ noOfEmployees }) }
                 
               />
@@ -191,9 +200,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='Avg revenue per month(in lakhs)'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (avgRevenue) => this.setState({ avgRevenue }) }
                 
               />
@@ -201,9 +211,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='Funding Received(in USD)'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (fundReceived) => this.setState({ fundReceived }) }
                 
               />
@@ -211,9 +222,10 @@ export default class EnterPreneurForm extends React.Component {
                 label='Funding Required(in USD)'
                 tintColor = 'rgb(10,111,179)'
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:60,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%' }}
+                inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (name) => this.setState({ name }) }
                 
               />
@@ -224,9 +236,10 @@ export default class EnterPreneurForm extends React.Component {
                 multiline={true}
                 numberOfLines={10}
                 lineWidth = {2}
-                activeLineWidth = {2}
-                inputContainerStyle={{height:120,backgroundColor:'rgb(240,240,240)', marginTop:'3%'}} 
-                containerStyle={{marginLeft:20, marginRight:20, width:screenWidth-40}}
+                activeLineWidth = {2}                 
+                labelTextStyle={{paddingLeft: '5%', paddingBottom: '28%' }}
+                inputContainerStyle={{backgroundColor:'rgb(240,240,240)', marginTop:'3%', paddingBottom: '28%', paddingLeft: '5%'}} 
+                containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (achievements) => this.setState({ achievements }) }
                 
               />
