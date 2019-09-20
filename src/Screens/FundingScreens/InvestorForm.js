@@ -137,7 +137,7 @@ export default class InvestorForm extends React.Component {
                 onChangeText={ (noOfCustomers) => this.setState({ noOfCustomers }) }
                 
               />
-              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: '3%'}}>
+              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: 7}}>
                 <TextInput 
                   placeholder = 'Choose Sector'
                   style = {{fontSize: 17, color: 'rgb(111,111,111)'}}

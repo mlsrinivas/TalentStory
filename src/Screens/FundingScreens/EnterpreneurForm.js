@@ -86,7 +86,7 @@ export default class EnterPreneurForm extends React.Component {
                 onChangeText={ (linkedIn) => this.setState({ linkedIn }) }
                 
               />
-              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: '3%'}}>
+              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: 7}}>
                 <TextInput 
                   placeholder = 'Choose Sector'
                   style = {{fontSize: 17, color: 'rgb(111,111,111)'}}
@@ -120,7 +120,7 @@ export default class EnterPreneurForm extends React.Component {
                 onChangeText={ (aboutIdea) => this.setState({ aboutIdea }) }
                 
               />
-              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: '3%'}}>
+              <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: 7}}>
                 <TextInput 
                   placeholder = 'Technologies used(IT Operations,SaaS)'
                   style = {{fontSize: 17, color: 'rgb(111,111,111)'}}
