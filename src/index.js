@@ -30,6 +30,7 @@ import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNav
 import Profile from './Screens/Profile/Profile'
 import Apply from './Screens/ScholarshipScreens/Apply'
 import PostScholarship from './Screens/ScholarshipScreens/PostScholarship'
+import ScholarshipHistory from './Screens/ScholarshipScreens/ScholarshipHistory'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
@@ -98,6 +99,10 @@ const AppStack = createStackNavigator({
      PostScholarship: {
       screen: PostScholarship,
       navigationOptions: (options) => NavigationOptions(options, "Post ScholarShip", "sideMenu")
+    },
+    ScholarshipHistory: {
+      screen: ScholarshipHistory,
+      navigationOptions: (options) => NavigationOptions(options, "ScholarShip History", "sideMenu")
     },
      Mywallet: {
        screen: Mywallet,
