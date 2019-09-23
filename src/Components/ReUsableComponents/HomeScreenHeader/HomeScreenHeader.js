@@ -44,7 +44,7 @@ export const NavigationOptions = (options, screenName, category) => {
                           onPress={()=>navigation.navigate('Notifications')}>
         <Ionicons name="ios-notifications" size={24} color={"grey"} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ marginRight: 28 }}>
+        <TouchableOpacity style={{ marginRight: 28 }} onPress={()=>navigation.navigate('SearchScreen')}>
         <Ionicons name="md-search" size={20} color={"grey"} />
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>navigation.navigate('Funding')}>
