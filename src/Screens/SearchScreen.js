@@ -163,7 +163,7 @@ export default class SearchScreen extends Component {
            <View style={{right: 50}}>
            <TouchableOpacity style={{
             backgroundColor: 'rgb(0,115,192)', width: 80, height: 30, alignItems: 'center', justifyContent: 'center', borderRadius: 15}}>
-             <Text style={{color:'white', fontSize: 12}}>Add Friend</Text>
+             <Text style={{color:'white', fontSize: 12}}>join</Text>
            </TouchableOpacity>
            <Text style={{marginTop: 8, color: 'rgb(132,132,132)', fontSize: 12}}>
               React Native
