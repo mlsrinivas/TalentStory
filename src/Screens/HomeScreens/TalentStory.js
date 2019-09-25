@@ -7,8 +7,12 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons' 
 import Feather from 'react-native-vector-icons/Feather'
+import BottomTabsHeader from '../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
 
 export default class TalentStory extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
   constructor() {
     super();
     this.state = {
@@ -20,8 +24,9 @@ export default class TalentStory extends React.Component {
         <View style={{flex:1}}>
           
      {/* <AntDesign name='like2' size={20} style={{position:'absolute',bottom:0}} /> */}
-            
+        
         <ScrollView>
+            <BottomTabsHeader navigation={this.props.navigation}/>
             {this.state.talentStoriesList.map((talentStory, index) => (
               <View key={index} style={styles.talentStory}>
                 <View style={styles.talentStoryRow}>
