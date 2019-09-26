@@ -12,7 +12,9 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 export default class SearchScreen extends Component {
   static navigationOptions = ({navigation}) => {
     return {
+      header: null,
      headerStyle: { backgroundColor: '#fff', elevation:0 }
+     
     }
   }
   constructor() {
@@ -86,8 +88,8 @@ export default class SearchScreen extends Component {
                 
             }}
             activeTabStyle={{ backgroundColor: 'white', borderBottomWidth: 3, borderBottomColor: 'rgb(0,115,192)' }}
-            tabTextStyle={{ color: 'rgb(0,115,192)'}}
-            activeTabTextStyle={{ color: 'rgb(0,115,192)'}}
+            tabTextStyle={{ color: 'rgb(0,115,192)', fontWeight: 'bold'}}
+            activeTabTextStyle={{ color: 'rgb(0,115,192)', fontWeight: 'bold'}}
             />
         </View>
         

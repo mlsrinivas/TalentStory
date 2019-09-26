@@ -1,23 +1,37 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Platform, Image, Dimensions } from 'react-native'
+import { View, Text, TouchableOpacity, Platform, Image, Dimensions, TextInput } from 'react-native'
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 import Ionicons from "react-native-vector-icons/Ionicons"
-
+import Entypo from "react-native-vector-icons/Entypo"
+const container = {
+  elevation: 3,
+  shadowColor: 'black',
+  shadowOffset: { width: 0, height: 0.5 * 3 },
+  shadowOpacity: 0.3,
+  shadowRadius: 0.8 * 3,
+}
 export default class BottomTabsHeader extends React.Component {
     constructor(props) {
-      super(props);
-      this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
+      super(props)
+      this.state = {
+        text: '',
+        autoFocus: true
+      }
+      this.handleBackButtonClick = this.handleBackButtonClick.bind(this)
+      this.onChangeText = this.onChangeText.bind(this)
     }
-    
-    
+   
+    onChangeText(text) {
+      this.setState({text:text})
+    }
     handleBackButtonClick() {
       console.log("game id is :::::",this.props.game_id)
       this.props.navigation.navigate("GameInfo",{game_id:this.props.game_id});
     }
     render() {
       return (
-        <View style={{flex: 1,
+        <View style={[{flex: 1,
             flexDirection:'row',
             alignItems: 'center',
             // position:'absolute',
@@ -25,34 +39,53 @@ export default class BottomTabsHeader extends React.Component {
             // top:0,
             width:Dimensions.get('window').width,
             height:50,
-            elevation: 3,
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 0.5 * 3 },
-    shadowOpacity: 0.3,
-    shadowRadius: 0.8 * 3,
+            
     backgroundColor: 'white',
-            }}>
+    
+            },this.props.search == false ? container:{}]}>
             <View style={{flex:1, flexDirection: 'row', justifyContent: 'flex-start'}}>
-            <TouchableOpacity
+            {this.props.search == false && <TouchableOpacity
               style={{ marginLeft: '8%' }}
               onPress={() => {
                 this.props.navigation.openDrawer()
               }}
             >
-              <MaterialCommunityIcons name="menu" size={26} color={"grey"} />
-            </TouchableOpacity>
-            <Text style={{color: 'gray', marginLeft: '8%', fontSize: 17}}>TalentStory</Text>
-              
+             <MaterialCommunityIcons name="menu" size={26} color={"gray"} />
+             
+            </TouchableOpacity>}
+            {this.props.search == true && <TouchableOpacity
+              style={{ marginLeft: '8%' }}
+              onPress={() => {
+                this.props.updateParentComponent(false)
+              }}
+            >
+              <Ionicons name={Platform.OS == 'ios' ? "ios-arrow-back": "md-arrow-back"} size={26} color={"gray"} />
+            </TouchableOpacity>}
+            <View style={{marginLeft: '10%', padding: Platform.OS == 'ios' ? 2 : null}}>
+            {this.props.search == false && <Text style={{color: 'gray', fontSize: 17}}>{this.props.screenName}</Text>}
+            {this.props.search == true && <TextInput
+      style={{  color: 'gray', fontSize: 17 }}
+      onChangeText={text => this.onChangeText(text)}
+      value={this.state.text}
+      placeholder='hai'
+      autoFocus={this.state.autoFocus}
+    />}
+            </View>
+            
             </View>
             <View style={{flex:1, flexDirection: 'row', justifyContent: 'flex-end'}}>
               <View style={{flexDirection: 'row'}}>
-              <TouchableOpacity style={{ marginRight: '20%' }}
+              {this.props.search == true && this.state.text.length > 0 && <TouchableOpacity style={{ marginRight: '22%' }}
+                          onPress={()=>this.setState({text:'',autoFocus: true})}>
+        <Entypo name="cross" size={24} color={"grey"} />
+        </TouchableOpacity>}
+              <TouchableOpacity style={{ marginRight: '22%' }}
                           onPress={()=>this.props.navigation.navigate('Notifications')}>
         <Ionicons name="ios-notifications" size={24} color={"grey"} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ marginRight: '20%' }} onPress={()=>this.props.navigation.navigate('SearchScreen')}>
+        {this.props.search == false && <TouchableOpacity style={{ marginRight: '22%' }} onPress={()=>this.props.updateParentComponent(true)}>
         <Ionicons name="md-search" size={24} color={"grey"} />
-        </TouchableOpacity>
+        </TouchableOpacity>}
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('Funding')}>
         <Image style={{tintColor: 'grey', width: 30, height: 30}} source={require('../../../../assets/funding.png')} />
         </TouchableOpacity>
