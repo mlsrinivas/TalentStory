@@ -85,7 +85,7 @@ export default class TalentStory extends React.Component {
      <View style={{position: 'absolute', bottom: 20, right:20}}>
        <TouchableOpacity>
           <View style={{backgroundColor:'#0073C0', width:50, height:50, borderRadius: 25, justifyContent: 'center', alignItems: 'center'}}>
-            <MaterialCommunityIcons name='square-edit-outline'size={30} color='#fff'/>
+            <MaterialCommunityIcons name='square-edit-outline'size={30} color='#fff' onPress={()=>this.props.navigation.navigate('Post')} />
           </View>
         </TouchableOpacity>
       </View>
