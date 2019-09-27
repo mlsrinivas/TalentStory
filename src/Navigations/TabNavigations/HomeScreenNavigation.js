@@ -40,7 +40,7 @@ const bottomTabIcon = (options, icon) => {
 const TalenStoryStatck = createStackNavigator({
   TalentStories: {
     screen: TalentStory,
-    navigationOptions: (options) => NavigationOptions(options, "TalentStory", "talentStory")
+    //navigationOptions: (options) => NavigationOptions(options, "TalentStory", "talentStory")
   },
 })
 

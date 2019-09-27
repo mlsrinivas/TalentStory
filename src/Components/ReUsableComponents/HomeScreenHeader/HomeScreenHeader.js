@@ -9,12 +9,12 @@ export const NavigationOptions = (options, screenName, category) => {
   return {
     header: (category == "homeScreen" && null),
     headerTitle: (
-      <View style={{ marginBottom: Platform === "ios" ? 30 : 25, marginLeft:5 }}>
+      <View style={{ marginBottom: Platform.OS === "ios" ? 30 : 25, marginLeft:5 }}>
         <Text
           style={{
             color: "gray",
             position: "absolute",
-            right: Platform.OS === "ios" ? 20 : null,
+            right: Platform.OS === "ios" ? '20%' : null,
             //fontWeight: "bold",
             fontSize: 17
           }}>
@@ -44,7 +44,7 @@ export const NavigationOptions = (options, screenName, category) => {
                           onPress={()=>navigation.navigate('Notifications')}>
         <Ionicons name="ios-notifications" size={24} color={"grey"} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ marginRight: 28 }}>
+        <TouchableOpacity style={{ marginRight: 28 }} onPress={()=>navigation.navigate('SearchScreen')}>
         <Ionicons name="md-search" size={20} color={"grey"} />
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>navigation.navigate('Funding')}>

@@ -6,7 +6,9 @@ import {
   StatusBar,
   Dimensions,
   ScrollView,
-  SafeAreaView
+  SafeAreaView,
+  Platform,
+  StyleSheet
 } from "react-native";
 import {
   createStackNavigator,
@@ -27,6 +29,8 @@ import Scholarship from './Screens/ScholarshipScreens/Scholarship'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
 import Profile from './Screens/Profile/Profile'
 import Apply from './Screens/ScholarshipScreens/Apply'
+import PostScholarship from './Screens/ScholarshipScreens/PostScholarship'
+import ScholarshipHistory from './Screens/ScholarshipScreens/ScholarshipHistory'
 import Mywallet from './Screens/Mywallet'
 import SendCoins from './Screens/SendCoins'
 import Scanner from './Screens/Scanner'
@@ -35,6 +39,9 @@ import MyTimeline from './Screens/Profile/MyTimeline'
 import Language from './Screens/Profile/Language'
 import Topics from './Screens/Profile/Topics'
 import Notifications from './Screens/Notifications'
+import EnterPreneurForm from './Screens/FundingScreens/EnterpreneurForm'
+import InvestorForm from './Screens/FundingScreens/InvestorForm'
+import SearchScreen from './Screens/SearchScreen'
 import Post from './Screens/Post'
 
 class AuthLoadingScreen extends React.Component {
@@ -51,14 +58,17 @@ class AuthLoadingScreen extends React.Component {
   // Render any loading content that you like here
   render() {
     return (
-      <View>
-        <ActivityIndicator />
-        <StatusBar barStyle="light-content" hidden={false} translucent={true} backgroundColor='#0073C0'/>
+      <View style={{flex:1}}>
+          {/*<MyStatusBar backgroundColor="#5E8D48" barStyle="light-content" />*/}
+{/*        <ActivityIndicator />*/}
+        {/*<StatusBar barStyle="light-content" hidden={false} translucent={true} backgroundColor='#0073C0'/>*/}
       </View>
 
     );
   }
 }
+
+
 
 const AppStack = createStackNavigator({
   HomeScreenStack: { 
@@ -85,8 +95,17 @@ const AppStack = createStackNavigator({
        navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
   },
   Apply: {
-       screen: Apply
+       screen: Apply,
+       navigationOptions: (options) => NavigationOptions(options, "Apply ScholarShip", "sideMenu")
      },
+     PostScholarship: {
+      screen: PostScholarship,
+      navigationOptions: (options) => NavigationOptions(options, "Post ScholarShip", "sideMenu")
+    },
+    ScholarshipHistory: {
+      screen: ScholarshipHistory,
+      navigationOptions: (options) => NavigationOptions(options, "ScholarShip History", "sideMenu")
+    },
      Mywallet: {
        screen: Mywallet,
        navigationOptions: (options) => NavigationOptions(options, "My Wallet", "sideMenu")
@@ -124,6 +143,19 @@ const AppStack = createStackNavigator({
       screen: Notifications,
       navigationOptions: (options) => NavigationOptions(options, "Notifications", "sideMenu")
     },
+    SearchScreen: {
+      screen: SearchScreen,
+      //navigationOptions: (options) => NavigationOptions(options, "Search", "search")
+      
+    },
+    EnterPreneurForm: {
+      screen: EnterPreneurForm,
+      navigationOptions: (options) => NavigationOptions(options, "EnterPreneur Form", "sideMenu")
+    },
+    InvestorForm: {
+      screen: InvestorForm,
+      navigationOptions: (options) => NavigationOptions(options, "Investor Form", "sideMenu")
+    },    
     Post:{
       screen: Post,
       navigationOptions: (options) => NavigationOptions(options, "Create Post", "sideMenu"),
@@ -166,7 +198,7 @@ export default createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
-     Auth: AuthStack,
+      Auth: AuthStack,
       App: DrawerAuthStack
     },
     {
