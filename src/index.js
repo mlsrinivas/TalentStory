@@ -42,6 +42,7 @@ import Notifications from './Screens/Notifications'
 import EnterPreneurForm from './Screens/FundingScreens/EnterpreneurForm'
 import InvestorForm from './Screens/FundingScreens/InvestorForm'
 import SearchScreen from './Screens/SearchScreen'
+import Post from './Screens/Post'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -154,7 +155,11 @@ const AppStack = createStackNavigator({
     InvestorForm: {
       screen: InvestorForm,
       navigationOptions: (options) => NavigationOptions(options, "Investor Form", "sideMenu")
-    }    
+    },    
+    Post:{
+      screen: Post,
+      navigationOptions: (options) => NavigationOptions(options, "Create Post", "sideMenu"),
+    }        
 })
 const AuthStack = createStackNavigator({
     Login: { 

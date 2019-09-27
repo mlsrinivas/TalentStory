@@ -51,6 +51,9 @@ export const NavigationOptions = (options, screenName, category) => {
         <Image style={{tintColor: 'grey', width: 30, height: 30}} source={require('../../../../assets/funding.png')} />
         </TouchableOpacity>
       </View>)
+      
+      // ( category == "Post" && <View style={{marginRight:25}}>
+      //    <TouchableOpacity><Text>Post</Text></TouchableOpacity></View>)
     ),
     // headerBackground: (
     //   <LinearGradient
