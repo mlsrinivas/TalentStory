@@ -33,7 +33,6 @@ export const NavigationOptions = (options, screenName, category) => {
     ),
     headerLeft: (
       <HeaderBackButton
-        style={{marginLeft: 30}}
         title={screenName}
         titleStyle={{ fontSize: 17, marginLeft: 10 }}
         tintColor="rgb(92,92,92)"
