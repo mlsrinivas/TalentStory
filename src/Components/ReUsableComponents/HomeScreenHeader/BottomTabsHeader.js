@@ -81,7 +81,7 @@ export default class BottomTabsHeader extends React.Component {
                   <Ionicons name="ios-notifications" size={26} color={"rgb(92,92,92)"} />
                 </TouchableOpacity>
                 {this.props.search == false && 
-                <TouchableOpacity style={{ marginRight: '21%', width: 27}} onPress={()=>this.props.updateParentComponent(true)}>
+                <TouchableOpacity style={{ marginRight: '20%', width: 27}} onPress={()=>this.props.updateParentComponent(true)}>
                   <Ionicons name="md-search" size={26} color={"rgb(92,92,92)"} />
                 </TouchableOpacity>}
                 <TouchableOpacity  onPress={()=>this.props.navigation.navigate('Funding')}>

@@ -1,13 +1,7 @@
-/*This is an example of Segmented Control Tab in React Native*/
 import React, { Component } from 'react';
-//Import React
-
 import { StyleSheet, Text, View, Image, Dimensions, ScrollView } from 'react-native';
-//Import Basic React Native Component
-
 import SegmentedControlTab from 'react-native-segmented-control-tab';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-//Import SegmentedControlTab
 
 export default class SearchScreen extends Component {
   static navigationOptions = ({navigation}) => {
@@ -20,41 +14,13 @@ export default class SearchScreen extends Component {
   constructor() {
     super();
     this.state = {
-      selectedIndex: 0,
-      //Default selected Tab Index for single select SegmentedControlTab
-      selectedIndices: [0],
-      //Default selected Tab Indexes for multi select SegmentedControlTab
       customStyleIndex: 0,
-      //Default selected Tab Indexes for cusatom SegmentedControlTab
       searchList: [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],
     };
   }
 
-  handleSingleIndexSelect = (index) => {
-    //handle tab selection for single Tab Selection SegmentedControlTab
-    this.setState(prevState => ({ ...prevState, selectedIndex: index }));
-  };
-
-  handleMultipleIndexSelect = (index) => {
-    //handle tab selection for multi Tab Selection SegmentedControlTab
-    const { selectedIndices } = this.state;
-    if (selectedIndices.includes(index)) {
-      //if included in the selected array then remove
-      this.setState(prevState => ({
-        ...prevState,
-        selectedIndices: selectedIndices.filter(i => i !== index),
-      }));
-    } else {
-      //if not included in the selected array then add
-      this.setState(prevState => ({
-        ...prevState,
-        selectedIndices: [...selectedIndices, index],
-      }));
-    }
-  };
-
+  //handle tab selection for custom Tab Selection SegmentedControlTab
   handleCustomIndexSelect = (index) => {
-    //handle tab selection for custom Tab Selection SegmentedControlTab
     this.setState(prevState => ({ ...prevState, customStyleIndex: index }));
   };
 
@@ -62,9 +28,6 @@ export default class SearchScreen extends Component {
     const { selectedIndex, selectedIndices, customStyleIndex } = this.state;
     return (
       <View style={styles.container}>
-      
-
-        {/* Simple Segmented with Custom Styling*/}
         <View 
         style={{
           backgroundColor: '#fff',
@@ -95,7 +58,7 @@ export default class SearchScreen extends Component {
         
         {customStyleIndex === 0 && (
           <ScrollView style={{marginTop: 17}}>
-         {this.state.searchList.map((item)=>(<View style={{
+         {this.state.searchList.map((item, index)=>(<View key={index} style={{
             flexDirection: 'row',
             width: Dimensions.get('window').width,
           //marginLeft: '4%'
@@ -130,7 +93,7 @@ export default class SearchScreen extends Component {
         )}
         {customStyleIndex === 1 && (
           <ScrollView style={{marginTop: 17}}>
-          {this.state.searchList.map((item)=>(<View><View style={{
+          {this.state.searchList.map((item, index)=>(<View key={index}><View style={{
              flexDirection: 'row',
              width: Dimensions.get('window').width,
            //marginLeft: '4%'

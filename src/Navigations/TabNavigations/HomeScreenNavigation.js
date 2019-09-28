@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Image,
   TouchableOpacity
 } from "react-native";
 import {
@@ -8,14 +7,11 @@ import {
   createStackNavigator,
 } from "react-navigation";
 
-import { NavigationOptions } from '../../Components/ReUsableComponents/HomeScreenHeader/HomeScreenHeader'
-
 import TalentStory from '../../Screens/HomeScreens/TalentStory'
 import Friend from '../../Screens/HomeScreens/Friend'
 import Chat from '../../Screens/HomeScreens/Chat'
 import AddCommunity from '../../Screens/HomeScreens/AddCommunity'
 import TalentStoryStar from '../../Components/TalentStoryStar'
-
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -32,37 +28,32 @@ const bottomTabIcon = (options, icon) => {
       icon = <MaterialCommunityIcons size={21} color={tintColor} name={icon} />
   }
   else if(icon=="star"){
-    return <TouchableOpacity><TalentStoryStar /></TouchableOpacity>
+    return <TouchableOpacity><TalentStoryStar/></TouchableOpacity>
   }
-  //console.log("tintColor is",tintColor)
   return icon
 }
 
 const TalenStoryStatck = createStackNavigator({
   TalentStories: {
     screen: TalentStory,
-    //navigationOptions: (options) => NavigationOptions(options, "TalentStory", "talentStory")
   },
 })
 
 const FriendStack = createStackNavigator({
   Friends: {
     screen: Friend,
-    //navigationOptions: (options) => NavigationOptions(options, "Friends", "friends")
   },
 })
 
 const ChatStack = createStackNavigator({
   Chating: {
     screen: Chat,
-    //navigationOptions: (options) => NavigationOptions(options, "Chat", "chat")
   },
 })
 
 const AddCommunityStack = createStackNavigator({
     AddCommunities: {
       screen: AddCommunity,
-      //navigationOptions: (options) => NavigationOptions(options, "Add Community", "addCommunity")
     },
   })
 
@@ -104,17 +95,10 @@ export const HomeScreenBottomTabs = createBottomTabNavigator({
     tabBarOptions: {
       scrollEnabled: false,
       activeTintColor: '#0073C0',
-      inactiveTintColor: "grey",
+      inactiveTintColor: "rgb(92,92,92)",
       showLabel: false,
-    //   labelStyle: {
-    //     fontSize: 12
-    //   },
       style: {}
     },
-    // tabBarComponent: props => <TalentStoryStar {...props}/>,
-    // tabBarPosition: "bottom",
-    // animationEnabled: true,
-    // swipeEnabled: true,
     initialRouteName: "TalentStory",
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarOnPress: ({ navigation, defaultHandler }) => { defaultHandler() }
