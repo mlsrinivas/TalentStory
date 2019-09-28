@@ -104,20 +104,23 @@ export default class TalentStory extends React.Component {
 
   render() {
     return (
-        <View style={{flex:1}}>
-          <ScrollView>
-            <BottomTabsHeader 
+        <View style={{flex: 1}}>
+          <BottomTabsHeader 
               navigation={this.props.navigation}
               updateParentComponent={this.updateParentComponent}
               search={this.state.search}
               screenName={this.state.search == true ? 'Search' : 'TalentStory'}
             />
+            {this.state.search == false && <View style={{borderTopWidth: 1, borderColor: 'gray'}} />}
+           {
+            this.state.search == true && <SearchScreen />
+            }  
+          <ScrollView>
+          
           { this.state.search == false &&
             this.renderTalentStories()
           }
-          {
-            this.state.search == true && <SearchScreen />
-          }
+         
           </ScrollView>
            { this.state.search == false && <View style={{position: 'absolute', bottom: 20, right:20}}>
        <TouchableOpacity>

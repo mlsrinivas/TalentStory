@@ -185,10 +185,11 @@ export default class SearchScreen extends Component {
             </Text> */}
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //flex: 1,
     // justifyContent: 'center',
     // alignItems: 'center',
     backgroundColor: 'white',
+    marginBottom: 100
     // padding: 10,
   },
   headerText: {

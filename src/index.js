@@ -145,7 +145,7 @@ const AppStack = createStackNavigator({
     },
     SearchScreen: {
       screen: SearchScreen,
-      //navigationOptions: (options) => NavigationOptions(options, "Search", "search")
+      //`navigationOptions: (options) => NavigationOptions(options, "Search", "search")
       
     },
     EnterPreneurForm: {

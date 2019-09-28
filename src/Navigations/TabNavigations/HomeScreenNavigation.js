@@ -47,21 +47,21 @@ const TalenStoryStatck = createStackNavigator({
 const FriendStack = createStackNavigator({
   Friends: {
     screen: Friend,
-    navigationOptions: (options) => NavigationOptions(options, "Friends", "friends")
+    //navigationOptions: (options) => NavigationOptions(options, "Friends", "friends")
   },
 })
 
 const ChatStack = createStackNavigator({
   Chating: {
     screen: Chat,
-    navigationOptions: (options) => NavigationOptions(options, "Chat", "chat")
+    //navigationOptions: (options) => NavigationOptions(options, "Chat", "chat")
   },
 })
 
 const AddCommunityStack = createStackNavigator({
     AddCommunities: {
       screen: AddCommunity,
-      navigationOptions: (options) => NavigationOptions(options, "Add Community", "addCommunity")
+      //navigationOptions: (options) => NavigationOptions(options, "Add Community", "addCommunity")
     },
   })
 

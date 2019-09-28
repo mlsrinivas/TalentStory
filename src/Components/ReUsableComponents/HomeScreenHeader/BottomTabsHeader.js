@@ -31,7 +31,7 @@ export default class BottomTabsHeader extends React.Component {
     }
     render() {
       return (
-        <View style={[{flex: 1,
+        <View style={[{
             flexDirection:'row',
             alignItems: 'center',
             // position:'absolute',
@@ -61,14 +61,15 @@ export default class BottomTabsHeader extends React.Component {
             >
               <Ionicons name={Platform.OS == 'ios' ? "ios-arrow-back": "md-arrow-back"} size={26} color={"gray"} />
             </TouchableOpacity>}
-            <View style={{marginLeft: '10%', padding: Platform.OS == 'ios' ? 2 : null}}>
+            <View style={{marginLeft: '10%', padding: Platform.OS == 'ios' ? 2 : 0, marginBottom: Platform.OS == 'ios' ? null : 4, flex: 1, width: '100%' }}>
             {this.props.search == false && <Text style={{color: 'gray', fontSize: 17}}>{this.props.screenName}</Text>}
             {this.props.search == true && <TextInput
       style={{  color: 'gray', fontSize: 17 }}
       onChangeText={text => this.onChangeText(text)}
       value={this.state.text}
-      placeholder='hai'
+      placeholder='Search'
       autoFocus={this.state.autoFocus}
+      selectionColor={'black'}
     />}
             </View>
             
@@ -86,7 +87,7 @@ export default class BottomTabsHeader extends React.Component {
         {this.props.search == false && <TouchableOpacity style={{ marginRight: '22%' }} onPress={()=>this.props.updateParentComponent(true)}>
         <Ionicons name="md-search" size={24} color={"grey"} />
         </TouchableOpacity>}
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Funding')}>
+        <TouchableOpacity  onPress={()=>this.props.navigation.navigate('Funding')}>
         <Image style={{tintColor: 'grey', width: 30, height: 30}} source={require('../../../../assets/funding.png')} />
         </TouchableOpacity>
               </View>
