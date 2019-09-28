@@ -35,6 +35,7 @@ import MyTimeline from './Screens/Profile/MyTimeline'
 import Language from './Screens/Profile/Language'
 import Topics from './Screens/Profile/Topics'
 import Notifications from './Screens/Notifications'
+import Edit from './Screens/Profile/Edit'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -122,6 +123,10 @@ const AppStack = createStackNavigator({
     Notifications:{
       screen: Notifications,
       navigationOptions: (options) => NavigationOptions(options, "Notifications", "sideMenu")
+    },
+    Edit:{
+      screen: Edit,
+      navigationOptions: (options) => NavigationOptions(options, "Profile Edit", "sideMenu")
     }    
 })
 const AuthStack = createStackNavigator({
