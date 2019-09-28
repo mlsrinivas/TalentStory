@@ -152,7 +152,7 @@ export default class SearchScreen extends Component {
             <Text style={{marginLeft: '7%', color: 'rgb(92,92,92)'}}>
               Learning Group
             </Text>
-            <Text style={{marginLeft: '7%', marginTop: 17, color: 'rgb(11,113,181)', fontSize: 12}}>
+            <Text style={{marginLeft: '7%', marginTop: 21, color: 'rgb(11,113,181)', fontSize: 12}}>
               Front End Tech
             </Text>
           </View>
@@ -162,12 +162,12 @@ export default class SearchScreen extends Component {
          
          }}>
           
-           <View style={{right: 50}}>
+           <View style={{right: '75%'}}>
            <TouchableOpacity style={{
             backgroundColor: 'rgb(0,115,192)', width: 80, height: 30, alignItems: 'center', justifyContent: 'center', borderRadius: 15}}>
              <Text style={{color:'white', fontSize: 12}}>join</Text>
            </TouchableOpacity>
-           <Text style={{marginTop: 8, color: 'rgb(132,132,132)', fontSize: 12}}>
+           <Text style={{marginTop: 12, color: 'rgb(132,132,132)', fontSize: 12}}>
               React Native
             </Text>
             </View>

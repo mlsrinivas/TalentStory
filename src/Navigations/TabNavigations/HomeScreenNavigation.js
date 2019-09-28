@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Image,
+  TouchableOpacity
 } from "react-native";
 import {
   createBottomTabNavigator,
@@ -31,7 +32,7 @@ const bottomTabIcon = (options, icon) => {
       icon = <MaterialCommunityIcons size={21} color={tintColor} name={icon} />
   }
   else if(icon=="star"){
-    return <TalentStoryStar />
+    return <TouchableOpacity><TalentStoryStar /></TouchableOpacity>
   }
   //console.log("tintColor is",tintColor)
   return icon

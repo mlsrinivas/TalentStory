@@ -39,6 +39,7 @@ import MyTimeline from './Screens/Profile/MyTimeline'
 import Language from './Screens/Profile/Language'
 import Topics from './Screens/Profile/Topics'
 import Notifications from './Screens/Notifications'
+import Edit from './Screens/Profile/Edit'
 import EnterPreneurForm from './Screens/FundingScreens/EnterpreneurForm'
 import InvestorForm from './Screens/FundingScreens/InvestorForm'
 import SearchScreen from './Screens/SearchScreen'
@@ -143,6 +144,10 @@ const AppStack = createStackNavigator({
       screen: Notifications,
       navigationOptions: (options) => NavigationOptions(options, "Notifications", "sideMenu")
     },
+    Edit:{
+      screen: Edit,
+      navigationOptions: (options) => NavigationOptions(options, "Profile Edit", "sideMenu")
+    },    
     SearchScreen: {
       screen: SearchScreen,
       //`navigationOptions: (options) => NavigationOptions(options, "Search", "search")

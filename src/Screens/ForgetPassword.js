@@ -30,7 +30,7 @@ export default class ForgetPassword extends React.Component{
             <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' 
                             style = {{ alignSelf:'center', marginTop:'66%'}}/>
             </View>
-            <Image source = {require('../../assets/key.webp')} style = {{position:'absolute', tintColor:'white', alignSelf:'center', marginTop:'10%', height:'20%', width:'30%'}}/>
+            <Image source = {require('../../assets/key.png')} style = {{position:'absolute', tintColor:'white', alignSelf:'center', marginTop:'10%', height:'20%', width:'30%'}}/>
             <TouchableOpacity style = {{ position:'absolute', marginLeft:'5%', marginTop:'8%' }}
                               onPress={()=>{this.props.navigation.navigate('Login')}}>
               <AntDesign size={24} color="white" name="arrowleft" />

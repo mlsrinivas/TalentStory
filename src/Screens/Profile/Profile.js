@@ -21,8 +21,10 @@ export default class Profile extends React.Component{
 
     render(){
         return(
-            <ScrollView>
-            <View style = {{ flex:1, backgroundColor:'#BeBeBe' }}>
+        
+    
+            <View style = {{ flex:1, backgroundColor:'#D3D3D3' }}>     
+            <ScrollView>           
                 <View style = {{height:200, width:'98%', backgroundColor:'white', margin:'1%', borderRadius:3}}>
                 <TouchableOpacity style = {{height:100, width:100,borderRadius:50, backgroundColor:'#BeBeBe', marginLeft:'40%', marginTop:'5%'}}>
                     </TouchableOpacity>
@@ -130,10 +132,14 @@ export default class Profile extends React.Component{
                         <Text style = {{fontSize:15, color:'black', marginLeft:'3%'}}>English</Text>
                     </View>                  
                 </View>
-
-                    
+                </ScrollView>
+                <TouchableOpacity style={{position: 'absolute', bottom: 20, right:20}}>
+            <View style={{backgroundColor:'#00897D', width:60, height:60, borderRadius: 30, justifyContent: 'center', alignItems: 'center'}}>
+                <MaterialCommunityIcons name='pencil' size={30} color='#fff' onPress={()=>this.props.navigation.navigate('Edit')} />
             </View>
-            </ScrollView>
+            </TouchableOpacity>
+            </View> 
+            
         );
     }
 }
