@@ -26,9 +26,13 @@ export default class Profile extends React.Component{
             
             
         <View style = {{ flex:1, backgroundColor:'#BeBeBe' }}>
-            <TouchableOpacity onPress={()=>{ this.props.navigation.navigate("Edit")}} style = {{ height:80, width:80,borderRadius:40, backgroundColor:'#00897D',justifyContent:'flex-end' }}>
-             {/* <MaterialCommunityIcons size={16} name='pencil' color='white'/> */}
-            </TouchableOpacity>
+        
+                <TouchableOpacity style={{position: 'absolute', bottom: 20, right:20}}>
+                <View style={{backgroundColor:'#00897D', width:60, height:60, borderRadius: 30, justifyContent: 'center', alignItems: 'center'}}>
+                    <MaterialCommunityIcons name='pencil' size={30} color='#fff' onPress={()=>this.props.navigation.navigate('Edit')} />
+                </View>
+                </TouchableOpacity>
+            
             <ScrollView>
                 <View style = {{height:200, width:'98%', backgroundColor:'white', margin:'1%', borderRadius:3}}>
                 <TouchableOpacity style = {{height:100, width:100,borderRadius:50, backgroundColor:'#BeBeBe', marginLeft:'40%', marginTop:'5%'}}>
