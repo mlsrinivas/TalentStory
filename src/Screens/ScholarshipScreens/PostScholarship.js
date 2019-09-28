@@ -13,7 +13,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
 import { Dropdown } from 'react-native-material-dropdown'
 
-export default class Apply extends React.Component{
+export default class PostScholarship extends React.Component{
     render(){
         let data = [{
                     value: 'Lorium Ipsum',
@@ -40,7 +40,7 @@ export default class Apply extends React.Component{
                 <View style={{borderWidth:3, borderColor: 'rgb(0,115,192)'}}>
                 <View>
                     <TextField
-                        label = 'Full Name'
+                        label = 'Organization Name'
                         labelFontSize = {14}
                         fontSize = {14}
                         labelTextStyle={{ paddingLeft: 42 }}
@@ -60,7 +60,7 @@ export default class Apply extends React.Component{
                 </View> 
                 <View>
                     <TextField
-                        label = 'Father/Guardian Name'
+                        label = 'Scholarship Name'
                         labelFontSize = {14}
                         fontSize = {14}
                         labelTextStyle={{ paddingLeft: 42 }}
@@ -79,7 +79,7 @@ export default class Apply extends React.Component{
                 </View>
                 <View>
                     <TextField
-                        label = 'Email'
+                        label = 'Description About Scholarship'
                         labelFontSize = {14}
                         fontSize = {14}
                         labelTextStyle={{ paddingLeft: 42 }}
@@ -98,7 +98,7 @@ export default class Apply extends React.Component{
                 </View>
                 <View>
                     <TextField
-                        label = 'Mobile Number'
+                        label = 'Contact Number'
                         labelFontSize = {14}
                         fontSize = {14}
                         labelTextStyle={{ paddingLeft: 42 }}
@@ -117,7 +117,64 @@ export default class Apply extends React.Component{
                 </View>
                 <View>
                     <TextField
-                        label = 'Age'
+                        label = 'Email Id'
+                        labelFontSize = {14}
+                        fontSize = {14}
+                        labelTextStyle={{ paddingLeft: 42 }}
+                        inputContainerStyle={{ paddingLeft: 42 }}
+                        containerStyle={{marginRight: '5%'}}
+                        tintColor = 'rgb(200,200,198)'
+                        InputLabelProps={{
+                            style: { color: 'rgb(82,82,82)' },
+                        }}
+                    />
+                    <AntDesign style={{
+                        position: 'absolute',
+                        top: 30,
+                        left: 7,
+                        }} size={28} color='rgb(200,200,198)' name='lock' />
+                </View>
+                <View>
+                    <TextField
+                        label = 'Min Age'
+                        labelFontSize = {14}
+                        fontSize = {14}
+                        labelTextStyle={{ paddingLeft: 42 }}
+                        inputContainerStyle={{ paddingLeft: 42 }}
+                        containerStyle={{marginRight: '5%'}}
+                        tintColor = 'rgb(200,200,198)'
+                        InputLabelProps={{
+                            style: { color: 'rgb(82,82,82)' },
+                        }}
+                    />
+                    <AntDesign style={{
+                        position: 'absolute',
+                        top: 30,
+                        left: 7,
+                        }} size={28} color='rgb(200,200,198)' name='lock' />
+                </View>
+                <View>
+                    <TextField
+                        label = 'Max Age'
+                        labelFontSize = {14}
+                        fontSize = {14}
+                        labelTextStyle={{ paddingLeft: 42 }}
+                        inputContainerStyle={{ paddingLeft: 42 }}
+                        containerStyle={{marginRight: '5%'}}
+                        tintColor = 'rgb(200,200,198)'
+                        InputLabelProps={{
+                            style: { color: 'rgb(82,82,82)' },
+                        }}
+                    />
+                    <AntDesign style={{
+                        position: 'absolute',
+                        top: 30,
+                        left: 7,
+                        }} size={28} color='rgb(200,200,198)' name='lock' />
+                </View>
+                <View>
+                    <TextField
+                        label = 'Website Link'
                         labelFontSize = {14}
                         fontSize = {14}
                         labelTextStyle={{ paddingLeft: 42 }}
@@ -135,7 +192,7 @@ export default class Apply extends React.Component{
                         }} size={28} color='rgb(200,200,198)' name='lock' />
                 </View>
                 <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 17}}>
-                    <Text style={{color: 'rgb(200,200,198)'}}>Select Gender</Text>
+                    <Text style={{color: 'rgb(200,200,198)'}}>Scholarship For</Text>
                     <RadioGroup 
                         size={24}
                         style = {{flexDirection:'row', marginTop: '5%'}}
@@ -148,17 +205,57 @@ export default class Apply extends React.Component{
                         <RadioButton  sytle={{marginLeft: '30%'}} value={'item2'} >
                             <Text>Female</Text>
                         </RadioButton>
-    
+                        <RadioButton  sytle={{marginLeft: '30%'}} value={'item2'} >
+                            <Text>Other</Text>
+                        </RadioButton>
                     </RadioGroup> 
-                </View>    
+                </View>
                 <View>
+                    <TextField
+                        label = 'Minimum Educational Qualification'
+                        labelFontSize = {14}
+                        fontSize = {14}
+                        labelTextStyle={{ paddingLeft: 42 }}
+                        inputContainerStyle={{ paddingLeft: 42 }}
+                        containerStyle={{marginRight: '5%'}}
+                        tintColor = 'rgb(200,200,198)'
+                        InputLabelProps={{
+                            style: { color: 'rgb(82,82,82)' },
+                        }}
+                    />
+                    <AntDesign style={{
+                        position: 'absolute',
+                        top: 30,
+                        left: 7,
+                        }} size={28} color='rgb(200,200,198)' name='lock' />
+                </View>
+                <View>
+                    <TextField
+                        label = 'Percentage Required'
+                        labelFontSize = {14}
+                        fontSize = {14}
+                        labelTextStyle={{ paddingLeft: 42 }}
+                        inputContainerStyle={{ paddingLeft: 42 }}
+                        containerStyle={{marginRight: '5%'}}
+                        tintColor = 'rgb(200,200,198)'
+                        InputLabelProps={{
+                            style: { color: 'rgb(82,82,82)' },
+                        }}
+                    />
+                    <AntDesign style={{
+                        position: 'absolute',
+                        top: 30,
+                        left: 7,
+                        }} size={28} color='rgb(200,200,198)' name='lock' />
+                </View>    
+              
                     <Dropdown
                         label='Select Caste'
                         data={data}
                         itemCount = '10'
-                        containerStyle={{marginLeft: '5%', marginRight: '5%'}}
+                        containerStyle={{marginLeft: '5%', marginRight: '5%', marginTop: 0}}
                     />
-                </View>
+                
                 <View>
                     <Dropdown
                         label='Select State'
@@ -168,24 +265,27 @@ export default class Apply extends React.Component{
                     />
                 </View>
                 <View>
-                    <Dropdown
-                        label='Current Education Details'
-                        data={data}
-                        itemCount = '10'
-                        containerStyle={{marginLeft: '5%', marginRight: '5%'}}
+                    <TextField
+                        label = 'Address for Submission of Application'
+                        labelFontSize = {14}
+                        fontSize = {14}
+                        labelTextStyle={{ paddingLeft: 42 }}
+                        inputContainerStyle={{ paddingLeft: 42 }}
+                        containerStyle={{marginRight: '5%'}}
+                        tintColor = 'rgb(200,200,198)'
+                        InputLabelProps={{
+                            style: { color: 'rgb(82,82,82)' },
+                        }}
                     />
-                </View>
-                <View>
-                    <Dropdown
-                        label='Current Education Details'
-                        data={data}
-                        itemCount = '10'
-                        containerStyle={{marginLeft: '5%', marginRight: '5%'}}
-                    />
+                    <AntDesign style={{
+                        position: 'absolute',
+                        top: 30,
+                        left: 7,
+                        }} size={28} color='rgb(200,200,198)' name='lock' />
                 </View>
                 <View>
                     <TextField
-                        label = 'Percentage'
+                        label = 'Number of Scholarship Available'
                         labelFontSize = {14}
                         fontSize = {14}
                         labelTextStyle={{ paddingLeft: 42 }}
@@ -202,13 +302,19 @@ export default class Apply extends React.Component{
                         left: 7,
                         }} size={28} color='rgb(200,200,198)' name='lock' />
                 </View> 
-                <View style={{marginTop: '13%', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
-                    <TouchableOpacity  style={{ alignItems: 'center', justifyContent: 'center', width: '28%', height: 40, backgroundColor: 'rgb(0,115,192)', borderRadius: 15 }}>
-                        <Text style={{color: 'white', fontSize: 12}}>Save</Text>
+                <View style={{marginTop: 50, marginBottom: '5%', alignItems: 'center', justifyContent: 'center'}}>
+                    <Text style={{color: 'rgb(200,200,198)'}}>Last Date to Apply</Text>
+                    <TouchableOpacity  style={{ alignItems: 'center', justifyContent: 'center', width: '28%', height: 40, backgroundColor: 'rgb(0,115,192)', borderRadius: 15, marginTop: 5 }}>
+                                <Text style={{color: 'white', fontSize: 12}}>Select Date</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity  style={{ alignItems: 'center', justifyContent: 'center', width: '28%', height: 40, backgroundColor: 'rgb(0,115,192)', borderRadius: 15, marginLeft: '10%'}}>
-                        <Text style={{color: 'white', fontSize: 12}}>Cancel</Text>
-                    </TouchableOpacity> 
+                    <View style={{flexDirection:'row', marginTop: 40}}>
+                        <TouchableOpacity  style={{ alignItems: 'center', justifyContent: 'center', width: '28%', height: 40, backgroundColor: 'rgb(0,115,192)', borderRadius: 15 }}>
+                            <Text style={{color: 'white', fontSize: 12}}>Save</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity  style={{ alignItems: 'center', justifyContent: 'center', width: '28%', height: 40, backgroundColor: 'rgb(0,115,192)', borderRadius: 15, marginLeft: '10%'}}>
+                            <Text style={{color: 'white', fontSize: 12}}>Cancel</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>  
                 </View>          
             </ScrollView>

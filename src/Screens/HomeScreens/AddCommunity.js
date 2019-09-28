@@ -63,6 +63,7 @@ export default class AddCommunity extends React.Component {
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         numberOfLines={10}
         multiline={true}
+        //style={{}}
         onChangeText={ (name) => this.setState({ name }) }
         />
         </View>

@@ -7,21 +7,35 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons' 
 import Feather from 'react-native-vector-icons/Feather'
+import BottomTabsHeader from '../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
+import SearchScreen from '../SearchScreen'
 
 export default class TalentStory extends React.Component {
-  constructor() {
-    super();
+  static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
+  constructor(props) {
+    super(props);
     this.state = {
-      talentStoriesList: [ {},{},{},{},{} ]
+      talentStoriesList: [ {},{},{},{},{} ],
+      search: false
     }
+    this.updateParentComponent = this.updateParentComponent.bind(this)
   }
-  render() {
-    return (
-        <View style={{flex:1}}>
+
+  updateParentComponent(search) {
+    this.setState({
+      search: search
+    })
+  }
+
+  renderTalentStories() {
+    return(
+      <View>
           
      {/* <AntDesign name='like2' size={20} style={{position:'absolute',bottom:0}} /> */}
-            
-        <ScrollView>
+        
+        
             {this.state.talentStoriesList.map((talentStory, index) => (
               <View key={index} style={styles.talentStory}>
                 <View style={styles.talentStoryRow}>
@@ -81,15 +95,37 @@ export default class TalentStory extends React.Component {
                   </View>
             </View>
             ))}
-          </ScrollView>   
-     <View style={{position: 'absolute', bottom: 20, right:20}}>
+          
+    
+     
+        </View>
+    )
+  }
+
+  render() {
+    return (
+        <View style={{flex:1}}>
+          <ScrollView>
+            <BottomTabsHeader 
+              navigation={this.props.navigation}
+              updateParentComponent={this.updateParentComponent}
+              search={this.state.search}
+              screenName={this.state.search == true ? 'Search' : 'TalentStory'}
+            />
+          { this.state.search == false &&
+            this.renderTalentStories()
+          }
+          {
+            this.state.search == true && <SearchScreen />
+          }
+          </ScrollView>
+           { this.state.search == false && <View style={{position: 'absolute', bottom: 20, right:20}}>
        <TouchableOpacity>
           <View style={{backgroundColor:'#0073C0', width:50, height:50, borderRadius: 25, justifyContent: 'center', alignItems: 'center'}}>
-            <MaterialCommunityIcons name='square-edit-outline'size={30} color='#fff'/>
+            <MaterialCommunityIcons name='square-edit-outline'size={30} color='#fff' onPress={()=>this.props.navigation.navigate('Post')} />
           </View>
         </TouchableOpacity>
-      </View>
-     
+      </View>}
         </View>
     );
   }

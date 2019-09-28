@@ -13,14 +13,14 @@ export default class Scholarship extends React.Component{
              </TouchableOpacity>
 
             <View style={{marginTop:'5%'}}>
-             <TouchableOpacity style={Styles.button}>
+             <TouchableOpacity style={Styles.button} onPress={()=>{this.props.navigation.navigate('PostScholarship')}}>
                 <Text style={{ marginLeft:'5%'}}>Post Scholarship</Text>
                 <Image source={require('../../../assets/postscholarship.png')}
                        style={{ height:30,width:30, marginRight:'5%' }}/>
              </TouchableOpacity>
              </View>
              <View style={{ marginTop:'5%' }}>
-             <TouchableOpacity style={Styles.button}>
+             <TouchableOpacity style={Styles.button} onPress={()=>{this.props.navigation.navigate('ScholarshipHistory')}}>
                 <Text style={{ marginLeft:'5%'}}>View Scholarship</Text>
                 <Image source={require('../../../assets/postscholarship.png')}
                        style={{ height:30,width:30, marginRight:'5%' }}/>

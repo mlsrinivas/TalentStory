@@ -10,16 +10,24 @@ const styles = StyleSheet.create({
     },
     talentStory: {
         height: 520,
-        //borderColor: '#ddd',
+        borderColor: '#ddd',
         borderBottomWidth: 0,
         borderTopWidth: 0,
-        shadowColor: '#000',
+        //shadowColor: '#000',
         //shadowOffset: { width: 0, height: 0 },
         //shadowOpacity: 0.8,
         //shadowRadius: 1,
         //elevation: 1,
-        marginTop: '2%',
+        marginTop: '3%',
         //marginBottom: '2%'
+
+        elevation: 5,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 0.5 * 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * 5,
+    backgroundColor: 'white',
+    //borderRadius: 8,
     },
     talenStoryCircle: {
         width: 42,
