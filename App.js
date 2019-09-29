@@ -14,6 +14,7 @@ import {
 
 const ReactNavigation = require('react-navigation');
 ReactNavigation.SafeAreaView.setStatusBarHeight(0);
+import { createStyles, minWidth, minHeight } from 'react-native-media-queries';
 
 export default class App extends React.Component {
   constructor() {
@@ -33,7 +34,7 @@ export default class App extends React.Component {
 
 const MyStatusBar = ({backgroundColor, ...props}) => (
   Platform.OS === 'ios' ? 
-	  <View style={[styles.statusBar, { backgroundColor }]}>
+	  <View style={[style.statusBar, { backgroundColor }]}>
 	    <StatusBar translucent backgroundColor={backgroundColor} {...props} />
 	  </View> : null
 );
@@ -44,10 +45,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  
+}); 
+
+const base = {
   statusBar: {
-    height: STATUSBAR_HEIGHT,
+    height: STATUSBAR_HEIGHT
   },
-});
+}
+ 
+const style = createStyles(
+  base,
+  minHeight(812, minWidth(375, {statusBar:{height: 40}})),
+);
 
 
 
