@@ -7,7 +7,7 @@ import { View,
         StyleSheet,
         Image, 
         TouchableOpacity,  
-        ImageBackground,
+        Platform,
         Dimensions } from 'react-native'
 import styles from '../../Styles/Profile/Profile'
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -18,15 +18,42 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 export default class Profile extends React.Component{
-
+    constructor(props) { 
+        super(props)
+    }
+    static navigationOptions = ({ navigation }) => ({
+		header: null,
+    })
     render(){
         return(
         
     
-            <View style = {{ flex:1, backgroundColor:'#D3D3D3' }}>     
+            <View style = {{ flex:1, backgroundColor:'#D3D3D3' }}>
+                <View style={{
+                flexDirection:'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                //width:Dimensions.get('window').width,
+                height:50,  
+                backgroundColor: 'rgb(0,115,192)',
+                }}>
+                   <TouchableOpacity
+                style={{flex:1, flexDirection: "row", marginLeft: '7%', width: 34, justifyContent: "flex-start" }}
+                onPress={() => {
+                  this.props.navigation.navigate('HomeScreenStack')
+                }}>
+                <Ionicons name={Platform.OS == 'ios' ? "ios-arrow-back": "md-arrow-back"} size={29} color={"white"} />
+              </TouchableOpacity> 
+              <View>
+                <Text style={{fontSize: 17, color: 'white'}}>PROFILE</Text>
+              </View>
+              <View style={{marginRight: '7%',flex:1,flexDirection: "row",justifyContent:'flex-end'}}>
+              <Image style={{tintColor: 'white', width: 30, height: 30}} source={require('../../../assets/edit_image.png')} />
+              </View>
+                </View>     
             <ScrollView>           
-                <View style = {{height:200, width:'98%', backgroundColor:'white', margin:'1%', borderRadius:3}}>
-                <TouchableOpacity style = {{height:100, width:100,borderRadius:50, backgroundColor:'#BeBeBe', marginLeft:'40%', marginTop:'5%'}}>
+                <View style = {{flexDirection: 'row', height:200, width:'98%', backgroundColor:'white', margin:'1%', borderRadius:3,justifyContent: 'center'}}>
+                <TouchableOpacity style = {{height:100, width:100,borderRadius:50, backgroundColor:'#BeBeBe', marginTop:'5%'}}>
                     </TouchableOpacity>
                 </View>
                 <View style = {{height:35, width:'100%', backgroundColor:'white' }}>
