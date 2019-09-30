@@ -6,13 +6,13 @@ export default class Edit extends React.Component{
     render(){
         return(
            <ScrollView>
-           <View style={{ flex:1,flexDirection:'column',paddingLeft:'2%',paddingRight:'2%' }}>
-              <View style={{ marginTop:'6%' }}>
-              <View style={{ flexDirection:'row' }}>
+           <View style={{ flex:1, marginLeft:'2%',marginRight:'2%' }}>
+              
+              <View style={{ flexDirection:'row', marginTop: 20 }}>
               <Text style={{ fontWeight:'bold',fontSize:16 }}> Personal Details</Text>
               <EvilIcons name='user' size={24} color='#FF0000' style={{ margin:'1%',marginLeft:'55%' }}/>
               </View>
-              </View>
+             
               <TextInput style={ styles.inputstyle1 } placeholder='First Name'/>
               <TextInput style={ styles.inputstyle2 } placeholder='Last Name'/>
               <TextInput style={ styles.inputstyle2 } placeholder='Date of Birth'/>
@@ -24,17 +24,15 @@ export default class Edit extends React.Component{
               </View>
               <TextInput style={ styles.inputstyle2 } placeholder='College'/>
               <TextInput style={ styles.inputstyle2 } placeholder='School'/>
-              <View style={{ marginTop:'6%' }}>
-              <View style={{ flexDirection:'row' }}>
+              <View style={{ flexDirection:'row', marginTop:  20 }}>
                   <Text style={{ fontSize:16,fontWeight:'bold' }}>My Interests</Text>
                   <EvilIcons name='user' color='#FF0000' size={24} style={{ margin:'1%',marginLeft:'65%' }}/>
-               </View>
                </View>
                <TextInput style={ styles.workinput } placeholder='Work'/>
                <TextInput style={ styles.inputstyle2 } placeholder='About Me'/>
                <TextInput style={ styles.inputstyle2 } placeholder='Personal Skills'/>
-               <TouchableOpacity style = {{height:35, width:120, borderRadius:12, backgroundColor:'#0073C0',alignSelf:'center',marginTop:'10%',marginBottom:'7%'}}>
-                   <Text style = {{ color:'white', marginTop:'6%', alignSelf:'center', fontSize:14,fontWeight:'bold' }}>Submit</Text>
+               <TouchableOpacity style = {{height:35, width:120, borderRadius:12, backgroundColor:'#0073C0',alignSelf:'center', justifyContent: 'center', marginTop: 20, marginBottom:20}}>
+                   <Text style = {{ color:'white', alignSelf:'center', fontSize:14,fontWeight:'bold' }}>Submit</Text>
                    </TouchableOpacity>
               </View>
        </ScrollView>
@@ -50,7 +48,7 @@ inputstyle1:{
     width:'100%',
     borderRadius:3,
     paddingHorizontal:10,
-    marginTop:'5%'
+    marginTop:20
 },
 inputstyle2:{
     height:35,
@@ -59,7 +57,7 @@ inputstyle2:{
     width:'100%',
     borderRadius:3,
     paddingHorizontal:10,
-    marginTop:'2%'
+    marginTop: 7
 },
 workinput:{
     height:35,
@@ -68,6 +66,6 @@ workinput:{
     width:'100%',
     borderRadius:3,
     paddingHorizontal:10,
-    marginTop:'8%'
+    marginTop: 20
 }
 })
