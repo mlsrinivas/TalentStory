@@ -84,8 +84,8 @@ export default class BottomTabsHeader extends React.Component {
                 <TouchableOpacity style={{ marginRight: '18%', width: 27}} onPress={()=>this.props.updateParentComponent(true)}>
                   <Ionicons name="md-search" size={26} color={"rgb(92,92,92)"} />
                 </TouchableOpacity>}
-                <TouchableOpacity  onPress={()=>this.props.navigation.navigate('Funding')}>
-                  <Image style={{tintColor: 'rgb(92,92,92)', width: 30, height: 30, marginRight: 5}} source={require('../../../../assets/funding.png')} />
+                <TouchableOpacity  onPress={()=>this.props.navigation.navigate('Startups')}>
+                  <Image style={{tintColor: 'rgb(92,92,92)', width: 22, height: 22, marginRight: 5}} source={require('../../../../assets/scholarship.png')} />
                 </TouchableOpacity>
               </View>
             </View>

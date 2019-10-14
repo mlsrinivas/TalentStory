@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         marginTop:'10%'
     },
     iconarrowstyle:{
-        color:'gray',
+        color:'black',
         marginTop:'12%',
         marginLeft:'35%'
         //justifyContent:'flex-end'
