@@ -4,6 +4,7 @@ import { Icon } from 'native-base';
 import styles from '../Styles/SideMenuStyles';
 import Modal from 'react-native-modal'
 import { Dropdown } from 'react-native-material-dropdown';
+import  MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
 export default class SideMenu extends React.Component {
   constructor() {
@@ -41,30 +42,47 @@ export default class SideMenu extends React.Component {
                 <Image source={require('../../assets/Splash.png')}
                        style={styles.profileimage}/>
                         <View style={styles.profilenamesview}>
-                            <Text style={{ fontSize:18,color:'#515151',fontWeight:'bold'}}>User Name</Text>
-                            <Text style={{ fontSize:12,color:'#BeBeBe', marginTop:'4%' }}>View Your Profile</Text>
+                            <Text style={{ fontSize:18,color:'black',fontWeight:'bold'}}>User Name</Text>
+                            <Text style={{ fontSize:12,color:'black', marginTop:'4%' }}>View Your Profile</Text>
                         </View>
                 <Icon name='ios-arrow-forward' 
                       style={styles.iconarrowstyle}
                       onPress={()=>{this.props.navigation.navigate('home')}}/>
              </TouchableOpacity>
             <View style={{ borderBottomColor:'#f2f2f2',borderBottomWidth:1,marginTop:'4%' }} />
-        
-            <TouchableOpacity onPress={this.onModalState}
-                              style={{flexDirection:'row'}}>
-                <View style = {styles.imageAndText}>
+             
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Funding')}}
+                               style={{flexDirection:'row'}}>
+                <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
-                    <Image source={require('../../assets/feedback.png')}
-                           style={styles.imagestyle} />
+                    <Image source={require('../../assets/funding.png')}
+                            style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10}}>
-                                Feedback
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                    Funding
                                 </Text>
                         </View>
                 </View>
             </TouchableOpacity>
             <View style={styles.linestyle} />
-             
+
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Startups')}}
+                               style={{flexDirection:'row'}}>
+                <View style = {styles.imageAndText}>               
+                    <View style={styles.circleBorder}/>
+                    <Image source={require('../../assets/scholarship.png')}
+                            style={styles.imagestyle} />
+                            <View style = {styles.listview}>
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
+                                    Startups
+                                </Text>
+                        </View>
+                </View>
+            </TouchableOpacity>
+            <View style={styles.linestyle} />
+            
+            
+
              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scholarship')}}
                                style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
@@ -72,7 +90,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/scholarship.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
                                     Scholarship
                                 </Text>
                         </View>
@@ -87,14 +105,31 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/scholarship.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
                                     My Wallet
                                 </Text>
                         </View>
                 </View>
             </TouchableOpacity>
             <View style={styles.linestyle} />
-            
+
+              
+            <TouchableOpacity onPress={this.onModalState}
+                              style={{flexDirection:'row'}}>
+                <View style = {styles.imageAndText}>
+                    <View style={styles.circleBorder}/>
+                    <Image source={require('../../assets/feedback.png')}
+                           style={styles.imagestyle} />
+                            <View style = {styles.listview}>
+                                <Text style={{ color:'black', paddingHorizontal:10}}>
+                                Feedback
+                                </Text>
+                        </View>
+                </View>
+            </TouchableOpacity>
+            <View style={styles.linestyle} />         
+
+{/*             
             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('JoinedCommunity')}}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
@@ -108,9 +143,9 @@ export default class SideMenu extends React.Component {
                         </View>
                 </View>
             </TouchableOpacity>
-            <View style={styles.linestyle} />
+            <View style={styles.linestyle} /> */}
             
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('CreatedCommunity')}}
+            {/* <TouchableOpacity onPress={()=>{this.props.navigation.navigate('CreatedCommunity')}}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
@@ -123,7 +158,7 @@ export default class SideMenu extends React.Component {
                         </View>
                 </View>
             </TouchableOpacity>
-            <View style={styles.linestyle} />
+            <View style={styles.linestyle} /> */}
             
             <TouchableOpacity style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
@@ -131,7 +166,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/rating.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
                                     Rate the App
                                 </Text>
                         </View>
@@ -145,7 +180,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/rating.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
                                     Share with Friends
                                 </Text>
                         </View>
@@ -160,7 +195,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/aboutus.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                                <Text style={{ color:'black', paddingHorizontal:10 }}>
                                     About Us
                                 </Text>
                         </View>
@@ -175,7 +210,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/logout.png')}
                             style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                            <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                            <Text style={{ color:'black', paddingHorizontal:10 }}>
                                 Logout
                             </Text>
                      </View>
@@ -184,12 +219,11 @@ export default class SideMenu extends React.Component {
             <View style={{ borderBottomColor:'#DADADA',borderBottomWidth:1 }} />
             
             <View style={{ height:110 }}>
-                <View style={{ height:100,backgroundColor:'#F6F6F6',alignItems:'center',justifyContent:'center',flexDirection:'column' }}>
+                <View style={{ backgroundColor:'#F6F6F6',alignItems:'center',justifyContent:'center',flexDirection:'column' }}>
                     <Text style={{ color:'#696969' }}>Version: 1.0.12</Text>
-                    <Text style={{ color:'#808080' }}>Powered by: TalentStory</Text>
+                    <Text style={{ color:'black',marginTop:'2%' }}>Powered by: TalentStory</Text>
                         <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scanner')}}>
-                            <Image source={require('../../assets/qrcode.png')} 
-                                    style={{height:50,width:50,marginTop:'1%'}}/>
+                            <MaterialCommunityIcons name='qrcode-scan' size={40} style={{ marginTop:'3%' }}/>
                         </TouchableOpacity>
                 </View>
             </View>
