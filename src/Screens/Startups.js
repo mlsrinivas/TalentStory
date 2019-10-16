@@ -26,7 +26,7 @@ export default class Startups extends React.Component{
                                     <Image style={styles.imageCircle} source={require('../../assets/jionedcommunity.png')}/>
                                 </View>
                                     <View style={{ flexDirection:'column' }}>
-                                        <TouchableOpacity>
+                                        <TouchableOpacity onPress={()=>this.props.navigation.navigate("CompanyProfile")}>
                                         <Entypo size={18} color='rgb(176, 171, 171)' style={{ marginLeft:'82%',marginTop:'2%',color:'black' }} name="dots-three-vertical"/> 
                                         </TouchableOpacity>
                                         <Text style={{ marginLeft:'8%', fontWeight:'bold',fontSize:16 }}>Cyber Security</Text>
