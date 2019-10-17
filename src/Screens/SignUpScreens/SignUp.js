@@ -8,7 +8,7 @@ import {
   StyleSheet,
   Image, 
   TouchableOpacity,  
-  ImageBackground,
+  ImageBackground, 
   Dimensions,
   
 } from 'react-native';
@@ -83,17 +83,21 @@ export default class SignUp extends React.Component {
             <View style = {{flexDirection:"column", justifyContent:'space-around', marginLeft:'5%', marginTop:'5%'}}>
             <Text style={{ color:'#515151' }}>Gender</Text>
             </View>
-
-            <View style = {{flexDirection:"row", justifyContent:'space-around'}}>                
-                <View style={styles.gender}>
-                <Icon size={26} name="ios-male" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
-                <Text style={{ color:'#DADADA',margin:'5%',position:'absolute',marginHorizontal:50 }}>Male</Text>
+            <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
+                <View style = {styles.gender}>
+                  <TouchableOpacity style = {{flexDirection:'row'}}>
+                  <Icon size={20} name="ios-male" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+                  <Text style={{ color:'#DADADA', paddingHorizontal :10, marginTop:'10%'}}>Male</Text>
+                  </TouchableOpacity>
                 </View>
-                <View style={ styles.gender}>
-                <Icon size={26} name="ios-female" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
-                <Text style={{ color:'#DADADA',margin:'5%',position:'absolute',marginHorizontal:50}}>Female</Text>
+                <View style = {styles.gender}>
+                  <TouchableOpacity style = {{flexDirection:'row'}}>
+                  <Icon size={20} name="ios-female" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+                  <Text style={{ color:'#DADADA', paddingHorizontal :10, marginTop:'8%' }}>Female</Text>
+                  </TouchableOpacity>
                 </View>                
             </View>
+
             </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around', marginTop:'5%'}}>
                 <View >

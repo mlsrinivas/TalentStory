@@ -26,7 +26,7 @@ export default class AddCommunity extends React.Component {
     this.updateParentComponent = this.updateParentComponent.bind(this)
   }
 
-  updateParentComponent(search) {
+  updateParentComponent(search) { 
     this.setState({
       search: search
     })

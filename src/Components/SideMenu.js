@@ -4,6 +4,7 @@ import { Icon } from 'native-base';
 import styles from '../Styles/SideMenuStyles';
 import Modal from 'react-native-modal'
 import { Dropdown } from 'react-native-material-dropdown';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 export default class SideMenu extends React.Component {
   constructor() {
@@ -196,11 +197,15 @@ export default class SideMenu extends React.Component {
         </View>
         <Modal isVisible={this.state.isModalVisible}> 
                 <View style={modalstyles.content}>
-                   {/* <View style={{ flexDirection:'row',margin:'5%'}}> */}
-                   <View style={{ margin:'5%'}}>
-                    <Text style={{ color:'#515151',fontSize:25,fontWeight:'bold' }}>Feedback</Text> 
-                    <Text style={{ color:'#515151',fontSize:12 }}>Reinforce positive and negative behaviours</Text>
-                    {/* </View> */}
+                   <View style={{ flexDirection:'row'}}>
+                        <View style={{ margin:'5%'}}>
+                            <Text style={{ color:'#515151',fontSize:25,fontWeight:'bold' }}>Feedback</Text> 
+                            <Text style={{ color:'#515151',fontSize:12 }}>Reinforce positive and negative behaviours</Text>
+                        </View>
+                        <TouchableOpacity style = {{marginLeft:'10%',marginTop:'10%'}}
+                                            onPress={this.closeModal}>
+                        <AntDesign size={26} name="close" style={{ color:'#515151'}}/>
+                        </TouchableOpacity>
                     </View> 
                     <View style={{ borderBottomColor:'#DADADA',borderBottomWidth:1,marginTop:'1%' }} />
 

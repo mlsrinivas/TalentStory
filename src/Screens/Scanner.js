@@ -5,7 +5,7 @@ export default class Scanner extends React.Component{
     render(){
         return(
             <View style={{ width:'100%',height:'100%' }}>
-                <Text style={{ color:'gray',marginTop:'2%',alignSelf:'center',fontSize:20 }}>Scan and view your details</Text>
+                <Text style={{ color:'gray',marginTop:'2%',alignSelf:'center',fontSize:17 }}>Scan and view your details</Text>
                 <Image source={require('../../assets/Dense-QR-Code.png')}
                        style={{ marginTop:'30%',height:250,width:250,alignSelf:'center' }} />
                 <View style={{ flex:1,justifyContent: 'flex-end' }}>

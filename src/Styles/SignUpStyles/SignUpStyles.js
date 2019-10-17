@@ -45,34 +45,18 @@ const styles = StyleSheet.create({
     paddingHorizontal :10,
   },
   gender:{
-    width:170,
-    height:40,
-    //backgroundColor: 'red',
-    shadowColor: '#000000',
-    shadowOffset:{ width:0, height:2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 1.84, 
-    elevation: 1,
-    borderRadius:3,
-     marginTop:'5%',
-     //paddingHorizontal :50,
-    //flex: 1,
-    
-    
-  },
-  viewFemale:{
-    width:170,
-    height:40,
-    //backgroundColor: 'red',
-    shadowColor: '#000000',
-    shadowOffset:{ width:0, height:2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 1.84, 
-    elevation: 1,
-    borderRadius:3,
-     marginTop:'5%',
-     //paddingHorizontal :50,
-    //flex: 1,
+      width:170,
+      height:40,
+      backgroundColor: '#fff',
+      shadowColor: '#000000',
+      shadowOffset:{ width:0, height:2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 1.84,
+      elevation: 2,
+      borderRadius:3,
+      marginTop:'5%',
+      paddingHorizontal :10,
+      flexDirection:'row'
   },
   viewPassword:{
     width:360,
@@ -105,16 +89,12 @@ const styles = StyleSheet.create({
     width:400,
     height:40,
     backgroundColor: '#0073C0',
-    //borderRadius:5,
-
   },
   loginTitle:{
     color: '#fff',
     textAlign:'center',
-    //paddingLeft: 200,
     paddingTop: 8,
   }
-    
   });
 
   export default styles

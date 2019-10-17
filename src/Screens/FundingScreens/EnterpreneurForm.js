@@ -9,6 +9,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
 import { Dropdown } from 'react-native-material-dropdown';
 import ModalDropdown from 'react-native-modal-dropdown';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 const screenWidth = Dimensions.get('window').width
@@ -84,8 +86,8 @@ export default class EnterPreneurForm extends React.Component {
                 inputContainerStyle={{backgroundColor: 'rgb(240,240,240)', marginTop:'3%', paddingLeft: '5%'}} 
                 containerStyle={{marginLeft: '6%', marginRight: '6%'}}
                 onChangeText={ (linkedIn) => this.setState({ linkedIn }) }
-                
               />
+              
               <View style={{marginLeft: '6%', marginRight: '6%', height: 60, marginTop: 7}}>
                 <TextInput 
                   placeholder = 'Choose Sector'
@@ -95,6 +97,7 @@ export default class EnterPreneurForm extends React.Component {
                 />
                 <View style={{borderWidth:1, borderColor: 'rgb(110,110,110)'}} />
               </View>
+              <View>
               <TextField
                 label='Date of Funding'
                 tintColor = 'rgb(10,111,179)'
@@ -106,6 +109,9 @@ export default class EnterPreneurForm extends React.Component {
                 onChangeText={ (date) => this.setState({ date }) }
                 autoFocus={true}
               />
+              <MaterialCommunityIcons size={20} name="calendar-check-outline" 
+                    style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+              </View>
               <TextField
                 label='About Idea(Elevator pitch)'
                 tintColor = 'rgb(10,111,179)'
