@@ -45,6 +45,7 @@ import InvestorForm from './Screens/FundingScreens/InvestorForm'
 import SearchScreen from './Screens/SearchScreen'
 import Post from './Screens/Post'
 import Startups from './Screens/Startups'
+import CompanyProfile from './Screens/CompanyProfile'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -169,6 +170,10 @@ const AppStack = createStackNavigator({
     Startups:{
       screen: Startups,
       navigationOptions: (options) => NavigationOptions(options, "Startup Communities", "sideMenu"),
+    },
+    CompanyProfile:{
+      screen: CompanyProfile,
+      navigationOptions: (options) => NavigationOptions(options, "Company Name", "sideMenu"),
     }        
 })
 const AuthStack = createStackNavigator({
