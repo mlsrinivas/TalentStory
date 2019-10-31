@@ -44,6 +44,8 @@ import EnterPreneurForm from './Screens/FundingScreens/EnterpreneurForm'
 import InvestorForm from './Screens/FundingScreens/InvestorForm'
 import SearchScreen from './Screens/SearchScreen'
 import Post from './Screens/Post'
+import CreateCommunity from './Screens/HomeScreens/AddCommunity/CreateCommunity'
+import MyCommunities from './Screens/HomeScreens/AddCommunity/MyCommunities'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -80,9 +82,6 @@ const AppStack = createStackNavigator({
     screen: Scholarship,
     navigationOptions: (options) => NavigationOptions(options, "Scholarship", "sideMenu")
   },
-  // MyWalletScreen: {
-  //   screen: MyWallet
-  // },
   JoinedCommunity: {
     screen: JoinedCommunity,
     navigationOptions: (options) => NavigationOptions(options, "Joined Communities", "sideMenu")
@@ -118,9 +117,6 @@ const AppStack = createStackNavigator({
      SendCoins: {
       screen: SendCoins
     },
-  // LogOutScreen: {
-  //   screen: Logout
-  // },
      Scanner:{
        screen: Scanner,
        navigationOptions: (options) => NavigationOptions(options, "QR Scan", "sideMenu")
@@ -164,7 +160,8 @@ const AppStack = createStackNavigator({
     Post:{
       screen: Post,
       navigationOptions: (options) => NavigationOptions(options, "Create Post", "sideMenu"),
-    }        
+    },
+           
 })
 const AuthStack = createStackNavigator({
     Login: { 
@@ -178,6 +175,12 @@ const AuthStack = createStackNavigator({
      ForgetPassword: {
        screen: ForgetPassword,
      },
+     CreateCommunity:{
+      screen: CreateCommunity,
+    },
+    MyCommunities: {
+      screen: MyCommunities
+    },
     // FeedBackScreen: {
     //   screen: FeedBack
     // },

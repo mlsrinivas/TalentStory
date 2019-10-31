@@ -10,7 +10,7 @@ import {
 import TalentStory from '../../Screens/HomeScreens/TalentStory'
 import Friend from '../../Screens/HomeScreens/Friend'
 import Chat from '../../Screens/HomeScreens/Chat'
-import AddCommunity from '../../Screens/HomeScreens/AddCommunity'
+import AddCommunity from '../../Screens/HomeScreens/AddCommunity/AddCommunity';
 import TalentStoryStar from '../../Components/TalentStoryStar'
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
