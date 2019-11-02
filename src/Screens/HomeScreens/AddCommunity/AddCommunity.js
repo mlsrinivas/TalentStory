@@ -42,26 +42,38 @@ export default class AddCommunity extends React.Component {
         </View>
 
 
-        <View style = {{flexDirection: 'row',marginTop:'5%', justifyContent:'space-between'}}>
+        <View style = {{flexDirection: 'row',marginTop:'2%', justifyContent:'space-around'}}>
         <TouchableOpacity style = {{marginLeft:'22%', }}
                           onPress = {() => {this.props.navigation.navigate('CreateCommunity')}}>
-        <View style = {{height:50, width:120, borderRadius:14, backgroundColor:'#0073C0'}}>
-        <Text style = {{color:'white', marginTop:'2%', alignSelf:'center', fontSize:15}}>Create Community</Text>
+        <View style = {styles.inputstyle2}>
+        <Text style = {{color:'black', marginTop:'4%', alignSelf:'center', fontSize:15}}>Create Community</Text>
         </View>
         </TouchableOpacity>
         <TouchableOpacity style = {{marginRight:'15%', }}
                                   onPress = {() => {this.props.navigation.navigate('MyCommunities')}}>
-        <View style = {{height:50, width:120, borderRadius:14, backgroundColor:'#0073C0'}}>
-        <Text style = {{color:'white', marginTop:'2%', alignSelf:'center', fontSize:15}}>My Communities </Text>
+        <View style = {styles.inputstyle2}>
+        <Text style = {{color:'black', marginTop:'4%', alignSelf:'center', fontSize:15}}>My Communities </Text>
         </View>
         </TouchableOpacity>
+        </View>
+
+        <View style = {{alignSelf:'center'}}>
+          <View style = {styles.inputstyle3}>
+          <Text style = {{color:'black', margin:'1%', fontSize:12, fontWeight:'bold'}}>#Joined Communities:</Text>
+          </View>
+        </View>
+
+        <View style = {{alignSelf:'center'}}>
+          <View >
+          <Text style = {{color:'#B5B5B5', marginTop:'70%', alignSelf:'center', alignItems:'center', fontSize:12}}>There are no more communities yet created or joined</Text>
+          <Text style = {{color:'#B5B5B5', marginTop:'2%', alignSelf:'center', alignItems:'center', fontSize:12}}>drag to retry</Text>
+          </View>
         </View>
       </View>
     )
   }
 
-  render() {
-   
+  render() {  
 
     return (
         <View style={{ flex: 1 }}>
@@ -93,9 +105,24 @@ const styles = StyleSheet.create({
       width:'96%',
       borderRadius:2,
       paddingHorizontal:15,
-      marginTop:10,
+      marginTop:7,
       marginLeft:'2%',
       backgroundColor: 'rgb(240,240,240)',
-      //marginRight:'10%',
   },
+  inputstyle2:{
+    height:40,
+    borderColor:'black',
+    borderWidth:1, 
+    width:'90%',
+    borderRadius:5,
+    backgroundColor: 'rgb(240,240,240)',
+},
+inputstyle3:{
+  height:25,
+  borderColor:'rgb(240,240,240)',
+  borderWidth:1, 
+  width:'100%',
+  borderRadius:5,
+  marginTop:'2%',
+},
   })

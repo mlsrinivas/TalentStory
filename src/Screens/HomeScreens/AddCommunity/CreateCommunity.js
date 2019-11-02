@@ -69,7 +69,11 @@ export default class CreateCommunity extends React.Component {
         />
         </View>
 
-        <View style = {{flexDirection: 'row',marginTop:'5%', justifyContent:'space-between'}}>
+        <View>
+          <Text style = {{color:'black', alignSelf:'center', marginTop:'2%', fontSize:13}}>Are you a startup</Text>
+        </View>
+
+        <View style = {{flexDirection: 'row',marginTop:'8%', justifyContent:'space-between'}}>
         <TouchableOpacity style = {{marginLeft:'22%', }}>
         <View style = {{height:50, width:120, borderRadius:14, backgroundColor:'#0073C0'}}>
         <Text style = {{color:'white', marginTop:'2%', alignSelf:'center', fontSize:15}}>Select</Text>
