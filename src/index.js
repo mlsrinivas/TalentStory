@@ -46,6 +46,8 @@ import SearchScreen from './Screens/SearchScreen'
 import Post from './Screens/Post'
 import CreateCommunity from './Screens/HomeScreens/AddCommunity/CreateCommunity'
 import MyCommunities from './Screens/HomeScreens/AddCommunity/MyCommunities'
+import Startups from './Screens/Startups'
+import CompanyProfile from './Screens/CompanyProfile'
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -160,8 +162,15 @@ const AppStack = createStackNavigator({
     Post:{
       screen: Post,
       navigationOptions: (options) => NavigationOptions(options, "Create Post", "sideMenu"),
+    },                 
+    Startups:{
+      screen: Startups,
+      navigationOptions: (options) => NavigationOptions(options, "Startup Communities", "sideMenu"),
     },
-           
+    CompanyProfile:{
+      screen: CompanyProfile,
+      navigationOptions: (options) => NavigationOptions(options, "Company Name", "sideMenu"),
+    }        
 })
 const AuthStack = createStackNavigator({
     Login: { 
