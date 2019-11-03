@@ -7,33 +7,22 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 //import RadioButton from 'react-native-radio-button' 
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
 import { Dropdown } from 'react-native-material-dropdown';
-import BottomTabsHeader from '../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
-import SearchScreen from '../SearchScreen'
+//import BottomTabsHeader from '../../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
+//import SearchScreen from '../../SearchScreen'
 import ModalDropdown from 'react-native-modal-dropdown';
 
 
 
-export default class AddCommunity extends React.Component {
-  static navigationOptions = ({ navigation }) => ({
-		header: null,
-  })
+export default class CreateCommunity extends React.Component {
   constructor() {
     super();
     this.state = {
       search: false,
       name: ''
     }
-    this.updateParentComponent = this.updateParentComponent.bind(this)
   }
 
-  updateParentComponent(search) {
-    this.setState({
-      search: search
-    })
-  }
-
-
-  renderAddCommunity() {
+  render() {
     const name = this.state;
     const radio_props = [{label: 'Public', value: 0 }, {label: 'Private', value: 0 }];
 
@@ -80,7 +69,11 @@ export default class AddCommunity extends React.Component {
         />
         </View>
 
-        <View style = {{flexDirection: 'row',marginTop:'5%', justifyContent:'space-between'}}>
+        <View>
+          <Text style = {{color:'black', alignSelf:'center', marginTop:'2%', fontSize:13}}>Are you a startup</Text>
+        </View>
+
+        <View style = {{flexDirection: 'row',marginTop:'8%', justifyContent:'space-between'}}>
         <TouchableOpacity style = {{marginLeft:'22%', }}>
         <View style = {{height:50, width:120, borderRadius:14, backgroundColor:'#0073C0'}}>
         <Text style = {{color:'white', marginTop:'2%', alignSelf:'center', fontSize:15}}>Select</Text>
@@ -179,29 +172,5 @@ export default class AddCommunity extends React.Component {
         </View>
         </View>
     )
-  }
-
-  render() {
-   
-
-    return (
-        <View style={{ flex: 1 }}>
-          <BottomTabsHeader 
-              navigation={this.props.navigation}
-              updateParentComponent={this.updateParentComponent}
-              search={this.state.search}
-              screenName={this.state.search == true ? 'Search' : 'Add Community'}
-            />
-            {/* {this.state.search == false && <View style={{borderTopWidth: 1, borderColor: 'gray'}} />} */}
-           {
-            this.state.search == true && <SearchScreen />
-            }  
-        <ScrollView>
-          {this.state.search == false && this.renderAddCommunity()}
-        </ScrollView> 
-        </View>
-        
-        
-    );
   }
 }

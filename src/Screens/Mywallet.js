@@ -35,7 +35,7 @@ export default class Mywallet extends React.Component{
                         </View>
                     </View>
                     <View style = {{alignItems:'center'}}>
-                    <TouchableOpacity style = {{height:23, width:125, backgroundColor:'#00897D', borderRadius:30, borderWidth:2, borderColor:'white', alignItems:'center'}}>
+                    <TouchableOpacity style = {{height:21, width:125, backgroundColor:'#00897D', borderRadius:30, borderWidth:2, borderColor:'white', alignItems:'center'}}>
                     <Text style = {{fontSize:12, color:'white',alignItems:'center', fontWeight:'bold' }}>Terms and Conditions</Text>
                     </TouchableOpacity>
                     </View>
