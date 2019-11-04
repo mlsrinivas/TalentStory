@@ -10,6 +10,7 @@ import { Dropdown } from 'react-native-material-dropdown';
 //import BottomTabsHeader from '../../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
 //import SearchScreen from '../../SearchScreen'
 import ModalDropdown from 'react-native-modal-dropdown';
+import ToggleSwitch from 'toggle-switch-react-native'
 
 
 
@@ -69,8 +70,19 @@ export default class CreateCommunity extends React.Component {
         />
         </View>
 
-        <View>
+        {/* <View>
           <Text style = {{color:'black', alignSelf:'center', marginTop:'2%', fontSize:13}}>Are you a startup</Text>
+        </View> */}
+        <View style = {{alignSelf:'center'}}>
+        <ToggleSwitch
+          isOn={false}
+          onColor="#B5B5B5"
+          offColor="gray"
+          label="Are you a startup"
+          labelStyle={{ color: "black", alignSelf:'center', fontSize:13 }}
+          size="small"
+          onToggle={isOn => console.log("changed to : ", isOn)}
+        />
         </View>
 
         <View style = {{flexDirection: 'row',marginTop:'8%', justifyContent:'space-between'}}>
