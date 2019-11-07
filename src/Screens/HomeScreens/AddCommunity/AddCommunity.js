@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native'
-import { TextField } from 'react-native-material-textfield';
+import { View, Text, StyleSheet } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import BottomTabsHeader from '../../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
 import SearchScreen from '../../SearchScreen'
-import Icon from 'react-native-vector-icons/FontAwesome'
-//import { Icon } from 'native-base';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
+
 
 
 export default class AddCommunity extends React.Component {
@@ -36,14 +36,14 @@ export default class AddCommunity extends React.Component {
         <View style = {{flexDirection:'row'}}>
           <View style={ styles.inputstyle1 }>
           <TouchableOpacity>
-          <Icon name='search' size={20} color='rgb(111,111,111)' style={{ margin:'3%' }}/>
+          <MaterialIcons name='search' size={28} color='rgb(111,111,111)' style={{ margin:'3%' }}/>
           </TouchableOpacity>
           </View>
         </View>
 
 
-        <View style = {{flexDirection: 'row',marginTop:'2%', justifyContent:'space-around'}}>
-        <TouchableOpacity style = {{marginLeft:'22%', }}
+        <View style = {{flexDirection: 'row',marginTop:'2%', justifyContent:'space-between'}}>
+        <TouchableOpacity style = {{marginLeft:'15%', }}
                           onPress = {() => {this.props.navigation.navigate('CreateCommunity')}}>
         <View style = {styles.inputstyle2}>
         <Text style = {{color:'black', marginTop:'4%', alignSelf:'center', fontSize:15}}>Create Community</Text>
@@ -99,23 +99,29 @@ export default class AddCommunity extends React.Component {
 
 const styles = StyleSheet.create({
   inputstyle1:{
-      height:45,
-      borderColor:'#D3D3D3',
-      borderWidth:1, 
-      width:'96%',
-      borderRadius:2,
-      paddingHorizontal:15,
-      marginTop:7,
-      marginLeft:'2%',
-      backgroundColor: 'rgb(240,240,240)',
+    height:45,
+    borderColor:'#f5f5f5',
+    borderWidth:1, 
+    width:'96%',
+    borderRadius:2,
+    paddingHorizontal:15,
+    marginTop:'2%',
+    marginLeft:'2%',
+    marginRight:'2%',
+    backgroundColor: '#f5f5f5',
+    shadowColor: '#000000',
+    shadowOffset:{ width:0, height:2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 1.84,
+    elevation: 3,
   },
   inputstyle2:{
     height:40,
     borderColor:'black',
     borderWidth:1, 
-    width:'90%',
+    width:'100%',
     borderRadius:5,
-    backgroundColor: 'rgb(240,240,240)',
+    backgroundColor: '#f5f5f5',
 },
 inputstyle3:{
   height:25,

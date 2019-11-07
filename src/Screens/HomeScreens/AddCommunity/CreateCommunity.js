@@ -47,6 +47,7 @@ export default class CreateCommunity extends React.Component {
               }, 
             ];
     return (
+      <ScrollView>
       <View>
       <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
@@ -158,7 +159,7 @@ export default class CreateCommunity extends React.Component {
         <Text >{this.state.text}</Text>      
         </View>
 
-        <View style = {{flexDirection: 'row',marginTop:'5%', justifyContent:'space-between'}}>
+        <View style = {{flexDirection: 'row',marginTop:'5%', justifyContent:'space-between',marginBottom:'5%'}}>
         <TouchableOpacity style = {{marginLeft:'22%', }}>
         <View style = {{height:40, width:120, borderRadius:14, backgroundColor:'#0073C0'}}>
         <Text style = {{color:'white', marginTop:'5%', alignSelf:'center', fontSize:15}}>Save</Text>
@@ -171,6 +172,7 @@ export default class CreateCommunity extends React.Component {
         </TouchableOpacity>
         </View>
         </View>
+        </ScrollView>
     )
   }
 }
