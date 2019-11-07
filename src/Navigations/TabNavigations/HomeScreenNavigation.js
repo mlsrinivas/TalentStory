@@ -8,9 +8,9 @@ import {
 } from "react-navigation";
 
 import TalentStory from '../../Screens/HomeScreens/TalentStory'
-import Friend from '../../Screens/HomeScreens/Friend'
+import Researches from '../../Screens/HomeScreens/Researches'
 import Chat from '../../Screens/HomeScreens/Chat'
-import AddCommunity from '../../Screens/HomeScreens/AddCommunity/AddCommunity';
+import AddCommunity from '../../Screens/HomeScreens/AddCommunity/AddCommunity'
 import TalentStoryStar from '../../Components/TalentStoryStar'
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
@@ -21,11 +21,11 @@ const bottomTabIcon = (options, icon) => {
   if(icon=="home"||icon=="squared-plus"){
       icon = <Entypo size={21} color={tintColor} name={icon} />
   }
-  else if(icon=="user-friends"){
-      icon = <FontAwesome5 size={21} color={tintColor} name={icon} />
-  }
   else if(icon=="message-processing"){
       icon = <MaterialCommunityIcons size={21} color={tintColor} name={icon} />
+  }
+  else if(icon=="user-friends"){
+    icon = <FontAwesome5 size={21} color={tintColor} name={icon} />
   }
   else if(icon=="star"){
     return <TouchableOpacity><TalentStoryStar/></TouchableOpacity>
@@ -40,8 +40,8 @@ const TalenStoryStatck = createStackNavigator({
 })
 
 const FriendStack = createStackNavigator({
-  Friends: {
-    screen: Friend,
+  Researches: {
+    screen: Researches,
   },
 })
 
@@ -65,12 +65,12 @@ export const HomeScreenBottomTabs = createBottomTabNavigator({
         tabBarIcon: (options) => bottomTabIcon(options, "home"),
       }
     },
-    Friends: { 
-      screen: FriendStack,
+    Chat: {
+      screen: ChatStack,
       navigationOptions: {
-        tabBarIcon: (options) => bottomTabIcon(options, "user-friends")
-      }
-    },
+       tabBarIcon: (options) => bottomTabIcon(options, "message-processing")
+     }
+   },
     StarButton: {
       screen: () => null,
       navigationOptions: {
@@ -78,12 +78,12 @@ export const HomeScreenBottomTabs = createBottomTabNavigator({
         tabBarOnPress: () => {}
       }
     },
-    Chat: {
-      screen: ChatStack,
-      navigationOptions: {
-       tabBarIcon: (options) => bottomTabIcon(options, "message-processing")
-     }
-   },
+    Researches: { 
+    screen: FriendStack,
+    navigationOptions: {
+      tabBarIcon: (options) => bottomTabIcon(options, "user-friends")
+    }
+  },
    AddCommunity: {
       screen: AddCommunityStack,
       navigationOptions: {
