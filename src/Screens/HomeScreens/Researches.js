@@ -17,7 +17,7 @@ export default class Researches extends React.Component {
     this.state = {
       search: false,
       name: '',
-      cardList: [ {}, {}, {} ]
+      cardList: [ {}, {}, {}, {} ]
     }
     this.updateParentComponent = this.updateParentComponent.bind(this);
     this.dropDownJoin = this.dropDownJoin.bind(this);
