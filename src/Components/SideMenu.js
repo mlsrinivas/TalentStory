@@ -52,6 +52,7 @@ export default class SideMenu extends React.Component {
              </TouchableOpacity>
             <View style={{ borderBottomColor:'#f2f2f2',borderBottomWidth:1,marginTop:'4%' }} />
              
+
             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Funding')}}
                                style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
@@ -122,7 +123,7 @@ export default class SideMenu extends React.Component {
                     <Image source={require('../../assets/feedback.png')}
                            style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'black', paddingHorizontal:10}}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10}}>
                                 Feedback
                                 </Text>
                         </View>

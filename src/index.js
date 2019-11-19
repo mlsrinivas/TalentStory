@@ -49,6 +49,8 @@ import CompanyProfile from './Screens/CompanyProfile'
 import CreateResearch from './Screens/HomeScreens/Research/CreateResearch'
 import MyResearches from './Screens/HomeScreens/Research/MyResearches'
 import JoinedResearches from './Screens/HomeScreens/Research/JoinedResearches'
+import Startups from './Screens/Startups'
+
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
