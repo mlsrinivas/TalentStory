@@ -50,22 +50,25 @@ export default class SideMenu extends React.Component {
                       onPress={()=>{this.props.navigation.navigate('home')}}/>
              </TouchableOpacity>
             <View style={{ borderBottomColor:'#f2f2f2',borderBottomWidth:1,marginTop:'4%' }} />
-        
-            <TouchableOpacity onPress={this.onModalState}
-                              style={{flexDirection:'row'}}>
-                <View style = {styles.imageAndText}>
+             
+                   
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Startups')}}
+                               style={{flexDirection:'row'}}>
+                <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
-                    <Image source={require('../../assets/feedback.png')}
-                           style={styles.imagestyle} />
+                    <Image source={require('../../assets/scholarship.png')}
+                            style={styles.imagestyle} />
                             <View style = {styles.listview}>
-                                <Text style={{ color:'#515151', paddingHorizontal:10}}>
-                                Feedback
+                                <Text style={{ color:'#515151', paddingHorizontal:10 }}>
+                                    Startups
                                 </Text>
                         </View>
                 </View>
             </TouchableOpacity>
             <View style={styles.linestyle} />
-             
+            
+            
+
              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Scholarship')}}
                                style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
@@ -95,7 +98,24 @@ export default class SideMenu extends React.Component {
                 </View>
             </TouchableOpacity>
             <View style={styles.linestyle} />
-            
+
+              
+            <TouchableOpacity onPress={this.onModalState}
+                              style={{flexDirection:'row'}}>
+                <View style = {styles.imageAndText}>
+                    <View style={styles.circleBorder}/>
+                    <Image source={require('../../assets/feedback.png')}
+                           style={styles.imagestyle} />
+                            <View style = {styles.listview}>
+                                <Text style={{ color:'#515151', paddingHorizontal:10}}>
+                                Feedback
+                                </Text>
+                        </View>
+                </View>
+            </TouchableOpacity>
+            <View style={styles.linestyle} />         
+
+{/*             
             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('JoinedCommunity')}}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
@@ -109,9 +129,9 @@ export default class SideMenu extends React.Component {
                         </View>
                 </View>
             </TouchableOpacity>
-            <View style={styles.linestyle} />
+            <View style={styles.linestyle} /> */}
             
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('CreatedCommunity')}}
+            {/* <TouchableOpacity onPress={()=>{this.props.navigation.navigate('CreatedCommunity')}}
                               style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
                     <View style={styles.circleBorder}/>
@@ -124,7 +144,7 @@ export default class SideMenu extends React.Component {
                         </View>
                 </View>
             </TouchableOpacity>
-            <View style={styles.linestyle} />
+            <View style={styles.linestyle} /> */}
             
             <TouchableOpacity style={{flexDirection:'row'}}>
                 <View style = {styles.imageAndText}>               
