@@ -47,9 +47,9 @@ export default class SignUp extends React.Component {
                               onPress={()=>{this.props.navigation.navigate('Login')}}>
               <AntDesign size={24} color="white" name="arrowleft" />
             </TouchableOpacity>
-            <View style = {{ position:'absolute', alignSelf:'center', marginTop:'57%' }}>
+            {/* <View style = {{ position:'absolute', alignSelf:'center', marginTop:'57%' }}>
             <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' />
-            </View>
+            </View> */}
             </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
                 <View>

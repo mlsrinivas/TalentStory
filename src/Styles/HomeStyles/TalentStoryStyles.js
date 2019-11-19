@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         marginTop: '2%',
         //marginBottom: '1%',
         fontSize:13,
-        alignSelf: 'flex-end',
+        alignSelf: 'flex-end', 
         color: 'rgb(176, 171, 171)',
     },
     likeCommentShareView: {

@@ -23,8 +23,6 @@ import ForgetPassword from './Screens/ForgetPassword'
 import Aboutus from './Screens/Aboutus'
 import { NavigationOptions } from './Components/ReUsableComponents/HomeScreenHeader/HomeScreenHeader'
 import SideMenu from './Components/SideMenu'
-import JoinedCommunity from './Screens/JoinedCommunity'
-import CreatedCommunity from './Screens/CreatedCommunity'
 import Scholarship from './Screens/ScholarshipScreens/Scholarship'
 import { HomeScreenBottomTabs } from './Navigations/TabNavigations/HomeScreenNavigation'
 import Profile from './Screens/Profile/Profile'
@@ -44,7 +42,15 @@ import EnterPreneurForm from './Screens/FundingScreens/EnterpreneurForm'
 import InvestorForm from './Screens/FundingScreens/InvestorForm'
 import SearchScreen from './Screens/SearchScreen'
 import Post from './Screens/Post'
+import CreateCommunity from './Screens/HomeScreens/AddCommunity/CreateCommunity'
+import MyCommunities from './Screens/HomeScreens/AddCommunity/MyCommunities'
 import Startups from './Screens/Startups'
+import CompanyProfile from './Screens/CompanyProfile'
+import CreateResearch from './Screens/HomeScreens/Research/CreateResearch'
+import MyResearches from './Screens/HomeScreens/Research/MyResearches'
+import JoinedResearches from './Screens/HomeScreens/Research/JoinedResearches'
+import Startups from './Screens/Startups'
+
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -81,17 +87,6 @@ const AppStack = createStackNavigator({
     screen: Scholarship,
     navigationOptions: (options) => NavigationOptions(options, "Scholarship", "sideMenu")
   },
-  // MyWalletScreen: {
-  //   screen: MyWallet
-  // },
-  JoinedCommunity: {
-    screen: JoinedCommunity,
-    navigationOptions: (options) => NavigationOptions(options, "Joined Communities", "sideMenu")
-  },
-  CreatedCommunity: {
-    screen: CreatedCommunity,
-    navigationOptions: (options) => NavigationOptions(options, "Created Communities", "sideMenu")
-  },
   Aboutus: {
        screen: Aboutus,
        navigationOptions: (options) => NavigationOptions(options, "About Us", "sideMenu")
@@ -99,78 +94,92 @@ const AppStack = createStackNavigator({
   Apply: {
        screen: Apply,
        navigationOptions: (options) => NavigationOptions(options, "Apply ScholarShip", "sideMenu")
-     },
-     PostScholarship: {
+  },
+  PostScholarship: {
       screen: PostScholarship,
       navigationOptions: (options) => NavigationOptions(options, "Post ScholarShip", "sideMenu")
-    },
-    ScholarshipHistory: {
+  },
+  ScholarshipHistory: {
       screen: ScholarshipHistory,
       navigationOptions: (options) => NavigationOptions(options, "ScholarShip History", "sideMenu")
-    },
-     Mywallet: {
+  },
+  Mywallet: {
        screen: Mywallet,
        navigationOptions: (options) => NavigationOptions(options, "My Wallet", "sideMenu")
-     },
-     Profile: {
+  },
+  Profile: {
        screen: Profile,
        //navigationOptions: (options) => NavigationOptions(options, "My Wallet", "sideMenu")
-     },
-     SendCoins: {
+  },
+  SendCoins: {
       screen: SendCoins
-    },
-  // LogOutScreen: {
-  //   screen: Logout
-  // },
-     Scanner:{
+  },
+  Scanner:{
        screen: Scanner,
        navigationOptions: (options) => NavigationOptions(options, "QR Scan", "sideMenu")
-     },
-     Funding: {
+  },
+  Funding: {
       screen: Funding
-     },
-     Timeline:{
+  },
+  Timeline:{
        screen: MyTimeline,
        navigationOptions: (options) => NavigationOptions(options, "My Timeline", "sideMenu")
-     },
-     Language:{
+  },
+  Language:{
        screen: Language,
        navigationOptions: (options) => NavigationOptions(options, "Languages Known", "sideMenu")
-     },
-     Topics:{
+  },
+  Topics:{
        screen: Topics,
        navigationOptions: (options) => NavigationOptions(options, "Interested Topics", "sideMenu")
-     },
-    Notifications:{
+  },
+  Notifications:{
       screen: Notifications,
       navigationOptions: (options) => NavigationOptions(options, "Notifications", "sideMenu")
-    },
-    Edit:{
+  },
+  Edit:{
       screen: Edit,
       navigationOptions: (options) => NavigationOptions(options, "Profile Edit", "sideMenu")
-    },    
-    SearchScreen: {
+  },    
+  SearchScreen: {
       screen: SearchScreen,
       //`navigationOptions: (options) => NavigationOptions(options, "Search", "search")
-      
-    },
-    EnterPreneurForm: {
-      screen: EnterPreneurForm,
-      navigationOptions: (options) => NavigationOptions(options, "EnterPreneur Form", "sideMenu")
-    },
-    InvestorForm: {
-      screen: InvestorForm,
-      navigationOptions: (options) => NavigationOptions(options, "Investor Form", "sideMenu")
-    },    
-    Post:{
-      screen: Post,
-      navigationOptions: (options) => NavigationOptions(options, "Create Post", "sideMenu"),
-    },        
-    Startups:{
-      screen: Startups,
-      navigationOptions: (options) => NavigationOptions(options, "Startup Communities", "sideMenu"),
-    }        
+  },
+  EnterPreneurForm: {
+    screen: EnterPreneurForm,
+    navigationOptions: (options) => NavigationOptions(options, "EnterPreneur Form", "sideMenu")
+  },
+  InvestorForm: {
+    screen: InvestorForm,
+    navigationOptions: (options) => NavigationOptions(options, "Investor Form", "sideMenu")
+  },    
+  Post:{
+    screen: Post,
+    navigationOptions: (options) => NavigationOptions(options, "Create Post", "sideMenu"),
+  },                 
+  Startups:{
+    screen: Startups,
+    navigationOptions: (options) => NavigationOptions(options, "Startup Communities", "sideMenu"),
+  },
+  CompanyProfile:{
+    screen: CompanyProfile,
+    navigationOptions: (options) => NavigationOptions(options, "Company Name", "sideMenu"),
+  },
+  MyResearches:{
+    screen: MyResearches,
+    navigationOptions: (options) => NavigationOptions(options,"My Researches", "sideMenu")
+  },
+  CreateResearch:{
+    screen: CreateResearch,
+    navigationOptions: (options) => NavigationOptions(options, "Create Researches", "sideMenu")
+  },
+  JoinedResearches:{
+    screen: JoinedResearches,
+    navigationOptions: (options) => NavigationOptions(options,"Joined Researches", "sideMenu")
+  }        
 })
+
+
 const AuthStack = createStackNavigator({
     Login: { 
         screen: Login,
@@ -183,16 +192,19 @@ const AuthStack = createStackNavigator({
      ForgetPassword: {
        screen: ForgetPassword,
      },
+     CreateCommunity:{
+      screen: CreateCommunity,
+    },
+    MyCommunities: {
+      screen: MyCommunities
+    },
     // FeedBackScreen: {
     //   screen: FeedBack
-    // },
-    
+    // },    
 });
 
 const DrawerAuthStack = createDrawerNavigator(
   {
-    
-    
     App: {
       screen: AppStack
     },

@@ -27,8 +27,8 @@ export default class ForgetPassword extends React.Component{
             {/* <ImageBackground  source={require('../../assets/Splash.png')} resizeMode = 'cover'
                           style={{ height: 250, width: imageWidth }}/> */}
             <View style = {{backgroundColor:'#0073C0', height:'40%', width:'100%'}}>
-            <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' 
-                            style = {{ alignSelf:'center', marginTop:'66%'}}/>
+            {/* <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' 
+                            style = {{ alignSelf:'center', marginTop:'66%'}}/> */}
             </View>
             <Image source = {require('../../assets/key.png')} style = {{position:'absolute', tintColor:'white', alignSelf:'center', marginTop:'10%', height:'20%', width:'30%'}}/>
             <TouchableOpacity style = {{ position:'absolute', marginLeft:'5%', marginTop:'8%' }}
