@@ -6,27 +6,64 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 //import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 //import RadioButton from 'react-native-radio-button' 
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
+import { Dropdown } from 'react-native-material-dropdown';
+import BottomTabsHeader from '../../Components/ReUsableComponents/HomeScreenHeader/BottomTabsHeader'
+import SearchScreen from '../SearchScreen'
+import ModalDropdown from 'react-native-modal-dropdown';
+
 
 
 export default class AddCommunity extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+		header: null,
+  })
   constructor() {
     super();
     this.state = {
-      name : '',
-    };
+      search: false,
+      name: ''
+    }
+    this.updateParentComponent = this.updateParentComponent.bind(this)
   }
 
-  render() {
+  updateParentComponent(search) { 
+    this.setState({
+      search: search
+    })
+  }
+
+
+  renderAddCommunity() {
     const name = this.state;
     const radio_props = [{label: 'Public', value: 0 }, {label: 'Private', value: 0 }];
+
+    let data = [{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              },{
+                value: 'Lorium Ipsum',
+              }, 
+            ];
     return (
-        <View style={{ flex: 1 }}>
-        <ScrollView>
-        <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+      <View>
+      <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Community Name'
         //baseColor = 'red'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
@@ -34,10 +71,11 @@ export default class AddCommunity extends React.Component {
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Tell about your community'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         numberOfLines={10}
         multiline={true}
+        //style={{}}
         onChangeText={ (name) => this.setState({ name }) }
         />
         </View>
@@ -58,11 +96,32 @@ export default class AddCommunity extends React.Component {
         </View>
         </TouchableOpacity>
         </View>
-        
+
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+        <Dropdown
+        label='Select City'
+        data={data}
+        itemCount = '10'
+        />
+        </View>
+
+        <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+        <Dropdown
+        label='Select State'
+        data={data}
+        itemCount = '10'
+        />
+        </View>
+
+        {/* <View style = {{marginLeft:'6%', marginRight:'6%'}}>
+        <ModalDropdown options={['option 1', 'option 2']}/>
+        </View> */}
+
+        
+        {/* <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Select City'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
@@ -70,15 +129,16 @@ export default class AddCommunity extends React.Component {
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Select State'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
-        </View>
+        </View> */}
+
         <View style = {{marginLeft:'6%', marginRight:'6%'}}>
         <TextField
         label='Area'
-        tintColor = '#c2c0c0'
+        tintColor = '#B5B5B5'
         style  = {{activeLineWidth : 1, lineWidth : 0.7}}
         onChangeText={ (name) => this.setState({ name }) }
         />
@@ -117,7 +177,27 @@ export default class AddCommunity extends React.Component {
         </View>
         </TouchableOpacity>
         </View>
+        </View>
+    )
+  }
 
+  render() {
+   
+
+    return (
+        <View style={{ flex: 1 }}>
+          <BottomTabsHeader 
+              navigation={this.props.navigation}
+              updateParentComponent={this.updateParentComponent}
+              search={this.state.search}
+              screenName={this.state.search == true ? 'Search' : 'Add Community'}
+            />
+            {/* {this.state.search == false && <View style={{borderTopWidth: 1, borderColor: 'gray'}} />} */}
+           {
+            this.state.search == true && <SearchScreen />
+            }  
+        <ScrollView>
+          {this.state.search == false && this.renderAddCommunity()}
         </ScrollView> 
         </View>
         

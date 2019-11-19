@@ -1,10 +1,16 @@
 {
   "expo": {
+    "androidStatusBarColor": "#0073C0",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#0073C0"
+    },
     "name": "TalentStory",
     "slug": "TalentStory",
     "privacy": "public",
     "sdkVersion": "34.0.0",
-    "platforms": [
+   
+    "platforms": [ 
       "ios",
       "android",
       "web"
@@ -14,7 +20,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/Splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -24,7 +30,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.Talent.TalentStory"
     }
   }
 }

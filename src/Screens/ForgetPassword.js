@@ -23,28 +23,30 @@ export default class ForgetPassword extends React.Component{
         const imageWidth = dimensions.width;
 
         return(
-            <View>
+            <View style = {{height:'100%', width:'100%'}}>
             {/* <ImageBackground  source={require('../../assets/Splash.png')} resizeMode = 'cover'
                           style={{ height: 250, width: imageWidth }}/> */}
             <View style = {{backgroundColor:'#0073C0', height:'40%', width:'100%'}}>
+            <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' 
+                            style = {{ alignSelf:'center', marginTop:'66%'}}/>
             </View>
-            <Image source = {require('../../assets/key.webp')} style = {{position:'absolute', tintColor:'white', alignSelf:'center', marginTop:'10%', height:'20%', width:'30%'}}/>
+            <Image source = {require('../../assets/key.png')} style = {{position:'absolute', tintColor:'white', alignSelf:'center', marginTop:'10%', height:'20%', width:'30%'}}/>
             <TouchableOpacity style = {{ position:'absolute', marginLeft:'5%', marginTop:'8%' }}
                               onPress={()=>{this.props.navigation.navigate('Login')}}>
               <AntDesign size={24} color="white" name="arrowleft" />
             </TouchableOpacity>
-            <View style = {{ position:'absolute', alignSelf:'center', marginTop:'59%' }}>
+            {/* <View style = {{ position:'absolute', alignSelf:'center', marginTop:'40%' }}>
             <MaterialCommunityIcons size={50} color='white' name='rhombus-medium' />
-            </View>
+            </View> */}
                 <View style={styles.container}>
-                    <Text style={{ color:'#000000', fontSize:25}}>Reset Password?</Text>
-                    <Text style={{ color:'#c2c0c0',marginTop:10 }}>Enter phone number below to recieve</Text>
-                    <Text style={{ color:'#c2c0c0',marginLeft:17 }}>otp to reset your password</Text>
+                    <Text style={{ color:'#515151', fontSize:25}}>Reset Password?</Text>
+                    <Text style={{ color:'#B5B5B5',marginTop:10 }}>Enter phone number below to recieve</Text>
+                    <Text style={{ color:'#B5B5B5',marginLeft:17 }}>otp to reset your password</Text>
 
                     <TextInput
                     style= {styles.txtinput}
                     placeholder= 'Phone number'
-                    placeholderTextColor = '#c2c0c0'
+                    placeholderTextColor = '#B5B5B5'
                     onChangeText = {(text) => this.setState({text})}/>
 
                     <TouchableOpacity style= {styles.buton}>

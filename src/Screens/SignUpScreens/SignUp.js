@@ -8,7 +8,7 @@ import {
   StyleSheet,
   Image, 
   TouchableOpacity,  
-  ImageBackground,
+  ImageBackground, 
   Dimensions,
   
 } from 'react-native';
@@ -52,67 +52,71 @@ export default class SignUp extends React.Component {
             </View>
             </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
-                <View >
-                <Text>First Name</Text>
+                <View>
+                <Text style={{ color:'#515151' }}>First Name</Text>
                 <TextInput
                 style = {styles.viewFname}
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = ''
                 onChangeText = { (text) => this.setState({text})}
                 />
                 </View>
-                <View >
-                <Text>Last Name</Text>
+                <View>
+                <Text style={{ color:'#515151' }}>Last Name</Text>
                 <TextInput
                 style = {styles.viewLname}
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                 </View>                
             </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around', marginTop:'5%'}}>
                 <View >
-                <Text>Mobile Number</Text>
+                <Text style={{ color:'#515151' }}>Mobile Number</Text>
                 <TextInput
                 style = {styles.viewMnumber}
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                 </View>                
             </View>
             <View>
             <View style = {{flexDirection:"column", justifyContent:'space-around', marginLeft:'5%', marginTop:'5%'}}>
-            <Text>Gender</Text>
+            <Text style={{ color:'#515151' }}>Gender</Text>
             </View>
-
-            <View style = {{flexDirection:"row", justifyContent:'space-around'}}>                
-                <View style={styles.gender}>
-                <Icon size={26} name="ios-male" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
-                <Text style={{ color:'#DADADA',margin:'5%',position:'absolute',marginHorizontal:50 }}>Male</Text>
+            <View style = {{flexDirection:"row", justifyContent:'space-around'}}>
+                <View style = {styles.gender}>
+                  <TouchableOpacity style = {{flexDirection:'row'}}>
+                  <Icon size={20} name="ios-male" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+                  <Text style={{ color:'#DADADA', paddingHorizontal :10, marginTop:'10%'}}>Male</Text>
+                  </TouchableOpacity>
                 </View>
-                <View style={ styles.gender}>
-                <Icon size={26} name="ios-female" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
-                <Text style={{ color:'#DADADA',margin:'5%',position:'absolute',marginHorizontal:50}}>Female</Text>
+                <View style = {styles.gender}>
+                  <TouchableOpacity style = {{flexDirection:'row'}}>
+                  <Icon size={20} name="ios-female" style={{ color:'#DADADA',margin:'3%',marginLeft:'9%'}}/>
+                  <Text style={{ color:'#DADADA', paddingHorizontal :10, marginTop:'8%' }}>Female</Text>
+                  </TouchableOpacity>
                 </View>                
             </View>
+
             </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around', marginTop:'5%'}}>
                 <View >
-                <Text>Password</Text>
+                <Text style={{ color:'#515151' }}>Password</Text>
                 <TextInput
                 style = {styles.viewPassword}
                 secureTextEntry = {true}
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                 </View>                
             </View>
             <View style = {{flexDirection:"row", justifyContent:'space-around', marginTop:'5%'}}>
                 <View >
-                <Text>Confirm Password</Text>
+                <Text style={{ color:'#515151' }}>Confirm Password</Text>
                 <TextInput
                 style = {styles.ViewCPassword}
                 secureTextEntry = {true}
-                placeholderTextColor = '#c2c0c0'
+                placeholderTextColor = '#B5B5B5'
                 onChangeText = { (text) => this.setState({text})}
                 />
                 </View>                
@@ -121,9 +125,9 @@ export default class SignUp extends React.Component {
             <View style={styles.login}>
                 
                 <View style={{ flexDirection:'row',marginTop:15, justifyContent:'center' }}>
-                    <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>I agree to</Text>
+                    <Text style={{ color:'#B5B5B5',margin:5,fontSize: 12 }}>I agree to</Text>
                     <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Privacy Policy</Text>
-                    <Text style={{ color:'#c2c0c0',margin:5,fontSize: 12 }}>and</Text>
+                    <Text style={{ color:'#B5B5B5',margin:5,fontSize: 12 }}>and</Text>
                     <Text style={{ color:'#0073C0',margin:5,fontSize: 13 }}>Terms</Text>
                 </View>
             </View>

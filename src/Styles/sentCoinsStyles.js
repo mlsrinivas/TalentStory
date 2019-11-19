@@ -5,7 +5,7 @@ txtinput:{
     width:'65%',
     height:45,
     backgroundColor: '#fff',
-    borderColor:'#0073C0',
+    borderColor:'#8CC1F4',
     borderWidth:1,
     borderRadius:30,
     paddingHorizontal :20,

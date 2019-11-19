@@ -8,16 +8,16 @@ const styles = StyleSheet.create({
     },
     soibtn:{
       alignSelf:'flex-start',
-      height:30,
-      width:150,
+      height:40,
+      width:150, 
       backgroundColor:'#0073C0',
       marginTop:'3%',
     },
     btns:{
-        marginTop:'3%',
+        marginTop:'3%', 
         backgroundColor:'white',
         height:50,
-        width:350,
+        width:'98%',
         shadowColor: '#000000',
         shadowOffset:{ width:0, height:2 },
         shadowOpacity: 0.25,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     },
     textStyle:{
         alignSelf:'center',
-        paddingHorizontal:25,
+        paddingHorizontal:20,
         fontSize:18,
         color:'gray'
     }
